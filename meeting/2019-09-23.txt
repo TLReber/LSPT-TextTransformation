@@ -1,0 +1,25 @@
+9/23/19 meeting
+
+goldschmidt put up some questions, not sure if we answered all of them but we
+answered the bulk of them:
+
+Trying to build:
+----------------
+program that takes in a raw string from crawlers and spits out various 
+statistics, derive meaning from html
+
+
+How do we know it will work?
+----------------------------
+Documents we evaulate and test for what we expect
+
+How do we know it will scale up?
+--------------------------------
+Keep simple, set up for paralleization
+
+Ethics
+------
+How we translate and parse is unbiased, don't get stats on inappropriate/
+irrelevant
+
+
