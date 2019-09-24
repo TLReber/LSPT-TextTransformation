@@ -1,0 +1,93 @@
+meeting 09-24
+
+Agenda:
+- Answer Questions from Class
+- Group Plans/Workflow
+
+Answer Question from Class:
+THE PEOPLE
+Jared(Masters 2020):
+strengths:
+- programming: python, java, C#
+- classes: Game Architecture, Interactive Visualization, Data Structures(mentor)
+- group management (issue tickets/group management)
+- like games
+- relatively free 13 credit load
+weaknesses:
+- programming: prolog, javascript, NO LATEX 
+
+Thomas(Senior):
+strengths:
+- programming: C#, SQL, Databases
+- classes: Database Systems, PSoft 
+- Object oriented programming
+- Database stuff
+- full stack web-dev
+
+weaknesses:
+- programming: python (no language), javascript
+- busy (20) w/ part-time job
+
+Greg:
+strengths:
+- programming: python, c++, javascript
+- classes: Computer Algorithms, Capstone, Signals and Systems
+- parallization
+- communication
+- say something it will get done
+
+weaknesses:
+- programming: c#
+- busy(20), working on masters project, research stuff
+- formating of stuff (minor OCD)
+
+Yitao:
+strengths:
+- 16 credits
+- loves to learn
+weaknesses:
+- immune system
+
+
+ISSUE TRACKING
+- git: covers both design and code
+- project management system on github with issue tracker
+- issue tracker: milestones(w/ issues) & tickets
+ticket: task that needs to get done
+issue: something that needs to be fixed
+
+
+--------------------------------------------------------------------------------
+MISCELANEOUS RAMBLING
+- no wiki
+
+
+Meeting Format:
+
+Agenda:
+- A
+- B
+...
+
+A
+- talk about A
+
+
+
+Group Plans/Workflow
+- Use Git
+- No branches (initial plan)
+- Commit straight to master
+- Commit messages:
+    <topic>: <short explanation> (50 characters)
+
+    <long explanation>
+
+- 80 line width
+- decide language
+
+
+
+
+
+
