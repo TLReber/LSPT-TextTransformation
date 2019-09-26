@@ -1,0 +1,91 @@
+{
+    "URL": "https://www.cs.rpi.edu/academics/courses/fall19/proglang/pa1/pa1.html",
+    "AsOfDate": "2019-09-26T12:55:21.000Z",
+    "Meta": {
+        "Title": "Programming Assignment #1",
+        "Author": "Carlos Varela",
+        "DateCreated": "2019-09-13T14:20:21.000Z",
+        "DateModified": "2019-09-13T14:20:21.000Z",
+        "KeyWords": [
+            "Lambda",
+            "Calculus",
+            "Assignment",
+            "Haskell",
+            "Oz",
+            "Carlos Varela"
+        ]
+    },
+    "Words": {
+        "NumWords": 12300,
+        "NumDistinctWords": 5031,
+        "WordCounts": [
+            {
+                "Text": "Lambda",
+                "Count": 5,
+                "Occurences": [
+                    1,
+                    4,
+                    10,
+                    13,
+                    400,
+                    590
+                ]
+            },
+            {
+                "Text": "Calculus",
+                "Count": 3,
+                "Occurences": [
+                    5,
+                    19,
+                    134
+                ]
+            },
+            {
+                "Text": "Haskell",
+                "Count": 6,
+                "Occurences": [
+                    190,
+                    204,
+                    450,
+                    560,
+                    590,
+                    610,
+                    614
+                ]
+            }
+        ]
+    },
+    "NGrams": {
+        "BiGrams": [
+            {
+                "Text": "Lambda Calculus",
+                "Count": 3,
+                "Occurences": [
+                    1,
+                    4,
+                    10,
+                    13,
+                    400,
+                    590
+                ]
+            },
+            {
+                "Text": "Programming Assigment",
+                "Count": 1,
+                "Occurences": [
+                    12
+                ]
+            }
+        ],
+        "TriGrams": [
+            {
+                "Text": "Lambda Calculus Interpreter",
+                "Count": 2,
+                "Occurences": [
+                    40,
+                    59
+                ]
+            }
+        ]
+    }
+}

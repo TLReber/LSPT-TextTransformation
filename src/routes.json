@@ -1,0 +1,45 @@
+{
+    "BaseUrl": "https://www.cs.rpi.edu/lspt-fall-19/text-transformers",
+    "Version": 1.0,
+    "Endpoints": [
+        {
+            "Verb": "POST",
+            "Route": "/postdocument",
+            "Description": "Used to post a document to text transformation server for analysis.",
+            "Body": [
+                {
+                    "Key": "url",
+                    "Type": "string",
+                    "Required": true
+                },
+                {
+                    "Key": "filebody",
+                    "Type": "file",
+                    "Required": true
+                }
+            ]
+        },
+        {
+            "Verb": "GET",
+            "Route": "/gettransformed",
+            "Description": "Used to retrive information about already analyzed documents. Can be used to request information about a specific file with valid url or guid parameters or to retrieve information about all documents analyzed after a certain date. Only one parameter can be used and one is required.",
+            "Parameters": [
+                {
+                    "Key": "url",
+                    "Type": "string",
+                    "Required": false
+                },
+                {
+                    "Key": "documentid",
+                    "Type": "string",
+                    "Required": false
+                },
+                {
+                    "Key": "after",
+                    "Type": "date",
+                    "Required": false
+                }
+            ]
+        }
+    ]
+}
