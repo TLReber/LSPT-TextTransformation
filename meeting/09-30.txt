@@ -43,9 +43,10 @@ API information [50 minutes]
 --TransformText(HTMLDoc doc, URL url) returns json
 --Immediately sends postDocument to indexing
 --Immediately send response of postquery back to Querying
---routes.json
+--current request commands
 ---/postdocument
 ---/postquery
+---/gettransformed (If indexing needs further data beyond the initial parse)
 
 Workflow
 -Crawling
