@@ -13,17 +13,22 @@ A longer description of your project goes here...
 
 Installation
 ============
-Using python 3.7 though 3.6 should work
+- Using python 3.7 though 3.6 should work
 
-For linux:: console
-    
+For linux:
+
+.. code-block:: bash
+
     python -m venv .tt-env
     source .tt-env/bin/activate
     pip install -e
 
 Running A Node
 ==============
-After installing:: console
+
+After installing:
+
+.. code-block:: bash
 
     text-trans-node
 
