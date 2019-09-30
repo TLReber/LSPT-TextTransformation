@@ -1,0 +1,63 @@
+meeting 09-24
+
+Agenda:
+- General Discussion
+- Answer Questions from Class
+- API information
+
+Discussion of ideas for search engine requirements [15 minutes]
+
+-Wouldn't it be cool if it included SISMan
+-Searching for everything RPI
+--Weed out Rasberry Pi
+--Who is SISMan?
+--Better Course Catalog (It won't be 10 years old)
+-Search Engine for Koalas
+-Crawl for hidden test cases
+
+
+Class Questions [10 minutes]
+
+-Design: what are we trying to build?
+--We take in raw document data and transform into useful statistics that can be indexed
+-How do we know it will work?
+--Use a bunch of known websites and test output against them.
+-How do we know it will scale up?
+--We can run multiple instances of the text transformer
+--We may want to parallelize large documents
+-What ethical considerations do we want to look at?
+--Anything pro Shirley Ann Jackson should be censored
+
+
+API information [50 minutes]
+
+-What we want from crawling/document data store
+--We want the raw html documents and url
+-What we want from query
+--Query in string form
+-What we send to indexing
+--json with data from html
+-What we send query
+--json with data from query
+-What API calls our component will provide
+--TransformText(HTMLDoc doc, URL url) returns json
+--Immediately sends postDocument to indexing
+--Immediately send response of postquery back to Querying
+--routes.json
+---/postdocument
+---/postquery
+
+Workflow
+-Crawling
+--Gets raw files
+-Document Data Store
+--Gets raw files from Crawling
+--Creates document id
+--posts raw files and doc id to Text Transformation
+-Text Transformation
+--Parses file
+--Sends title back to DDS along w/ doc id
+--Posts full response to Indexing
+--Parses query
+--Sends full response to Querying
+
