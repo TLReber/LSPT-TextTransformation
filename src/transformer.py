@@ -1,1 +1,0 @@
-print("Give me data.")
