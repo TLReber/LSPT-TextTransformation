@@ -20,23 +20,30 @@
             ]
         },
         {
+            "Verb": "POST",
+            "Route": "/postquery",
+            "Description": "Used to post a query to parse intent in order to efficiently query the data store and navigate the index.",
+            "Body": [
+                {
+                    "Key": "query",
+                    "Type": "string",
+                    "Required": true
+                }
+            ]
+        },
+        {
             "Verb": "GET",
             "Route": "/gettransformed",
-            "Description": "Used to retrive information about already analyzed documents. Can be used to request information about a specific file with valid url or guid parameters or to retrieve information about all documents analyzed after a certain date. Only one parameter can be used and one is required.",
+            "Description": "Used to retrive information about a specific documents. Used to request information about a specific file specified by document data store id. If ngrams parameter is specified then that n-grams of that size are also parsed and included in the response (in addition to bigrams and trigrams).",
             "Parameters": [
-                {
-                    "Key": "url",
-                    "Type": "string",
-                    "Required": false
-                },
                 {
                     "Key": "documentid",
                     "Type": "string",
-                    "Required": false
+                    "Required": true
                 },
                 {
-                    "Key": "after",
-                    "Type": "date",
+                    "Key": "ngrams",
+                    "Type": "int",
                     "Required": false
                 }
             ]
