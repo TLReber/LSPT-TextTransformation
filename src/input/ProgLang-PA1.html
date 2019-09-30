@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Programming Assignment #1</title>
+    </head>
+    <style>
+	@media not print {
+		body {
+		max-width: 65%;
+		margin: auto;
+		padding: 25px;
+		font-size: 14pt;
+		}
+	}
+
+	.header {
+		text-align: center;
+	}
+
+	.notice {
+		font-size: 125%;
+		text-align: center;
+		max-width: 75%;
+		margin: auto;
+	}
+
+	.tabular {
+		border-style: double;
+	}
+
+	.tabular>tbody>tr>th,
+	.tabular>tbody>tr>td {
+		border: 1px solid;
+	}
+</style>
+    <body>
+        <h1 class="header">
+		CSCI 4430/6430 Programming Languages
+            <br>
+		Fall 2019
+            <br>
+		Programming Assignment #1
+            <br>
+            <br>
+		Due Date: 7:00 PM September 26 (Thursday)
+            <br>
+	
+        </h1>
+        <p class="notice">
+            <i>This assignment is to be done either 
+                <b>individually</b> or
+                <b>in pairs</b>.
+                <b>Do not show your code to any other group</b> and
+                <b>do not look at any other group's code</b>. Do not put your code in a public directory or otherwise make it public. However, you may get help from the mentors, TAs, or the instructor. You are encouraged to use the
+                <a href="https://submitty.cs.rpi.edu/f19/csci4430/forum/threads">Submitty Discussion Forum</a> to post problems so that other students can also answer/see the answers.
+            </i>
+        </p>
+        <h2>
+            <b>Lambda Calculus Interpreter</b>
+        </h2>
+        <p> The goal of this assignment is to write a lambda calculus interpreter in a functional programming language to reduce lambda calculus expressions in a call-by-name (normal order) manner.
+	</p>
+        <p>
+		You are to use the following grammar for the lambda calculus:
+	</p>
+        <p>
+            <code>
+                <table>
+                    <tr>
+                        <td width="100px"></td>
+                        <td>&lt;expression&gt;</td>
+                        <td>::=</td>
+                        <td>&lt;atom&gt;</td>
+                    </tr>
+                    <tr>
+                        <td width="100px"></td>
+                        <td></td>
+                        <td>|</td>
+                        <td>&#34;&#92;&#34; &lt;atom&gt; &#34;&#46;&#34; &lt;expression&gt;</td>
+                    </tr>
+                    <tr>
+                        <td width="100px"></td>
+                        <td></td>
+                        <td>|</td>
+                        <td>&#34;(&#34; &lt;expression&gt;  &#34; &#34;  &lt;expression&gt; &#34;)&#34; </td>
+                    </tr>
+                </table>
+            </code>
+        </p>
+        <p>
+		Your interpreter is expected to take each lambda calculus expression and repeatedly perform beta reduction until no longer possible. It must then perform eta reduction until no longer possible.
+	</p>
+        <p>
+		In the above grammar, 
+            <code>&lt;atom&gt;</code> is defined as a lower case letter followed by a sequence of zero or more alphanumeric characters, excluding Oz language keywords. A full listing of Oz language keywords can be found on P. 839 Table C.8 of "Concepts, Techniques, and Models of Computer Programming". Your interpreter is to take lambda calculus expressions from a text file (one expression per line) and reduce them sequentially. To enable you to focus on the lambda calculus semantics, a parser is available for both Haskell and Oz, along with supporting code to handle input and output.
+        </p>
+        <p>
+		Your program must accept two command line arguments. The first argument is the name of a file containing a list of lambda calculus expressions. The second argument is the name of the file you will write your reduced lambda calculus expressions into.
+	</p>
+        <p>
+		Your parser should write out the reduced expressions to a file, again one per line. If something goes wrong and you cannot reduce an expression, you should write a single new line and then continue with the next lambda calculus expression. Writing more than one line, or writing nothing at all, will interfere with autograding. Do not write anything else, such as debug printouts, test numbers, etc.
+	</p>
+        <p>
+		You may (and should!) define auxiliary procedures for alpha-renaming, beta-reduction, and eta-conversion. For beta reduction, you may want to write an auxiliary procedure that substitutes all occurrences of a variable in an expression for another expression. Be sure that the replacing expression does not include free variables that would become captured in the substitution. Remember that in call-by-name, the argument to a function is 
+            <b>not</b> evaluated before the function is called.
+        </p>
+        <p>
+		You may choose whatever names you wish when alpha-renaming, as long as they do not violate the definition of 
+            <b>&lt;atom&gt;</b>. Your code will be judged correct if we could make your solution match our solution by renaming zero or more of your variable names.
+        </p>
+        <h2>
+            <hr width="100%">
+		Sample Interpretations
+	
+        </h2>
+        <p>
+		Below are some lambda calculus interpretation test cases:
+		
+            <table class="tabular" cellpadding="5px">
+                <tr>
+                    <th>Expression</th>
+                    <th>Result</th>
+                    <th>Comment</th>
+                </tr>
+                <tr>
+                    <td>
+                        <code>(\x.\y.(y x) (y w))</code>
+                    </td>
+                    <td>
+                        <code>\z.(z (y w))</code>
+                    </td>
+                    <td>Avoid capturing the free variable 
+                        <code>y</code> in
+                        <code>(y w)</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>(\x.\y.(x y) (y w))</code>
+                    </td>
+                    <td>
+                        <code>(y w)</code>
+                    </td>
+                    <td>Avoid capturing the free variable 
+                        <code>y</code> in
+                        <code>(y w)</code>, and perform eta reduction
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>(\x.x y)</code>
+                    </td>
+                    <td>
+                        <code>y</code>
+                    </td>
+                    <td>Identity combinator</td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>\x.(y x)</code>
+                    </td>
+                    <td>
+                        <code>y</code>
+                    </td>
+                    <td>Eta reduction</td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>((\y.\x.(y x) \x.(x x)) y)</code>
+                    </td>
+                    <td>
+                        <code>(y y)</code>
+                    </td>
+                    <td>Application combinator</td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>(((\b.\t.\e.((b t) e) \x.\y.x) x) y)</code>
+                    </td>
+                    <td>
+                        <code>x</code>
+                    </td>
+                    <td>If-then-else combinator</td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>\x.((\x.(y x) \x.(z x)) x)</code>
+                    </td>
+                    <td>
+                        <code>(y z)</code>
+                    </td>
+                    <td>Eta reductions</td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>(\y.(\x.\y.(x y) y) (y w))</code>
+                    </td>
+                    <td>
+                        <code>(y w)</code>
+                    </td>
+                    <td>Alpha renaming, beta reduction and eta reduction all involved</td>
+                </tr>
+            </table>
+        </p>
+        <p>
+		For your convenience, these have been given in a 
+            <a href="lambda/input.lambda">sample input file</a>, where each line contains one lambda expression.
+        </p>
+        <h2>
+            <hr width="100%">
+		Notes for Oz Programmers
+	
+        </h2>
+        <p>
+		You should remove any other Oz installations and use Mozart 2. You can download the binaries from 
+            <a href="https://github.com/mozart/mozart2/releases/tag/v2.0.1">the project's GitHub repository</a>.
+        </p>
+        <p>
+		Note for Windows users: the interactive Oz editor may fail to launch if you install Mozart on a path containing spaces. It may also fail to launch due to problems with your environment (causing Mozart to be unable to find its bundled copy of Emacs). If you are having problems, please post about it on Submitty or come to office hours for help.
+	</p>
+        <p>
+		A 
+            <a href="oz/parser.oz">parser</a> is provided. Use this
+            <a href="oz/PA1Helper.oz">starter code</a> and this
+            <a href="oz/main.oz">provided main file</a>.
+            <b>main.oz</b> receives command line arguments and invokes PA1Helper's RunProgram procedure, which handles reading the input and writing output. You will need to implement the
+            <b>ReduceExp</b> method. The program will write reduced expressions to the output file
+            <b>and</b> print out both the original and reduced expressions to stdout. Only the lines written to the file will be considered when grading.
+        </p>
+        <h3>Sample Interaction</h3>
+        <pre>
+
+$ cat sample.lambda
+(\x.x y)
+(\x.\y.(x y) (y w))
+
+$ ozc -c parser.oz
+
+$ ozc -c PA1Helper.oz
+
+$ ozc -c main.oz
+
+$ ozengine main.ozf sample.lambda output.lambda
+
+$ cat output.lambda
+y
+(y w)
+
+</pre>
+        <h2>
+            <hr width="100%">
+		Notes for Haskell Programmers
+	
+        </h2>
+        <p> Use 
+            <a href="haskell/PA1Helper.hs">this parser</a> to get a list of lambda calculus expressions from an input file. See also the
+            <a href="haskell/main.hs">sample main.hs file</a> (in particular, see the
+            <code>runProgram</code> function.) Specifically, type constructors for the
+            <code>Lexp</code> datatype have been exported from the module. This datatype is used to represent lambda calculus expressions in Haskell, and the type constructors should be used to pattern match a lambda expression. Your goal is to create a
+            <code>reducer</code> function that takes an
+            <code>Lexp</code> value as input and returns a
+            <code>Lexp</code> value as output.
+        </p>
+        <p>
+		The provided helper code will both write to stdout and to the output file. The former is inteded to help you during the development process. Only the lines written to the file will matter when the assignment is graded.
+	</p>
+        <p>
+            <b>Note</b>: Please name your main file 'main.hs'. It should accept two arguments when compiled and executed. The provided main.hs has this functionality provided.
+        </p>
+        <h3>Sample Interaction</h3>
+        <pre>
+
+$ cat sample.lambda
+(\x.x y)
+(\x.\y.(x y) (y w))
+
+$ runghc main.hs sample.lambda output.lambda
+
+$ cat output.lambda
+y
+(y w)
+
+</pre>
+        <p>If you get an error about Text.Parsec being undefined, run 
+            <code>stack install parsec</code> (or
+            <code>cabal install parsec</code>)
+        </p>
+        <p>
+            <b>Further Haskell Hints</b>: It may be useful to consider Map and Set, which can be found in the Data.Map and Data.Set modules, respectively. It is also recommended to use
+            <a href="https://www.haskell.org/hoogle/">Hoogle</a>, a search engine for looking up Haskell documentation.
+        </p>
+        <p>
+		If you use an unusual library, you will need to contact the course TAs to have them installed on the Submitty server. Otherwise, your solution 
+            <b>will not compile.</b>
+        </p>
+        <p>
+            <b>Grading: </b>The assignment will be graded mostly on correctness, but code clarity / readability will also be a factor. If something is unclear, explain it with comments!
+        </p>
+        <p>
+		Correctness is judged by testing if your lambda calculus expressions are alpha-equivalent to the expected expressions. Therefore, your choice of names when performing alpha renaming will not affect correctness, as long as your chosen names are valid (i.e. lowercase alphanumeric strings that start with a letter and are not Oz keywords).
+	</p>
+        <p>
+            <b>Submission Requirements: </b>
+		You will submit your code via Submitty. Include all source files need to run your program, as well as a README file. We will
+            <b>not</b> automatically include any provided code. In the README file, place the names of each group member (up to two). Your README file should also have a list of specific features/bugs in your solution. If you are working with another student, then only one member of the team needs to submit.
+        </p>
+        <p>
+            <b>Working alone/in pairs:</b>
+		You may work alone, or with one other student. To work alone, simply create a new team on Submitty with only yourself in it. To work with a partner, either invite them to your team, or join their team.
+        </p>
+    </body>
+</html>
