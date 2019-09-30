@@ -1,0 +1,56 @@
+meeting 09-26
+
+Agenda:
+- Create an API
+Goals:
+- Create an API
+
+
+Groups:
+Crawling-TextAquisition(get data from)
+Indexing(give to)
+
+Text Transformation:
+responsible for transforming raw text from crawled documents into parsed words,
+n-grams ect...
+
+Crawling ---------> TextTransformation --> Indexing
+
+Crawling --------------------------------------------> TextTransformation 
+          [source files: html, css, javascript, php]
+
+
+TextTransformation --------------------------------------> Indexing
+                    [word count, <data indexing wants>]
+
+
+means: POST & GET requestions
+
+
+Indexing
+- 
+
+
+
+
+
+Action Items
+------------
+
+
+
+
+Expectation from Crawling:
+--------------------------------------------------------------------------------
+POST request with files, urls
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+-- only need to produce as much information as they need, and nothing extra...
+-- corresponce back and forward is not stateless
+
+
