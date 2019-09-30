@@ -8,7 +8,7 @@
             "Description": "Used to post a document to text transformation server for analysis.",
             "Body": [
                 {
-                    "Key": "url",
+                    "Key": "documentid",
                     "Type": "string",
                     "Required": true
                 },
