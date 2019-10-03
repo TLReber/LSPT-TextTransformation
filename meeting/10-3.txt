@@ -1,0 +1,52 @@
+meeting 09-24
+
+Agenda:
+- Go through challenges 
+- Duration
+
+
+Highdeas:
+SIS Engine
+
+
+Brain storm
+- "we want x numbers of queries or new documents"
+- "stuff about n-grams" arbitrary?
+- "dynamic stop word list"
+- general
+
+
+REQUIREMENT ID    |              Description                                   
+--------------------------------------------------------------------------------
+ tt-1             | System must support API defined by the architecture
+ user-1           | User should not wait more than 5 seconds for a response
+ tt-2             | System must keep up with data stream from D&D
+ user-0*          | System requires SIS to be part of UI
+ user-2           | User should not get pop-ups
+ user-3           | Don't sell data or have advertisement
+                  |
+                  |
+
+Verification:
+- test
+
+Quality Metrics:
+- Feasibility: google did it so it is possible, but in our time frame? Yes still
+especially with the help of third party libraries & python & teamwork!
+- Completness: are all the requirements met?
+- Correctness: Need to define what is a correctly transformed document, and what
+is a documents title?
+- Consistency: Same page parsed, same stuff back
+- Verifiability:  coverage, white box testing, black box testing, unit testing
+
+
+Challenges: 
+- page cleaning (dealing with extraneous html)
+    - look for python libraries involving html
+- defining preprocessing steps
+- keep up with D&D data stream (efficiency)
+
+
+
+Duration:
+- 
