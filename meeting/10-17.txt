@@ -1,0 +1,17 @@
+meeting 09-24
+
+Agenda:
+- Figure out what we're doing
+- Go through challenges 
+- Duration
+
+Question:
+- What are concrete deadlines for the project?
+- What is the project?
+- Is there a grading criteria or example presentation
+
+Project(Our understanding):
+- What we think the API is we're going to program: "here is our plan"
+- Tests: being how do we measure the correctness of our API
+- Other ways to measure success: effeciency, correctness, expandability...
+
