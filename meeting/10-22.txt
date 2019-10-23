@@ -1,0 +1,35 @@
+meeting 10-22
+
+Agenda:
+- Delegate presentation slides:
+- Message confirmation to other TextTransformation group
+
+Goals:
+- Document in 
+- Have every one in the group know what slides to work on
+
+Potential Presentation Issues:
+- Go to present and:
+1. Other text transformation presents a different API
+2. Other groups have misconceptions about our API
+3. Run out of time
+...
+
+
+Actions:
+- Once our API is established, send message out on slack about it: or we should
+create a google drive document regarding the information (better idea)
+
+
+
+Delegation:
+
+20 minutes: 5 minutes per person
+
+Intro: Jared Okun
+Architectural Divisions: Thomas Reber, 
+Design of Component: Greg Hansell
+Test Plan: Yitao
+Coding Standards: Jared Okun
+Conclusions: Jared Okun
+
