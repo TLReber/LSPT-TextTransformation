@@ -4,47 +4,27 @@
     "Endpoints": [
         {
             "Verb": "POST",
-            "Route": "/postdocument",
-            "Description": "Used to post a document to text transformation server for analysis.",
+            "Route": "/transform",
             "Body": [
                 {
-                    "Key": "documentid",
+                    "Key": "type",
                     "Type": "string",
                     "Required": true
                 },
                 {
-                    "Key": "filebody",
-                    "Type": "file",
-                    "Required": true
-                }
-            ]
-        },
-        {
-            "Verb": "POST",
-            "Route": "/postquery",
-            "Description": "Used to post a query to parse intent in order to efficiently query the data store and navigate the index.",
-            "Body": [
-                {
-                    "Key": "query",
-                    "Type": "string",
-                    "Required": true
-                }
-            ]
-        },
-        {
-            "Verb": "GET",
-            "Route": "/gettransformed",
-            "Description": "Used to retrive information about a specific documents. Used to request information about a specific file specified by document data store id. If ngrams parameter is specified then that n-grams of that size are also parsed and included in the response (in addition to bigrams and trigrams).",
-            "Parameters": [
-                {
-                    "Key": "documentid",
+                    "Key": "data",
                     "Type": "string",
                     "Required": true
                 },
                 {
-                    "Key": "ngrams",
-                    "Type": "int",
-                    "Required": false
+                    "Key": "filters",
+                    "Type": "list of strings",
+                    "Required": true
+                },
+                {
+                    "Key": "targets",
+                    "Type": "list of strings",
+                    "Required": true
                 }
             ]
         }
