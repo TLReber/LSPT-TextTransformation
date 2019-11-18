@@ -2,8 +2,9 @@
 
 This file describes how the information parsed from an analyzed document will be returned by our API. Information will be returned in JSON form. For reference see an abbreviated example [located here](ProgLang-PA1.json).
 
+- `DocumentID` - Document Data Store ID of the source document.
 - `URL` - The url of the source document.
-- `AsOfDate` - The date the information associated with this response was passed to - analysis engine.
+- `AsOfDate` - The date the information associated with this response was passed to analysis engine.
 - `Meta` - Object describing high level summary information about the document.
     - `Title` - Inferred document title.
     - `Author` - Inferred document author.
@@ -17,12 +18,10 @@ This file describes how the information parsed from an analyzed document will be
         - `Text` - The word described by this object.
         - `Count` - The number of times this word appeared in the document. The sum of all `Count` attributes within the `WordCounts` list will equal `NumWords`.
         - `Occurences` - List of locations within the document where this word occured in the document. 1 indicates this is the first token in the document. This list is `Count` long.
-- `NGrams` - List of bigrams and trigrams that appear in the document.
-    - `BiGrams` - List of objects with frequency and positional information for each bigram in the document. Entries are sorted first in order of descending frequency then in alphabetic order.
-        - `Text` - The actual text of the bigram described by this object.
-        - `Count` - The number of times this bigram appeared in the document.
-        - `Occurences` - List of locations within the document where this bigram occurs in the document. Number indicates the position of the first token of the bigram. 1 indicates this bigram starts at the first token in the document. This list is `Count` long.
-    - `TriGrams` - List of objects with frequency and positional information for each trigram in the document.
-        - `Text` - The actual text of the trigram described by this object.
-        - `Count` - The number of times this trigram appeared in the document.
-        - `Occurences` - List of locations within the document where this trigram occurs in the document. Number indicates the position of the first token of the trigram. 1 indicates this trigram starts at the first token in the document. This list is `Count` long.
+- `NGrams` - List of objects desrcibing different n-grams found in the srouce document. Includes entries for `n = 2` and `n = 3` by default.
+    - `N` - Value of `n` for this list of n-grams.
+    - `Grams` - List of objects with frequency and positional information for each n-gram in the document for above `n`. Entries are sorted first in order of descending frequency then in alphabetic order.
+        - `Text` - The actual text of the n-gram described by this object.
+        - `Count` - The number of times this n-gram appeared in the document.
+        - `Occurences` - List of locations within the document where this n-gram occurs in the document. Number indicates the position of the first token of the n-gram. 1 indicates this n-gram starts at the first token in the document. This list is `Count` long.
+    

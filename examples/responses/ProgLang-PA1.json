@@ -55,37 +55,43 @@
             }
         ]
     },
-    "NGrams": {
-        "BiGrams": [
-            {
-                "Text": "Lambda Calculus",
-                "Count": 3,
-                "Occurences": [
-                    1,
-                    4,
-                    10,
-                    13,
-                    400,
-                    590
-                ]
-            },
-            {
-                "Text": "Programming Assigment",
-                "Count": 1,
-                "Occurences": [
-                    12
-                ]
-            }
-        ],
-        "TriGrams": [
-            {
-                "Text": "Lambda Calculus Interpreter",
-                "Count": 2,
-                "Occurences": [
-                    40,
-                    59
-                ]
-            }
-        ]
-    }
+    "NGrams": [
+        {
+            "N": 2,
+            "Grams": [
+                {
+                    "Text": "Lambda Calculus",
+                    "Count": 3,
+                    "Occurences": [
+                        1,
+                        4,
+                        10,
+                        13,
+                        400,
+                        590
+                    ]
+                },
+                {
+                    "Text": "Programming Assigment",
+                    "Count": 1,
+                    "Occurences": [
+                        12
+                    ]
+                }
+            ]
+        },
+        {
+            "N": 3,
+            "Grams": [
+                {
+                    "Text": "Lambda Calculus Interpreter",
+                    "Count": 2,
+                    "Occurences": [
+                        40,
+                        59
+                    ]
+                }
+            ]
+        }
+    ]
 }
