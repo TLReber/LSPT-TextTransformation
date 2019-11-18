@@ -18,6 +18,12 @@ class Transformer:
 
     Raises:
         ValueError: function not found from name provided
+
+    Example:
+        titleTransform = Transformer("title")
+        titleTransform(true, soup instance with "<title>hello</title>") #returns "hello"
+        ngramTransform = Transformer("ngrams")
+        ngramTransform([1, 2, 4], soup instance with "ab ce ce") #returns {1: [[1, 0, "ab"], [2, 1, 2, "ce"]], 2: [[1, 0, "ab ce"], [1, 1, "ce ce"]], 4: []}
     """
 
     def __init__(
@@ -27,5 +33,20 @@ class Transformer:
         """
         pass
 
+
     def __call__(self, *args, **kwargs):
         pass
+
+def title(text):
+    pass
+
+def strip(text):
+    pass
+
+def ngrams(n, text):
+    pass
+
+
+
+
+
