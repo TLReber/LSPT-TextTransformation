@@ -23,7 +23,8 @@ class Transformer:
         titleTransform = Transformer("title")
         titleTransform(true, soup instance with "<title>hello</title>") #returns "hello"
         ngramTransform = Transformer("ngrams")
-        ngramTransform([] ,[1, 2, 4], soup instance with "ab ce ce") #returns {1: [[1, 0, "ab"], [2, 1, 2, "ce"]], 2: [[1, 0, "ab ce"], [1, 1, "ce ce"]], 4: []}
+        ngramTransform([] ,[1, 2, 4], soup instance with "hello hello world") #returns 
+            {1: {"hello": [0, 1], "world": [2]}, 2: {"hello hello": [0], "hello world": [1]}, 4: {}}
     """
 
     def __init__(
@@ -78,9 +79,8 @@ def ngrams(stop_word_list = [], n = [], soup_instance = None):
         soup_instance: An instance of BeautifulSoup that contains the text to transform
 
     Returns:
-        (dict): A dictionary where the keys are each n and the values are a list of lists where
-                the inner lists have their first index be the amount of that n-gram, indexes 1...size-2
-                are the locations in the text with that n gram, and index size-1 is the n-gram
+        (dict): A dictionary where the keys are each n and the values are their own dictionary where the keys
+        is each ngram while the values are a list of their occurrences
     """
     pass
 
