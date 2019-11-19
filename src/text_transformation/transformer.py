@@ -54,7 +54,7 @@ def title(executing: bool, soup_instance = None):
     """
     pass
 
-def strip(stop_word_list = [], soup_instance = None):
+def stripped(stop_word_list = [], soup_instance = None):
     """
     Takes a soup instance and filters out html tags and stop words and returns the resulting text
 
