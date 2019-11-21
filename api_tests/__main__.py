@@ -78,7 +78,9 @@ def test2():
     print(
         "test 2 running, this should print a 400 error, indicating that the parameters are invalid\n"
     )
-    addr = "http://127.0.0.1:8001"  # the port number will be replaced with the actual port number that the text transformation server is using
+    # the port number will be replaced with the actual port number that the 
+    # text transformation server is using
+    addr = "http://127.0.0.1:8000/transform"
 
     data = {
         "$type": "html",
@@ -101,7 +103,9 @@ def test3():
 
     print("test3 running, nothing should be printed from this test.\n")
 
-    addr = "http://127.0.0.1:8000"  # the port number will be replaced with the actual port number that the text transformation server is using
+    # the port number will be replaced with the actual port number that the 
+    # text transformation server is using
+    addr = "http://127.0.0.1:8000/transform"
 
     data = {
         "$type": "html",
@@ -139,7 +143,9 @@ def test4():
 
     start = time.time()
 
-    addr = "http://127.0.0.1:8000"  # the port number will be replaced with the actual port number that the text transformation server is using
+    # the port number will be replaced with the actual port number that the 
+    # text transformation server is using
+    addr = "http://127.0.0.1:8000/transform"
 
     data = json.load(open("api_tests/lots_of_data.json"))
 
