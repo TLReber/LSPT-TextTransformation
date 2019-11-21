@@ -49,7 +49,7 @@ def title(executing: bool, soup_instance = None):
         soup_instance: An instance of BeautifulSoup that contains the text to transform
 
     Returns:
-        (string): A string that contains the title or an empty string
+        (string): A string that contains the title or None
 
     """
     pass
