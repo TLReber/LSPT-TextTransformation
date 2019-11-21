@@ -41,32 +41,33 @@ html4 = "<html><head><title></title></head><body>the</body></html>"
 def test_transformer_title():
     t = title
     soup = BeautifulSoup(text1, "html.parser")
-    assert t(True, soup) == None
-    assert t(False, soup) == None
+    assert t(True, soup) == ""
+    assert t(False, soup) == ""
     soup = BeautifulSoup(text2, "html.parser")
-    assert t(True, soup) == None
-    assert t(False, soup) == None
+    assert t(True, soup) == ""
+    assert t(False, soup) == ""
     soup = BeautifulSoup(text3, "html.parser")
-    assert t(True, soup) == None
-    assert t(False, soup) == None
+    assert t(True, soup) == ""
+    assert t(False, soup) == ""
     soup = BeautifulSoup(text4, "html.parser")
-    assert t(True, soup) == None
-    assert t(False, soup) == None
+    assert t(True, soup) == ""
+    assert t(False, soup) == ""
     soup = BeautifulSoup(html1, "html.parser")
     assert t(True, soup) == "The Dormouse's story"
-    assert t(False, soup) == None
+    assert t(False, soup) == ""
     soup = BeautifulSoup(html2, "html.parser")
     assert t(True, soup) == ""
-    assert t(False, soup) == None
+    assert t(False, soup) == ""
     soup = BeautifulSoup(html3, "html.parser")
-    assert t(True, soup) == None
-    assert t(False, soup) == None
+    assert t(True, soup) == ""
+    assert t(False, soup) == ""
     soup = BeautifulSoup(html4, "html.parser")
     assert t(True, soup) == "the"
-    assert t(False, soup) == None
+    assert t(False, soup) == ""
     soup = BeautifulSoup(html5, "html.parser")
     assert t(True, soup) == ""
-    assert t(False, soup) == None
+    assert t(False, soup) == ""
+
 
 
 def test_transformer_stripped():
