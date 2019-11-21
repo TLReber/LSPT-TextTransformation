@@ -21,16 +21,43 @@ For linux:
 
     python -m venv .tt-env
     source .tt-env/bin/activate
-    pip install -e
+    pip install -e .
 
-Running A Node
-==============
+Running Unit Testing
+====================
 
 After installing:
 
 .. code-block:: bash
 
-    text-trans-node
+    python setup.py test
+
+Running API Testing
+====================
+
+After installing:
+
+.. code-block:: bash
+
+    python api_test
+
+Running A Worker
+=================
+
+After installing:
+
+.. code-block:: bash
+
+    text-trans-worker
+
+Running A Scheduler
+===================
+
+After installing:
+
+.. code-block:: bash
+
+    text-trans-scheduler
 
 Note
 ====
