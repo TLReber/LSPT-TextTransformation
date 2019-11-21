@@ -11,7 +11,9 @@ stop_word_list = []
 
 def title(executing: bool, soup_instance=None):
     """
-    Takes a soup instance a returns the title
+    Takes a soup instance a returns the title. If there is no title, it will then check h1, then
+    h2, h3, h4, h5, h6, and the p tag in order. This function will only return a title of a constant
+    size
 
     Args:
         executing(bool): If true, this function returns the title, otherwise 
@@ -20,7 +22,7 @@ def title(executing: bool, soup_instance=None):
             transform
 
     Returns:
-        (string): A string that contains the title or None
+        (string): A string that contains the title or ""
 
     """
     pass
