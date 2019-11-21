@@ -72,7 +72,7 @@ def test_transformer_stripped():
     soup = BeautifulSoup(text4, 'html.parser')
     assert t(stop_words_list, soup) == ""
     soup = BeautifulSoup(html1, 'html.parser')
-    assert t(stop_words_list, soup) == "Dormouse's story Dormouse's story Once upon time"
+    assert t(stop_words_list, soup) == "dormouse's story dormouse's story once upon time"
     soup = BeautifulSoup(html2, 'html.parser')
     assert t(stop_words_list, soup) == "words words words"
     soup = BeautifulSoup(html3, 'html.parser')

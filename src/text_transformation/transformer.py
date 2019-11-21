@@ -56,7 +56,7 @@ def title(executing: bool, soup_instance = None):
 
 def stripped(stop_word_list = [], soup_instance = None):
     """
-    Takes a soup instance and filters out html tags and stop words and returns the resulting text
+    Takes a soup instance and filters out html tags and stop words and returns the resulting text in all lower case
 
     Args:
         stop_word_list(list): A list of stop words to be filtered
