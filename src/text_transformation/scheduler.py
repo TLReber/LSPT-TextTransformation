@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+This file houses the Scheduler component which is the front facing api server
+"""
+
 
 class Scheduler:
     """
@@ -23,12 +27,13 @@ class Scheduler:
         
     """
 
-    def __init__(
-        self, name: str,
-    ):
+    def __init__(self, name: str, address: tuple):
         pass
 
-    def __del__(self):
+    def start(self):
+        """
+        Starts self.listen_thread and app
+        """
         pass
 
     def stop(self):

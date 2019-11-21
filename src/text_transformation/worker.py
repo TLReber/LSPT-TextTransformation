@@ -19,10 +19,11 @@ class Worker:
     Attributes:
         scheduler_name(str): name of scheduler receives requests from and
             pushes results to
+        transformations(dict): string of transformation names
     """
 
     def __init__(
-        self, scheduler_name: str,
+        self, scheduler_name: str, transformations: dict
     ):
         pass
 
