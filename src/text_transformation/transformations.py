@@ -52,7 +52,10 @@ def stripped(stop_word_list=[], soup_instance=None):
     return_text = ""
     for word in stripped_words:
         if word not in stop_word_list:
-            return_text += (return_text == "" ? word : " " + word)
+            if return_text != "":
+                return_text += " "
+            return_text += word
+            
     return return_text
 
 
@@ -80,16 +83,18 @@ def ngrams(stop_word_list=[], n=[], soup_instance=None):
 
     for ngram_size in n:
         return_dict[ngram_size] = dict()
-        for index in range(len(stripped_words) - (ngram - 1)):
+        for index in range(len(stripped_words) - (ngram_size - 1)):
             accepted_ngram = True
             ngram_key = ""
-            for ngram_index in range(n):
+            for ngram_index in n:
                 if stripped_words[index + ngram_index] in stop_word_list:
                     accepted_ngram = False
                     break
                 else:
-                    ngram_key += (ngram_index == 0 ? stripped_words[index + ngram_index] : 
-                        " " + stripped_words[index + ngram_index])
+                    if(ngram_index != 0):
+                        ngram_key += " "
+                    ngram_key + stripped_words[index + ngram_index]
+                    
             if accepted_ngram:
                 if ngram_key not in return_dict[ngram_size].keys():
                     return_dict[ngram_size][ngram_key] = list()
