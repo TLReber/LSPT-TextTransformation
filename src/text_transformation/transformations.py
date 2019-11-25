@@ -6,7 +6,7 @@ This file supplies helper functions to handle transformation of input data to
 output. The Worker uses these tools to parse its transformations
 """
 
-stop_word_list = []
+import re
 
 
 def title(executing: bool, soup_instance=None):
@@ -46,7 +46,14 @@ def stripped(stop_word_list=[], soup_instance=None):
         (string): A string that does not contain html tags or stop words
 
     """
-    pass
+    text = soup_instance.text
+    text = text.lower()
+    stripped_words = re.findall("[a-z]+(?:'[a-z]+)?", text)
+    return_text = ""
+    for word in stripped_words:
+        if word not in stop_word_list:
+            return_text += (return_text == "" ? word : " " + word)
+    return return_text
 
 
 def ngrams(stop_word_list=[], n=[], soup_instance=None):
@@ -66,4 +73,26 @@ def ngrams(stop_word_list=[], n=[], soup_instance=None):
             their own dictionary where the keys is each ngram while the values 
             are a list of their occurrences
     """
-    pass
+    text = soup_instance.text
+    text = text.lower()
+    stripped_words = re.findall("[a-z]+(?:'[a-z]+)?", text)
+    return_dict = dict()
+
+    for ngram_size in n:
+        return_dict[ngram_size] = dict()
+        for index in range(len(stripped_words) - (ngram - 1)):
+            accepted_ngram = True
+            ngram_key = ""
+            for ngram_index in range(n):
+                if stripped_words[index + ngram_index] in stop_word_list:
+                    accepted_ngram = False
+                    break
+                else:
+                    ngram_key += (ngram_index == 0 ? stripped_words[index + ngram_index] : 
+                        " " + stripped_words[index + ngram_index])
+            if accepted_ngram:
+                if ngram_key not in return_dict[ngram_size].keys():
+                    return_dict[ngram_size][ngram_key] = list()
+                return_dict[ngram_size][ngram_key].append(index)
+
+    return return_dict
