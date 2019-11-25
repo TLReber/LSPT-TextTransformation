@@ -25,7 +25,11 @@ def title(executing: bool, soup_instance=None):
         (string): A string that contains the title or ""
 
     """
-    pass
+    if(executing == False):
+        return ""
+    if(soup_instance.title == None):
+        return ""
+    return soup_instance.title;
 
 
 def stripped(stop_word_list=[], soup_instance=None):
