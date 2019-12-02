@@ -29,7 +29,9 @@ def title(executing: bool, soup_instance=None):
         return ""
     if(soup_instance.title == None):
         return ""
-    return soup_instance.title;
+    if(soup_instance.title.string == None):
+        return ""
+    return soup_instance.title.string;
 
 
 def stripped(stop_word_list=[], soup_instance=None):
@@ -86,14 +88,14 @@ def ngrams(stop_word_list=[], n=[], soup_instance=None):
         for index in range(len(stripped_words) - (ngram_size - 1)):
             accepted_ngram = True
             ngram_key = ""
-            for ngram_index in n:
+            for ngram_index in range(ngram_size):
                 if stripped_words[index + ngram_index] in stop_word_list:
                     accepted_ngram = False
                     break
                 else:
                     if(ngram_index != 0):
                         ngram_key += " "
-                    ngram_key + stripped_words[index + ngram_index]
+                    ngram_key += stripped_words[index + ngram_index]
                     
             if accepted_ngram:
                 if ngram_key not in return_dict[ngram_size].keys():

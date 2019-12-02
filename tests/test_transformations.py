@@ -35,7 +35,7 @@ html2 = (
 )
 html3 = "<html></html>"
 html4 = "<html><head><title>the</title></head><body></body></html>"
-html4 = "<html><head><title></title></head><body>the</body></html>"
+html5 = "<html><head><title></title></head><body>the</body></html>"
 
 
 def test_transformer_title():
@@ -123,7 +123,7 @@ def test_transformer_ngrams():
             "time": [9],
         },
         2: {"dormouse's story": [1, 4], "story once": [5], "once upon": [6]},
-        3: {"dormouse's story once": [5], "story once upon": [6]},
+        3: {"dormouse's story once": [4], "story once upon": [5]},
     }
     soup = BeautifulSoup(html2, "html.parser")
     assert t(stop_words_list, [1, 2, 3], soup) == {
