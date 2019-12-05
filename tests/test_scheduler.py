@@ -6,7 +6,7 @@ This file tests the scheduler by stubbing the worker an echo server and
 verifying that the json request coming in the same json request coming out
 """
 
-from multiprocessing import Process
+from multiprocessing import Process, Queue
 import pytest
 import requests
 import time
@@ -19,10 +19,16 @@ __copyright__ = "gregjhansell97"
 __license__ = "mit"
 
 
-def run_scheduler(name, address):
-    # run as separate process
-    s = Scheduler(name, address)
-    s.start()
+def run_scheduler(name, address, duration, q):
+    # run a scheduler for specified duration separate process
+    try:
+        s = Scheduler(name, address)
+        s.start()
+        time.sleep(duration)
+        s.stop()
+    except Exception:
+        q.put("ERROR")
+        raise Exception
 
 
 def run_echo_worker(name):
@@ -46,8 +52,12 @@ def run_requester(address, num_requests):
         assert r.status_code == 200
         assert r.json == {"echo": [1, 2, 3], "index": i}
 
+def test_scheduler_start_up():
+    s = Scheduler("scheduler")
+    s.start()
+    s.stop()
 
-def test_scheduler_echo_one_worker():
+def _test_scheduler_echo_one_worker():
     # run_scheduler as separate process
     scheduler_p = Process(
         target=run_scheduler, args=("scheduler", ("127.0.0.1", 8080))
@@ -63,7 +73,7 @@ def test_scheduler_echo_one_worker():
     worker_p.join()
 
 
-def test_scheduler_multiple_workers():
+def _test_scheduler_multiple_workers():
     scheduler_p = Process(
         target=run_scheduler, args=("scheduler", ("127.0.0.1", 8080))
     )
@@ -81,7 +91,7 @@ def test_scheduler_multiple_workers():
         w.join()
 
 
-def test_scheduler_multiple_workers_multiple_requests():
+def _test_scheduler_multiple_workers_multiple_requests():
     scheduler_p = Process(
         target=run_scheduler, args=("scheduler", ("127.0.0.1", 8080))
     )

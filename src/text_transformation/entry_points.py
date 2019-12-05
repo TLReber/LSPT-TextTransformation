@@ -8,6 +8,7 @@ worker script is run_worker which spins up a worker to help the scheduler
 processes incoming requests
 """
 import sys
+from text_transformation.scheduler import Scheduler
 
 
 def run_scheduler():
@@ -18,7 +19,8 @@ def run_scheduler():
     is the name of the scheduler which is used to workers can communicate with
     the scheduler
     """
-    pass
+    s = Scheduler("tt-scheduler")
+    s.host("0.0.0.0", 8080)
 
 
 def run_worker():

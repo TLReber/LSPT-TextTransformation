@@ -3,8 +3,12 @@
 
 """
 This module houses the Scheduler component which is the front facing api server
-
 """
+
+from aiohttp import web
+import asyncio
+from threading import Thread
+import zmq
 
 
 class Scheduler:
@@ -17,6 +21,7 @@ class Scheduler:
     of input
 
     Attributes:
+        address(tuple):(str, int), (ip, port)
         app(web.Application): helper tool to setup http request system
         name(str): string identifier unique across processes
         results(dict): key of unique work request id, value of future
@@ -26,20 +31,54 @@ class Scheduler:
         
     """
 
-    def __init__(self, name: str, address: tuple):
-        pass
+    def __init__(self, name: str):
+        self.name = name
+        # listening thread set-up
+        self.request_id = 0
+        self.results = {}
+        self.listen_thread = Thread(target=self.listen)
+
+        self.app = web.Application()
+        # adding current routes
+        routes = [
+            web.post(f"/transform", self.transform)
+        ]
+        self.app.add_routes(routes)
+
+    def host(self, ip, port):
+        """
+        Starts web app
+        """
+        web.run_app(self.app, host=ip, port=port)
 
     def start(self):
         """
         Starts self.listen_thread and app
         """
-        pass
+        self.listen_thread.start()
 
     def stop(self):
         """
         Ends self.listen_thread
         """
-        pass
+        context = zmq.Context()
+        ender = context.socket(zmq.PUSH)
+        ender.connect(f"ipc://./{self.name}-pull")
+        ender.send_pyobj((None, None))
+        self.listen_thread.join()
+    
+    def listen(self):
+        context = zmq.Context()
+        receiver = context.socket(zmq.PULL)
+        receiver.bind(f"ipc://./{self.name}-pull")
+        while True:
+            result_id, data = receiver.recv_pyobj()
+            #if result_id is None:
+                # signal that its time to stop
+            #    break
+            # recover future id
+            # need to lock?
+            self.results[result_id].set_result(data)
 
     async def transform(self, request):
         """
@@ -53,3 +92,4 @@ class Scheduler:
 
         """
         pass
+
