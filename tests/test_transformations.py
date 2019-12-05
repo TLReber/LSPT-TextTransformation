@@ -230,8 +230,15 @@ def test_transformer_ngrams():
     assert t(stop_words_list, [1, 2, 3], soup) == {1: {}, 2: {}, 3: {}}
     soup = BeautifulSoup(text4, "html.parser")
     assert t(stop_words_list, [1, 2, 3], soup) == {1: {}, 2: {}, 3: {}}
-    soup = BeautifulSoup(text4, "html.parser")
+    soup = BeautifulSoup(text5, "html.parser")
     assert t(stop_words_list, [1, 2, 3], soup) == {1: {}, 2: {}, 3: {}}
+    soup = BeautifulSoup(text6, "html.parser")
+    assert t(stop_words_list, [1, 2, 3], soup) == {
+    	1: {"script": [0, 4], "console": [1], "log": [2], "hello": [3]}, 
+    	2: {"script console": [0], "console log": [1], "log hello": [2], "hello script": [3]}, 
+    	3: {"script console log": [0], "console log hello": [1], "log hello script": [2]}
+    }
+    #script console log hello script
     soup = BeautifulSoup(html1, "html.parser")
     assert t(stop_words_list, [1, 2, 3, 4], soup) == {
         1: {
