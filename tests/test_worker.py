@@ -24,7 +24,7 @@ def run_worker(name):
     w.start()
 
 
-def test_start_up_worker():
+def _test_start_up_worker():
     # run worker as separate process, wait then end it
     worker_p = Process(target=run_worker, args=("W"))
     time.sleep(1)
@@ -33,7 +33,7 @@ def test_start_up_worker():
     worker_p.join()
 
 
-def test_start_up_multiple_workers():
+def _test_start_up_multiple_workers():
     workers = [Process(target=run_worker, args=("W")) for i in range(10)]
     time.sleep(1)
     # end processes
@@ -42,7 +42,7 @@ def test_start_up_multiple_workers():
         w.join()
 
 
-def test_one_worker_transform_no_transformations():
+def _test_one_worker_transform_no_transformations():
     context = zmq.Context()
     # create sender
     sender = context.socket(zmq.PUSH)
@@ -64,7 +64,7 @@ def test_one_worker_transform_no_transformations():
     worker_p.join()
 
 
-def test_multiple_workers_transform_no_transformations():
+def _test_multiple_workers_transform_no_transformations():
     # makes a blocking call, don't test until ready
     context = zmq.Context()
     # create sender
