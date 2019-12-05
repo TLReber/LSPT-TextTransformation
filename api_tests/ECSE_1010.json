@@ -1,0 +1,975 @@
+[{
+	"id" : 1,
+	"type":"html",
+	"data":"<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0047)https://www.ecse.rpi.edu/courses/F19/ECSE-1010/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ECSE 1010</title>
+
+<style type="text/css">
+<!--
+body {
+	background-color: #FFFFCC;
+}
+.style1 {
+	font-size: medium;
+	font-weight: bold;
+}
+.style2 {
+	color: #0000FF;
+	font-weight: bold;
+}
+.style4 {color: #FF0000}
+.style5 {
+	color: #FF0000;
+	font-style: italic;
+}
+.style3 {	color: #FF0000;
+	font-weight: bold;
+}
+.style6 {
+	color: #00FF00;
+	font-weight: bold;
+}
+.style7 {
+	color: #FFFF00;
+	font-weight: bold;
+}
+.style8 {color: #0000FF}
+-->
+</style>
+</head>
+
+<body>
+<h1>ECSE 1010</h1>
+<h2>Fall 2019 <span class="style5">{First day of classes is Thursday, August 29}</span></h2>
+<h2><a href="https://piazza.com/class/j6sdzbtxjie2l4">piazza</a>	| <a href="https://lms.rpi.edu/">LMS</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#schedule">Schedule</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#duedates">Due Dates</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#staff">Staff</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#resourcesbyday">Class Days</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#attendance">Attendance </a>| <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#othercourses">Other Courses</a></h2>
+<h2><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#software">Software</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#analogdiscovery">Analog Discovery</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#spice">SPICE</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#excel">Excel</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#matlab">Matlab</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#voltagedivider">Voltage Divider</a></h2>
+<h2><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#tools">Tools</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#misc">Misc</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#quizzes">Quizzes</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#vocabulary">Vocabulary</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#amplitude">Amplitude</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#demos">Demos</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#grades">Grading</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/1010%20Syllabus.pdf">Syllabus</a> | <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#parts">Parts</a></h2>
+<h2><a name="schedule"></a>Schedule</h2>
+<table border="1">
+  <caption>
+  <span class="style1"> Daily Schedule<br>
+  <em><span class="style8">With Links to Resources</span></em></span><br>
+  </caption>
+  <tbody><tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="col">Week</th>
+    <th bgcolor="#CCCCCC" scope="col">Monday</th>
+    <th bgcolor="#CCCCCC" scope="col">Thursday</th>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">1</th>
+    <td bgcolor="#CCCCCC"><div align="center"><span class="style3"> </span></div></td>
+    <td bgcolor="#CCCCCC"><div align="center">1: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#1">Overview, Breadboards</a> August 29<br>
+    </div></td>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">2</th>
+    <td bgcolor="#CCCCCC"><div align="center">2: <span class="style3">(Tues)</span> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#2">Intro to Analog Discovery (AD)</a> September 3 (Tuesday) <br>
+    </div></td><td bgcolor="#CCCCCC"><div align="center">3: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#3">Resistors and Voltage Dividers</a> September 5<br>
+    </div></td>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">3</th>
+    <td bgcolor="#CCCCCC"><div align="center">4:  <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#4">Analysis Challenge, Real vs. Ideal Characteristics</a> September 9</div></td>
+    <td bgcolor="#CCCCCC"><div align="center">5:  <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#5"><span class="style2">Quiz 1</span></a> September 12</div></td>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">4</th>
+    <td bgcolor="#CCCCCC"><div align="center">6: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#6">Ladder Circuits, Nodes and Ground</a> September 16</div></td>
+    <td bgcolor="#CCCCCC"><div align="center">7: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#7">Matrix Formulation, Matlab Introduction, Nodal Analysis</a> September 19</div></td>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">5</th>
+    <td bgcolor="#CCCCCC"><div align="center">8: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#8">Multiple Sources (Superposition) </a> September 23</div></td>
+    <td bgcolor="#CCCCCC"><div align="center">9: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#9">Constrained Design Problem - Linear Circuits</a> September 26</div></td>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">6</th>
+    <td bgcolor="#CCCCCC"><div align="center">10: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#10">Open Design Problem - Linear Circuits</a> September 30</div></td>
+    <td bgcolor="#CCCCCC"><div align="center">11: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#11"><span class="style2">Quiz 2</span></a> October 3</div></td>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">7</th>
+    <td bgcolor="#CCCCCC"><div align="center">12: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#12"> Matrix Inverse</a> October 7</div></td>
+    <td bgcolor="#CCCCCC"><div align="center">13: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#13"> Least Squares - Linear Fit (Voltage Dividers)</a> October 10</div></td>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">8</th>
+    <td bgcolor="#CCCCCC"><div align="center"><span class="style3">No Class: Columbus Day, October 14</span> </div></td>
+    <td bgcolor="#CCCCCC"><div align="center">14: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#14">Rectangular Matrices</a> October 17</div></td>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">9</th>
+    <td bgcolor="#CCCCCC"><div align="center">15: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#15">Design Problem</a> October 21</div></td>
+    <td bgcolor="#CCCCCC"><div align="center">16: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#16"><span class="style2">Quiz 3</span></a> October 24</div></td>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">10</th>
+    <td bgcolor="#CCCCCC"><div align="center">17: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#17">RC Circuits</a> October 28 </div></td>
+    <td bgcolor="#CCCCCC"><div align="center">18: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#18">RLC Circuits</a> October 31 </div></td>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">11</th>
+    <td bgcolor="#CCCCCC"><div align="center">19: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#19">Constrained Design Problem </a> November 4 </div></td>
+    <td bgcolor="#CCCCCC"><div align="center">20: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#20">Open Design Problem </a> November 7 </div></td>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">12</th>
+    <td bgcolor="#CCCCCC"><div align="center">21: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#21"><span class="style2">Quiz 4</span></a> November 11 </div></td>
+	<td bgcolor="#CCCCCC"><div align="center">22: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#22">AC Steady State Circuits</a> November 14 </div></td>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">13</th>
+    <td bgcolor="#CCCCCC"><div align="center">23: <span class="style4"><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#23">Power and Vectors</a></span> November 18 </div></td>
+    <td bgcolor="#CCCCCC"><div align="center">24: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#24">Diodes</a> November 21 </div></td>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">14</th>
+    <td bgcolor="#CCCCCC"><div align="center">25: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#25">Rectifiers</a> November 25 </div></td>
+    <td bgcolor="#CCCCCC"><div align="center"><span class="style3">No Class: Thanksgiving Weekend, November 28</span> </div></td>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">15</th>
+    <td bgcolor="#CCCCCC"><div align="center">26: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#26">Open Design Problem</a> December 2 </div></td>
+    <td bgcolor="#CCCCCC"><div align="center">27: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#27"><span class="style2">Quiz 5</span></a> December 5 </div></td>
+  </tr>
+  <tr bgcolor="#66FFFF">
+    <th bgcolor="#CCCCCC" scope="row">17</th>
+    <td bgcolor="#CCCCCC"><div align="center">28: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/#28">Open Design Problem</a> December 9 </div></td>
+    <td bgcolor="#CCCCCC"><div align="center">Finals</div></td>
+  </tr>
+</tbody></table>
+<h2><a name="duedates"></a>Due Dates</h2>
+<p>Experiments are due two class days after they are assigned. The assignment class # is included in the title of each experiment. 
+Experiments turned in late will receive the following penalties: 10% per class day late (no penalty over weekends). 
+The same due dates and penalties hold for projects, except for the final project, which is due on the last day of classes (not the last day we meet). </p>
+<p>There is a Problem Set associated with most class days (except for quizzes). The Problem Set # (i.e. PS #) corresponds to the Class # for the 
+material addressed. Problem Sets are released at 6am of the day indicated on the calendar and is to be completed by 11:59pm of the next class day. 
+It is always possible to attempt Problem Sets more than once. Any attempts completed by the due date &amp; time will receive full credit. 
+For example, PS#5 is to be completed (for full credit) by the 11:59pm on the day of Class #6. Problem sets completed after the due date 
+receive half credit. Late problem sets will be available for two more class days, ie. three class days after the original assignment. </p>
+<p>Quizzes will be given during regular class time. They are designed to be finished in about one hour, but do not need to be handed in 
+until the end of the entire 1 hour and 50 minute class. If you require adjustments for learning disabilities, letters from the Dean 
+are to be submitted at the beginning of the semester.  </p>
+<p><strong>Laboratory report submission:</strong> We will be using Gradescope for lab report submission, grading, and feedback. <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/gradescope_tips.pdf">Tips for gradescope</a> </p>
+
+<h2><a name="staff"></a>Staff</h2>
+
+<br>
+<table border="1">
+  <tbody><tr>
+    <th bgcolor="#00FF00" scope="col">Section 1</th>
+    <th bgcolor="#00FF00" scope="col">INSTRUCTOR</th>
+    <th bgcolor="#00FF00" scope="col">TA</th>
+    <th bgcolor="#00FF00" scope="col">TA</th>
+  </tr>
+  <tr>
+    <th bgcolor="#00FF00" scope="row">Name</th>
+    <td>M. Hameed</td>
+    <td>Hongji Guo</td>
+    <td>Nazifa Rumman</td>
+  </tr>
+  <tr>
+    <th bgcolor="#00FF00" scope="row">Office</th>
+    <td>JEC 7006</td>
+    <td bgcolor="#CCCCCC"></td>
+    <td bgcolor="#CCCCCC"></td>
+  </tr>
+  <tr>
+    <th bgcolor="#00FF00" scope="row">Open Shop</th>
+    <td bgcolor="#CCCCCC">&nbsp;</td>
+    <td>4201 JEC</td>
+    <td>4201 JEC</td>
+  </tr>
+  <tr>
+    <th bgcolor="#00FF00" scope="row">Office Hours</th>
+    <td>Tuesday 1:00-3:00pm</td>
+    <td>Wednesday 6-8pm</td>
+    <td>Monday 6-8pm</td>
+  </tr>
+  <tr>
+    <th bgcolor="#00FF00" scope="row">Email</th>
+    <td><a href="mailto:hameem2@rpi.edu">hameem2@rpi.edu</a></td>
+    <td><a href="mailto:guoh11@rpi.edu">guoh11@rpi.edu</a></td>
+    <td><a href="mailto:rumman@rpi.edu">rumman@rpi.edu</a></td>
+  </tr>
+</tbody></table>
+<br>
+<table border="1">
+  <tbody><tr>
+    <th bgcolor="#00FF00" scope="col">Section 2</th>
+    <th bgcolor="#00FF00" scope="col">INSTRUCTOR</th>
+    <th bgcolor="#00FF00" scope="col">TA</th>
+    <th bgcolor="#00FF00" scope="col">TA</th>
+  </tr>
+  <tr>
+    <th bgcolor="#00FF00" scope="row">Name</th>
+    <td>J. H. Braunstein</td>
+    <td>Md. Ibrahim Ibne Alam</td>
+    <td>Julia Hariharan</td>
+  </tr>
+  <tr>
+    <th bgcolor="#00FF00" scope="row">Office</th>
+    <td>JEC 6020</td>
+    <td bgcolor="#CCCCCC"></td>
+    <td bgcolor="#CCCCCC"></td>
+  </tr>
+  <tr>
+    <th bgcolor="#00FF00" scope="row">Open Shop</th>
+    <td bgcolor="#CCCCCC">&nbsp;</td>
+    <td>4201 JEC</td>
+    <td>4201 JEC</td>
+  </tr>
+  <tr>
+    <th bgcolor="#00FF00" scope="row">Office Hours</th>
+    <td>Monday/Thursday 10:00am-11:50am</td>
+    <td>Tuesday 6-8pm</td>
+    <td>Sunday 6-8pm</td>
+  </tr>
+  <tr>
+    <th bgcolor="#00FF00" scope="row">Email</th>
+    <td><a href="mailto:braunj4@rpi.edu">braunj4@rpi.edu</a></td>
+    <td><a href="mailto:alamm2@rpi.edu">alamm2@rpi.edu</a></td>
+    <td><a href="mailto:harihj@rpi.edu">harihj@rpi.edu</a></td>
+  </tr>
+</tbody></table>
+
+<br>
+<p>Other Hours: Prof. Braunstein has an open office door policy (If his door is open, you can stop in.).</p> 
+<p>Open shop hours are shared with other courses in the Core Studio classroom, JEC-4201. Specific times for ECSE 1010&nbsp;TAs&nbsp;are posted in the table below in green&nbsp;<span class="style6">Open</span>. Yellow &nbsp;<span class="style7">Open</span>&nbsp;indicates open shop&nbsp;<strong>without an assigned ECSE 1010 TA</strong>. Please note that TA office hours are held during their open shop sessions. Open shop is automatically cancelled the weekend before a Monday Holiday and after a Friday Holiday.&nbsp;For&nbsp;<em><strong>Sunday open shop</strong></em>, the handicap entrance on the 3rd floor of JEC should be open.</p>
+<p align="center" class="MsoNormal" style="margin:0in;
+text-align:center"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><span style="color:red">OPEN SHOP HOURS BEGIN after First Week.</span><br>
+  Schedule for JEC-4201 </span></p>
+<table width="1000" border="2" align="center">
+  <tbody><tr>
+    <td>&nbsp;</td>
+    <td><div align="center">Sunday</div></td>
+    <td><div align="center">Monday</div></td>
+    <td><div align="center">Tuesday</div></td>
+    <td><div align="center">Wednesday</div></td>
+    <td><div align="center">Thursday</div></td>
+    <td><div align="center">Friday</div></td>
+    <td><div align="center">Saturday</div></td>
+  </tr>
+  <tr>
+    <td>8AM-9AM</td>
+    <td><div align="center"> </div></td>
+    <td bordercolor="#000000"><div align="center">EI</div></td>
+    <td bordercolor="#000000"><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td bordercolor="#000000"><div align="center">EI</div></td>
+    <td bordercolor="#000000"><div align="center"></div></td>
+    <td><div align="center"></div></td>
+  </tr>
+  <tr>
+    <td>9AM-10AM</td>
+    <td><div align="center"> </div></td>
+    <td bordercolor="#000000"><div align="center">EI</div></td>
+    <td bordercolor="#000000"><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td bordercolor="#000000"><div align="center">EI</div></td>
+    <td bordercolor="#000000"><div align="center"></div></td>
+    <td><div align="center"></div></td>
+  </tr>
+  <tr>
+    <td>10AM-11AM</td>
+    <td><div align="center"> </div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">Circuits</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center"></div></td>
+  </tr>
+  <tr>
+    <td>11AM-12PM</td>
+    <td><div align="center"> </div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">Circuits</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center"></div></td>
+  </tr>
+  <tr>
+    <td>12PM-1PM</td>
+    <td><div align="center"> </div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">Circuits</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center"></div></td>
+  </tr>
+  <tr>
+    <td>1PM-2PM</td>
+    <td><div align="center"> </div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center"></div></td>
+  </tr>
+  <tr>
+    <td>2PM-3PM</td>
+    <td><div align="center"> </div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">Circuits</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center"></div></td>
+  </tr>
+  <tr>
+    <td>3PM-4PM</td>
+    <td bordercolor="#006600" bgcolor="#FFFF00"><div align="center">Open</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">Circuits</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center">LITEC</div></td>
+    <td><div align="center"></div></td>
+  </tr>
+  <tr>
+    <td>4PM-5PM</td>
+    <td bordercolor="#006600" bgcolor="#FFFF00"><div align="center">Open</div></td>
+    <td bordercolor="#000000"><div align="center">EI</div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center">Circuits</div></td>
+    <td bordercolor="#000000"><div align="center">EI</div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+  </tr>
+  <tr>
+    <td>5PM-6PM</td>
+    <td bordercolor="#006600" bgcolor="#FFFF00"><div align="center">Open</div></td>
+    <td bordercolor="#000000"><div align="center">EI</div></td>
+    <td bgcolor="#FFFF00"><div align="center">Open</div></td>
+    <td bordercolor="#006600" bgcolor="#FFFF00"><div align="center">Open</div></td>
+    <td bordercolor="#000000"><div align="center">EI</div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+  </tr>
+  <tr>
+    <td>6PM-7PM</td>
+    <td bordercolor="#006600" bgcolor="#00FF00"><div align="center">Open</div></td>
+    <td bordercolor="#006600" bgcolor="#00FF00"><div align="center">Open</div></td>
+    <td bordercolor="#006600" bgcolor="#00FF00"><div align="center">Open</div></td>
+    <td bordercolor="#006600" bgcolor="#00FF00"><div align="center">Open</div></td>
+    <td bordercolor="#006600" bgcolor="#00FF00"><div align="center">Open</div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+  </tr>
+  <tr>
+    <td>7PM-8PM</td>
+    <td bordercolor="#006600" bgcolor="#00FF00"><div align="center">Open</div></td>
+    <td bordercolor="#006600" bgcolor="#00FF00"><div align="center">Open</div></td>
+    <td bordercolor="#006600" bgcolor="#00FF00"><div align="center">Open</div></td>
+    <td bordercolor="#006600" bgcolor="#00FF00"><div align="center">Open</div></td>
+    <td bordercolor="#006600" bgcolor="#00FF00"><div align="center">Open</div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+  </tr>
+  <tr>
+    <td>8PM-9PM</td>
+    <td bordercolor="#006600" bgcolor="#FFFF00"><div align="center">Open</div></td>
+    <td bordercolor="#006600" bgcolor="#FFFF00"><div align="center">Open</div></td>
+    <td bgcolor="#FFFF00"><div align="center">Open</div></td>
+    <td bgcolor="#FFFF00"><div align="center">Open</div></td>
+    <td bgcolor="#FFFF00"><div align="center">Open</div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+  </tr>
+  <tr>
+    <td>9PM-10PM</td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+    <td><div align="center"></div></td>
+  </tr>
+</tbody></table>
+<h2 align="center"><a name="grading"></a>Grading Responsibilities</h2>
+<div align="center">
+  <table width="800" border="1">
+    <tbody><tr>
+      <th width="263" scope="col">Name</th>
+      <th width="210" scope="col">Experiments (Class #)</th>
+      <th width="151" scope="col">Projects (Class #)</th>
+      <th width="148" scope="col">Quizzes</th>
+    </tr>
+    <tr>
+      <td>Yuan Liu</td>
+      <td><div align="center">All</div></td>
+      <td><div align="center">All</div></td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Jeffrey Braunstein</td>
+      <td><div align="center">None</div></td>
+      <td><div align="center">None</div></td>
+      <td>1, 2, 3</td>
+    </tr>
+  </tbody></table>
+</div>
+<h2><a name="resourcesbyday"></a>Resources by Class Day</h2>
+<ul>
+  <li><a name="1"></a>Class 1 Overview, Breadboards
+    <ul>
+      <li>PPT: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class01_ECSE1010-1-v2.pptx">Introduction to ECSE 1010</a></li>
+      <li>Exp: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab01-1010_Introduction.pdf">Introduction</a></li>
+      <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab01_Report_Template.doc">Experiment 01 Template</a></li>
+      <li>Videos: <br> 
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://youtu.be/kN5CsonQ8Bg">Intro to Protoboards and DC Circuit Measurements</a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://youtu.be/NT6Fr3fY-L4">DC Measurements - Multimeters</a>
+		</li>
+      <li>PS1: <a href="https://lms.rpi.edu/">LMS</a></li>
+    </ul>
+  </li>
+  <li><a name="2"></a>Class 2 Intro to Analog Discovery (AD)
+    <ul>
+      <li>PPT: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class02_AnalogDiscovery1010_v2.pptx">Intro Analog Discovery</a></li>
+      <li>Exp: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab02-1010_Introduction_to_Analog_Discovery.pdf">Introduction to Analog Discovery </a></li>
+      <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab02_Report_Template.doc">Experiment 02 Template</a></li>
+      <li>Videos: <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab02_Intro%20to%20Analog%20Discovery.mp4">Introduction to Analog Discovery </a><br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (also see the YouTube) <a href="https://www.youtube.com/playlist?list=PLZXERmYWSLA9UlzqaJLm5va3BfydHj0Wx">Analog Discovery</a>
+      </li>
+      <li>PS2: <a href="https://lms.rpi.edu/">LMS</a></li>
+    </ul>
+  </li>
+  <li><a name="3"></a>Class 3 Resistors and Voltage Dividers
+    <ul>
+      <li>PPT: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_03_Voltage_Dividers.pptx">Voltage Dividers  </a></li>
+      <li>TPS: What is a resistor? Select a resistor from your parts kit in the range from 1kOhm to 10kOhm. Determine the maximum current that the resistor can carry.</li>
+      <li>Exp: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab03-1010%20Analog_Discovery%20and%20Voltage%20Dividers%20v2.pdf">Voltage Dividers, Resistors</a></li>
+      <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab03_Report_Template.doc">Experiment 03 Template</a></li>
+      <li>Videos: <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.khanacademy.org/science/physics/circuits-topic/circuits-resistance/v/circuits-part-2?modal=1"> Resistors in Series </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.khanacademy.org/science/physics/circuits-topic/circuits-resistance/v/circuits-part-3?modal=1"> Resistors in Parallel </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.youtube.com/watch?v=0abefBVOSdg">Voltage Dividers (First 10 minutes) </a>
+      </li>
+      <li>PS3: <br>
+	        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/PS/PS03.pdf">Circuit for PS03</a><br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://lms.rpi.edu/">LMS</a><br>
+      </li>
+    </ul>
+  </li>
+  <li><a name="4"></a>Class 4 Analysis Challenge, Real vs. Ideal Characteristics
+    <ul>
+      <li>PPT: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_03_Voltage_Dividers.pptx">Voltage Dividers  </a></li>
+      <li>TPS: How does one measure I and V using Analog Discovery? Can they both be measured directly? What is the input impedance of an analog input channel for the Analog Discovery board? What is a typical value for the internal resistance of a heavy duty 9V battery?</li>
+      <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab04-1010_Battery_Characteristics.pdf">Battery Characteristics</a></li>
+      <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab04_Report_Template.doc">Experiment 04 Template</a></li>
+      <li>Videos: <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.youtube.com/watch?v=0abefBVOSdg">Voltage Dividers (Last 15 minutes) </a>
+      </li><li>PS3: <br>
+	        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/PS/PS04.pdf">Data for PS04</a><br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://lms.rpi.edu/">LMS</a><br>
+      </li>
+    </ul>
+  </li>
+  <li><a name="5"></a>Class 5: <span class="style2">Quiz I
+    </span>
+    <ul>
+      <li>Quiz 1 Material: Analog Discovery Board, Ohm's Law, Series and Parallel Resistors, Voltage Dividers </li>
+      <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010Quiz1F19_Solutions.pdf">Quiz 1 Solutions</a></li>
+    </ul>
+  </li>
+  <li><a name="6"></a>Class 6 Nodal Voltages, LTspice simulation
+    <ul>
+      <li>PPT:  <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_06_Identifying_Nodes.pdf">Identifying_Nodes</a></li>
+      <li>Software: <a href="https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html">LTspice Software</a></li>
+      <li>TPS: Why is a nodal voltage different than a voltage difference</li>
+      <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab06-1010_Nodal_Voltages.pdf">Nodal Voltages and Simulation</a></li>
+      <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab06_Report_Template.doc"> Experiment 06 Template</a></li>
+      <li>Videos: <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab5_Identifying%20Nodes.mp4">Identifying Nodes </a><br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab5_Intro%20to%20LTSpice.mp4">Introduction to LTspice </a><br>
+	  <!-- <a href="https://youtu.be/4MvkF5bprsk"></a> This video is longer than usual because it addresses some related topics. The timing for each topic is found in the description of the video so you can jump around a bit if you prefer. Otherwise watch the video straight through, pausing at points where it is suggested that you think about a concept or question and then restarting. --></li>
+      <li>PS: <a href="https://lms.rpi.edu/">LMS</a></li>
+    </ul>
+  </li>
+  <li><a name="7"></a>Class 7: Matrices, Nodal Analysis
+      <ul>
+      <li>PPT:  <br>
+	  	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_07_Voltage_Divider_Analysis.pdf">Voltage Divider Circuit Analysis</a> <br>
+	  	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_07_Nodal_Analysis_Background.pdf">Nodal Analysis Background</a> <br>
+	 	 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_07_Nodal_Analysis_Example.pdf">Nodal Analysis Example</a> <br>
+      </li>
+      <li>TPS: How do you know a matrix has an inverse? </li>
+      <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab07-1010_Nodal_Analysis.pdf">Building and Solving Matrices for Voltages</a></li>
+      <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab07_Report_Template.doc">Experiment 07 Template</a></li>
+	  <li>Videos: <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab7_Voltage_Divider_Example.MP4">Series/parallel resistor combinations and voltage divider</a><br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab7_Nodal_Background.MP4">Nodal Analysis background </a><br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab7_Nodal_Example.MP4">Nodal Analysis example </a><br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Class_07_Solving_Equations_Using_MATLAB.mp4">Solving linear equations using MATLAB </a><br>
+      </li>
+      <li>PS: <a href="https://lms.rpi.edu/">LMS</a></li>
+    </ul>
+</li>
+  <li><a name="8"></a>Class 8: Superposition in linear systems
+  
+    <!--<em><strong><span class="style4">{All activities except the Problem Set moved to class #9}</span></strong></em>-->
+    <ul>
+      <li>PPT:  <br>
+	  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_08_Nodal_analysis_multiple_sources.pdf">Nodal analysis with multiple sources</a> <br>
+	  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_08_LTspice_Superposition.pptx">LTspice simulation with multiple sources</a> <br>
+	  </li>
+      <li>TPS: Can we place sources with different voltages in series? Can we place sources with different voltages in series?</li>
+      <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab08-1010_Nodal_Analysis_Multiple_Sources.pdf"> Nodal Analysis Part II</a>  </li>
+      <li>Template:  <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab08_Report_Template.doc">Experiment 08 Template</a> </li>
+      <li>Videos: <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Class_08_Nodal_Analysis_Multiple_Sources.MP4">Nodal analysis with multiple sources</a><br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Class_08_LTspice_superposition.mp4">LTspice simulation with multiple sources</a><br>
+      </li>
+      <li>PS:  <a href="https://lms.rpi.edu/">LMS</a></li>
+    </ul>
+  </li>
+  <li><a name="9"></a>Class 9: Constrained Circuit Design
+    <ul>
+      <li>PPT: <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_07_Voltage_Divider_Analysis.pdf">Review Voltage Divider Circuit Analysis</a> <br>
+	 	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_07_Nodal_Analysis_Background.pdf">Review Nodal Analysis Background</a> <br>
+      </li>
+      <li>TPS: How many circuits can be designed to give a specific set of output voltages?</li>
+      <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab09-1010_Constrained_Design_nodes.pdf"> Constrained Circuit Design</a></li>
+      <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab09_Report_Template.doc">Experiment 09 Template</a></li>
+      <li>Video: <br> 
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.khanacademy.org/science/physics/circuits-topic/circuits-resistance/v/circuits-part-2?modal=1"> Review Resistors in Series </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.khanacademy.org/science/physics/circuits-topic/circuits-resistance/v/circuits-part-3?modal=1"> Review Resistors in Parallel </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab7_Voltage_Divider_Example.MP4">Review Voltage Dividers</a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab7_Nodal_Background.MP4">Review Nodal Analysis background </a>
+      </li>
+      <li>PS:   <a href="https://lms.rpi.edu/">LMS</a></li>
+    </ul>
+  </li>
+  <li><a name="10"></a>Class 10: Open Circuit Design
+    <ul>
+      <li>PPT: <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_07_Voltage_Divider_Analysis.pdf">Review Voltage Divider Circuit Analysis</a> <br>
+	 	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_07_Nodal_Analysis_Background.pdf">Review Nodal Analysis Background</a> <br>
+      </li>
+      <li>TPS: If two resistors are in series, is the equivalent resistance larger or smaller? If two resistors are in parallel, is the equivalent resistance larger or smaller?</li>
+      <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab10-1010_Circuit_Design_nodes.pdf"> Constrained Circuit Design</a></li>
+      <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab10_Report_Template.doc">Experiment 10 Template</a></li>
+      <li>Video: <br> 
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.khanacademy.org/science/physics/circuits-topic/circuits-resistance/v/circuits-part-2?modal=1"> Review Resistors in Series </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.khanacademy.org/science/physics/circuits-topic/circuits-resistance/v/circuits-part-3?modal=1"> Review Resistors in Parallel </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab7_Voltage_Divider_Example.MP4">Review Voltage Dividers</a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab7_Nodal_Background.MP4">Review Nodal Analysis background </a>
+      </li>
+      <li>PS:   Quiz on Thursday
+    </li></ul>
+  </li>
+  <li><a name="11"></a>Class 11: <span class="style2">Quiz 2
+    </span>
+    <ul>
+      <li>Quiz 2 Material: Review Quiz 1 material, Ladder Circuits, KCL, Nodal Analysis, Matrix Mathematics, Multiple Sources (Superposition)</li>
+	  <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010Quiz2F19_solutions.pdf">Quiz 2 Solutions</a></li>
+    </ul>
+  </li>
+  <li><a name="12"></a>Class 12: 
+    <ul>
+      <li>PPT: <br> 
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_12_Matrix_Multiplication_simple.pdf"> Matrix Multiplication 3x3 and 3x1 </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_12_Matrix_Multiplication_simple2.pdf"> Matrix Multiplication 3x3 and 3x3 </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_12_Matrix_Multiplication_General_Case.pdf"> Matrix Multiplication General Case </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_12_Matrix_Multiplication_inverse_simple.pdf">2x2 Matrix Inversion </a><br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_12_Matrix_Multiplication_inverse_simple2.pdf">3x3 Matrix Inversion </a>
+      </li>
+      <li>TPS: Name some real-life applications of linear algebra? </li>
+      <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab12-1010_Matrices_Part_2.pdf">Matrices, Part 2</a></li>
+      <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab12_Report_Template.doc">Experiment 12 Template</a></li>
+      <li>Video: <br> 
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Class_12_Matrix_Multiplication_simple.MP4"> Matrix Multiplication 3x3 and 3x1 </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Class_12_Matrix_Multiplication_simple2.MP4"> Matrix Multiplication 3x3 and 3x3 </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Class_12_Matrix_Multiplication_General_Case.MP4"> Matrix Multiplication General Case </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Class_12_Matrix_Multiplication_inverse_simple.MP4">2x2 Matrix Inversion </a><br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Class_12_Matrix_Multiplication_inverse_simple2.MP4">3x3 Matrix Inversion </a>
+      </li>
+      <li>PS: <a href="https://lms.rpi.edu/">LMS</a></li>
+    </ul>
+  </li>
+  <li><a name="13"></a>Class 13: 
+    <ul>
+      <li>PPT: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Lab13_tolerance_LTspice.pptx"> Tolerance of Resistors: Simulation in LTspice </a></li>
+      <li>TPS: Is a linear approximation always useful when looking at data?</li>
+      <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab13-1010_Linear_Approximations.pdf">Lab13-1010_Linear_Approximations</a></li>
+      <li>Matlab script file: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/lab13_example_plot_line.m">Lab 13 m-file</a></li>
+      <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab13_Report_Template.doc">Experiment 13 Template</a></li>
+      <li>Video: <br> 
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab13_tolerance_LTspice.mp4"> Tolerance of Resistors: Simulation in LTspice </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab13_import_Matlab.mp4"> Import data from Excel to MATLAB </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab13_linear_fit.mp4"> Linear Regression in MATLAB </a> <br>
+		</li>
+      <li>PS: <a href="https://lms.rpi.edu/">LMS</a></li>
+    </ul>
+  </li>
+  <li><a name="14"></a>Class 14:
+    <ul>
+      <li>PPT: <br>
+	  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_14_Rectangular_Matrices.pptx">Solving Rectangular Matrices using Pseudo-inverse</a> <br>
+	  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_14_Mean.pptx">Arithmetic Mean</a> <br>
+	  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_14_std.pptx">Standard Deviation</a> <br>
+	  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_14_corrcoef.pptx">Correlation Coefficient</a> <br>
+	  	  </li>
+      <li>TPS: Give two real world applications of histogram (density curves or probability density functions) data usage?</li>
+      <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab14-1010_Statistical_Analysis.pdf"> Statistical Analysis</a></li>
+      <li>Excel file: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab13_Data.xlsx">Lab 13 part f, data collected for resistor R2</a></li>
+	  <li>Histogram plot: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab13_hist.pdf">Histogram (distribution) of resitor R2 data</a></li>
+	  <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab14_Report_Template.doc">Experiment 14 Template</a></li>
+      <li>Video: <br> 
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab14_Rectangular_Matrices.mp4"> Solving Rectangular Matrices using Pseudo-inverse </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab14_Mean.mp4"> Arithmetic Mean </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab14_std.mp4"> Standard Deviation </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Videos/Lab14_corrcoef.mp4"> Correlation Coefficient </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.youtube.com/watch?v=PUvUQMQ7xQk"> Khan Academiy: Density curves </a> <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://www.youtube.com/watch?v=JFesFhraX2M"> Khan Academiy: Median, mean and skew from density curves </a> <br>
+		</li>
+		
+	  <!-- <li>Video:  There are several useful videos on complex numbers including <a href="http://youtu.be/CtZ8HfuJM18">Part 1</a> Quick review of complex numbers, complex plane, polar representation and Euler's Identity; <a href="http://youtu.be/iw-7EoxAhVY">Part 2</a> The real and imaginary parts of ratios and magnitude of complex numbers; and <a href="http://youtu.be/iw-7EoxAhVY">Part 3</a> The phase of a complex number. <a href="https://youtu.be/ZhNDcdtf8t4">Phasor Analysis of Circuits</a> <a href="https://youtu.be/D7_CThoyPtE">Phasor Examples</a>-->
+      <li>PS: <a href="https://lms.rpi.edu/">LMS</a></li>
+      <!-- <li>Additional Out-of-class Activity: The MATLAB On-Ramp certificate is due.</li> -->
+    </ul>
+  </li>
+  <li><a name="15"></a>Class 15: </li>
+  <ul>
+    <li>PPT: <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 	<a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Diodes%20Pt2%201010.pptx">Diodes Pt 2</a> LEDs as optical transmitters.</li>
+    <li>TPS: What type of relationship exists between light intensity and current in a photodiode?</li>
+    <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab15-1010_Design_problem_linear_fit.pdf"> Photodetector properties</a></li>
+    <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab15_Report_Template.doc">Experiment 15 Template</a></li>
+    <li>Video: <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 	<a href="https://youtu.be/6eVe_nXezm0">Photodetectors</a></li>
+    <li>PS: <a href="https://lms.rpi.edu/">LMS</a></li>
+  </ul>
+  <li><a name="16"></a>Class 16: <span class="style2">Quiz 3
+    </span>
+    <ul>
+      <li>Quiz 3 Material: </li>
+      <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010Quiz3F19_Solutions.pdf">Quiz 3 Solutions</a></li>
+    </ul>
+  </li>
+  <li><a name="17" id="17"></a>Class 17: Introduction to First Order Circuits</li>
+  <ul>
+    <li>PPT: <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 	<a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Exponential%20Function%20in%20Circuits%20Pt1.pptx">The Exponential Function in Circuits</a></li>
+    <li>TPS: Where can we find exponential decay in 'real life'? </li>
+    <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab17_RC_Exponential_Functions.pdf">RC Transients</a></li>
+    <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab17_Report_Template.doc">Experiment 17 Template</a></li>
+    <li>Video: <br>
+		&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 	<a href="https://youtu.be/-twQNordyDg">The Exponential Function in Circuits</a></li>
+    <li>PS: <a href="https://lms.rpi.edu/">LMS</a></li>
+  </ul>
+  <li><a name="18" id="18"></a>Class 18: Introduction to Second Order Circuits</li>
+  <ul>
+    <li>PPT: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Class_18_SeriesRLC.pdf">Second-order transient response of series RLC circuits</a> </li>
+    <li>TPS: What happens as you increase the resistance value in an RLC series circuit?</li>
+    <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab18-1010_Second_Order_Systems.pdf">RL and RLC Circuits</a> </li>
+    <li>Inductor Data Sheet: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab18_Inductor_Properties.pdf">Properties of Inductors</a></li>
+    <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab18_Report_Template.doc">Experiment 18 Template</a></li>
+    <li>Video: <!-- <a href="https://youtu.be/d7HQgOpwdTI">Voltage Divider, Part 10.1</a> and the beginning of <a href="http://youtu.be/eAw1MwjH5FE">Voltage Divider, Pt 10</a>--></li>
+    <li>PS: <a href="https://lms.rpi.edu/">LMS</a></li>
+  </ul>
+  <li><a name="19"></a>Class 19: </li>
+  <ul>
+    <li>PPT: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/VoltagesAndCurrents1010.pptx">Voltages, Currents &amp; Power</a> (Slides address some analogies for voltage and current and some general questions to contemplate. See below for a short video addressing part of the slides.)</li>
+    <li>TPS: What types of 'real life' signals are underdamped?</li>
+    <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab19-1010_Transisents_Simulation.pdf">Transient Simulations and Voltage Follower Circuits</a> </li>
+    <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab19_Report_Template.doc">Experiment 19 Template</a></li>
+    <li>Video: <a href="https://youtu.be/FdHZ4wZc8ow">Intro to LT-Spice</a> (Addressing a circuit in PPT above) </li>
+    <li>PS: <a href="https://lms.rpi.edu/">LMS</a></li>
+  </ul>
+  <li><a name="20"></a>Class 20:   </li>
+  <ul>
+    <li>PPT: Refer to previous laboratories</li>
+    <li>TPS: How does a second order circuit behave if the attenuation constant is much larger than the resonant frequency</li>
+    <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab20-1010_Transient_Circuit_Design.pdf">Design of Transient Circuits</a> </li>
+    <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab20_Report_Template.doc">Experiment 20 Template</a></li>
+    <li>Video: Refer to previous laboratories</li>
+    <li>PS: <a href="https://lms.rpi.edu/">LMS</a></li>
+  </ul>
+  <li><a name="21"></a>Class 21: <span class="style2">Quiz 4
+    </span>
+    <ul>
+      <li>Quiz 4 Material: Characteristics of first and second order circuits, Quiz 1-3 material</li>
+      <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010Quiz4F19_Solutions.pdf">Quiz 4 Solutions</a></li>
+    </ul>
+  </li>
+  <li><a name="22"></a>Class 22: </li>
+  <ul>
+    <li>PPT: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Phase%20in%20Circuits.pptx">Phase in Circuits</a></li>
+    <li>TPS: What is the phase shift of a sinusoidal signal that is half a cycle 'delayed'?</li>
+    <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab22-1010_AC_circuits.pdf">AC steady state signals</a></li>
+    <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab22_Report_Template.doc">Experiment 22 Template</a></li>
+    <li>Video: <a href="https://youtu.be/A-YHT6HawD8">Phase in Circuits</a></li>
+    <li>PS:  <a href="https://lms.rpi.edu/">LMS</a></li>
+  </ul>
+  <li><a name="23"></a>Class 23: </li>
+  <ul>
+    <li>PPT: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/VoltagesAndCurrents1010.pptx">Voltages, Currents &amp; Power</a> Some review information as well as a power discussion</li>
+    <li>TPS: What is the most important thing in the world?</li>
+    <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab23-1010_Power_Vectors.pdf"> Power in DC and AC circuits</a> </li>
+    <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab23_Report_Template.doc">Experiment 23 Template</a></li>
+    <li>Video: <a href="https://youtu.be/8KTcHJbiPw0">Voltages and Currents</a> (Discussion of PPT above) </li>
+    <li>PS:  <a href="https://lms.rpi.edu/">LMS</a></li>
+  </ul>
+  <li><a name="24"></a>Class 24:</li>
+  <ul>
+    <li>PPT: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Diodes%201010.pptx">Diodes</a> (goes with video below)</li>
+    <li>TPS: If a diode has a forward opperating voltage of Vf and an operating current of If, how much power does the diode dissipate? (Diodes do get warm.) Approximately how much power does a diode dissipate when it is operated in the reverse direction?</li>
+    <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab24-1010_Diodes_v2.pdf"> Diode Models </a></li>
+    <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab24_Report_Template.doc"> Experiment 24 Template</a></li>
+    <li>Video: <a href="https://youtu.be/mXpfzHatHD4">Diodes.</a> </li>
+    <li>PS:  <a href="https://lms.rpi.edu/">LMS</a></li>
+  </ul>
+  <li><a name="25"></a>Class 25: </li>
+  <ul>
+    <li>PPT: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Diodes%201010.pptx">Diodes</a> (goes with video below)</li>
+    <li>TPS: What is an AC to DC converter? What about a DC to AC inverter?</li>
+    <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab25-1010_Rectifiers.pdf"> Rectifiers</a></li>
+    <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab25_Report_Template.doc"> Experiment 25 Template</a></li>
+    <li>Video: <a href="https://youtu.be/mXpfzHatHD4">Diodes.</a> </li>
+    <li>PS: <a href="https://lms.rpi.edu/">LMS</a></li>
+  </ul>
+  <li><a name="26"></a>Class 26: Design Project</li>
+  <ul>
+    <li>PPT: Reference previous laboratories </li>
+    <li>TPS: What is the most interesting circuit you built this semester?</li>
+    <li>EXP: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/assignments/Lab26-1010_Summary_Designs.pdf"> Summary Designs</a></li>
+    <li>Template: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/Templates/ECSE_1010_Lab25_Report_Template.doc"> Experiment 26 Template</a></li>
+    <li>Video: Reference previous laboratories </li>
+    <li>PS: <a href="https://lms.rpi.edu/">LMS</a></li>
+  </ul>
+  <li><a name="27"></a>Class 27: <span class="style2">Quiz 5
+    </span>
+    <ul>
+      <li>Quiz 5 Material: Power, Diodes, Rectifier, previous quiz material </li>
+    </ul>
+  </li>
+  <li><a name="28"></a>Class 28: Final Laboratory - Make a light blink</li>
+  <ul>
+    <li></li>
+  </ul>
+</ul>
+<h2><a name="othercourses"></a>Other Intro to EE/ECE Courses</h2>
+<p>The first course for EE, CpE, CSE ... students is usually taught in the first year but often can be found in the second year. Thus, pay close attention to pre-requisites.</p>
+<ul>
+  <li><a href="https://utah.instructure.com/courses/313714">Intro to ECE Design</a>: Taught by <a href="https://faculty.utah.edu/u0029376-CYNTHIA_M_FURSE/biography/index.hml">Prof. Cynthia Furse</a>, University of Utah, ECE Department (Requires Calculus I) 4 Credit Hours</li>
+  <li><a href="http://hibp.ecse.rpi.edu/~connor/education/IEE/IEE.html">Introduction to Engineering Electronics</a>: Taught in the past at RPI (No university level pre-requisites) 1 Credit Hour</li>
+</ul>
+<h2><a name="software"></a>Software Downloads</h2>
+<p>Software tools play a critical role in this course. The following will give you access to Waveforms, LTspice IV and Matlab.</p>
+<ul>
+  <li><a href="http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,66,849&amp;Prod=WAVEFORMS">Waveforms Software Information</a> and Download from Digilent</li>
+  <li><a href="http://www.linear.com/designtools/software/">LTspice IV</a> for Windows from Linear Technology (Download and install the latest version of LTspice IV.) You can also use <a href="http://www.linear.com/designtools/software/">LTspice XVII</a>, which has a few improvements. </li>
+  <li><a href="http://dotcio.rpi.edu/services/software-labs/software-documentation/matlab-2015a">Matlab Activation Procedure</a> (RPI students only)</li>
+</ul>
+<h2><a name="analogdiscovery"></a>Analog Discovery Information</h2>
+<p>This course is based on the use of personal instrumentation. The device of choice is the Analog Discovery from Digilent. It provides all the functionality of a typical electronics laboratory. </p>
+<ul>
+  <li>Video: <a href="https://www.youtube.com/watch?v=reB3yQzYPUk">Intro to Analog Discovery</a></li>
+  <li><a href="http://store.digilentinc.com/all-products/software/">Waveforms Software Information and Download</a>&nbsp;(Note that there are two versions of Waveforms. Waveforms 2015 is the new version, but the older version was used in all of the experiment write ups. It is recommended that you download and install both and then decide which one you like better.)</li>
+  <li>Waveforms 2015 vs Waveforms - converting from one to the other (coming soon)</li>
+  <li><a href="http://www.ecse.rpi.edu/courses/F16/ENGR-2300/EILinks.html#Info">http://www.ecse.rpi.edu/courses/F16/ENGR-2300/EILinks.html#Info</a>&nbsp;  Go to the section called ‘Analog Discovery Information.’
+    <ul>
+      <li>One link of major importance provides information on how to <a href="http://www.ecse.rpi.edu/courses/S16/ENGR-2300/Calibration.pdf">calibrate the board</a>, which should remove any offset issues you may be experiencing. </li>
+    </ul>
+  </li>
+  <li>Videos: <a href="http://www.ecse.rpi.edu/courses/F16/ENGR-2300/EILectures.html#Tools">http://www.ecse.rpi.edu/courses/F16/ENGR-2300/EILectures.html#Tools</a>&nbsp;  Go to section 2 called ‘Analog Discovery.’ Start with video #3  even though it deals with a topic that you have not seen – Lissajou patterns.  The basic setup is a good exercise even if you do not quite understand what is  going on when the Lissajou patterns are generated. </li>
+  <li><a href="https://store.digilentinc.com/analog-parts-kit-by-analog-devices-companion-parts-kit-for-the-analog-discovery/">Analog Discovery Parts Kit</a> from Digilent</li>
+  <li>Videos &amp; Other Info from Digilent</li>
+  <li><a href="http://hibp.ecse.rpi.edu/~connor/Analog%20Discovery/ADAPsetup.exe">ADAP</a> - Written primarily in Python, ADAP provides three functionalities without using Digilent Waveforms. Included are a Data Logger (to record measurements for a long-term experiment lasting minutes or hours), Threshold (which allows control of outputs using the levels of analog inputs to create, for example, a thermostat or similar device), PWM (which provides a simple interface to study pulse width modulation). The link allows the setup executable to download.</li>
+  <li><a href="http://www.mathworks.com/hardware-support/digilent-analog-discovery.html">Digilent Analog Discovery Support Package from MATLAB</a> (Download button at upper right)
+    <ul>
+      <li>Check out Getting Started Resources at the right</li>
+      <li>Do the Examples to see how it works</li>
+      <li>Check Out <a href="http://rodshome.com/">Resources</a> from Jeff Rodriguez,&nbsp;Physics Teacher,&nbsp;Anderson H.S. Cincinnati, Ohio Including <a href="http://rodshome.com/engII/Recitation/Lab%208%20Automatic%20Nightlight.docx">Lab 8 - Automatic Night Light</a></li>
+    </ul>
+  </li>
+</ul>
+<h2><a name="spice"></a>SPICE Information</h2>
+<p>Essentially all numerical circuit simulations done by electrical and computer engineers use some version of <a href="https://en.wikipedia.org/wiki/SPICE">SPICE</a>. The particular version we use in this course is LTspice IV. </p>
+<ul>
+  <li><a href="http://cds.linear.com/docs/en/software-and-simulation/LTspiceGettingStartedGuide.pdf">LTspice IV Getting Started Guide</a> (from Linear Technology)</li>
+  <li><a href="http://www.me.umn.edu/labs/hmd/lab/docs/LTspice_Guide.pdf">LTspice Guide</a> (from Minnesota)</li>
+  <li><a href="http://eecs.oregonstate.edu/education/docs/tutorials/LTSpiceIntro.pdf">LTspice Intro</a> (from Oregon State)</li>
+  <li><a href="https://www.physics.purdue.edu/webapps/index.php/course_document/index/phys536/1252/177/6557">Intro to LTspice with Examples</a> (from Purdue)</li>
+  <li><a href="http://ltwiki.org/index.php?title=Waveform_Arithmetic">LTspice Waveform Arithmetic</a> (from LTwiki)</li>
+  <li><a href="http://www.seas.upenn.edu/~jan/spice/SpiceTutorials.html">SPICE Overview</a> (from Penn)</li>
+</ul>
+<h2><a name="matlab"></a>Matlab Information</h2>
+<p>Matlab (MATrix LABoratory) is one of the most powerful tools engineers use for numerical analysis.</p>
+<ul>
+  <li><a href="http://dotcio.rpi.edu/services/software-labs/software-documentation/matlab-2015a">Matlab Activation Procedures for Students</a> (RPI)</li>
+  <li><a href="http://www.mathworks.com/videos/getting-started-with-matlab-101684.html">Getting Started with Matlab</a> (Mathworks) More info than you can absorb, but still a good general intro.</li>
+  <li><a href="http://ocw.mit.edu/courses/mathematics/18-s997-introduction-to-matlab-programming-fall-2011/library/videos/lecture-1-using-matlab-for-the-first-time/">Using Matlab for the First Time</a> (MIT) There are some follow on videos that are also good.</li>
+  <li><a href="http://hibp.ecse.rpi.edu/~connor/matlab/">Matlab Demos</a> (Some written locally and some no longer available with the present version of Matlab). </li>
+  <li><a href="http://www.ck12.org/book/Engineering%3A-An-Introduction-to-Solving-Engineering-Problems-with-Matlab/">Engineering Problem Solving with Matlab</a> (<a href="http://www.ck12.org/student/">CK-12 Project</a>)</li>
+  <li><a href="http://www.mathworks.com/hardware-support/digilent-analog-discovery.html">Digilent Analog Discovery Support Package from MATLAB</a> (Download button at upper right)
+    You will need to create a Mathworks account.
+    <ul>
+      <li>Check out Getting Started Resources at the right</li>
+      <li>Do the Examples to see how it works</li>
+      <li>Check Out <a href="http://rodshome.com/">Resources</a> from Jeff Rodriguez,&nbsp;Physics Teacher,&nbsp;Anderson H.S. Cincinnati, Ohio Including <a href="http://rodshome.com/engII/Recitation/Lab%208%20Automatic%20Nightlight.docx">Lab 8 - Automatic Night Light</a></li>
+    </ul>
+  </li>
+  <li><a href="https://matlabacademy.mathworks.com/">MATLAB On-Ramp</a> from Mathworks</li>
+</ul>
+<h2><a name="excel"></a>Excel Information</h2>
+<ul>
+  <li>PPT: <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/slides/Excel1010.pptx">Using Excel in ECSE 1010</a></li>
+  <li>Video 1: <a href="https://youtu.be/6h7_cFUpz_Q">Outputting data from Analog Discovery and LTspice IV</a> in forms that can be read by Excel. Also plotting and other basic functionality. </li>
+  <li>Video 2: <a href="https://youtu.be/oQuRDvUik2o">Plotting Data with Excel </a></li>
+</ul>
+
+<h2><a name="voltagedivider"></a>The Voltage Divider</h2>
+<p>The Voltage Divider (Investigating the Voltage Divider both as a Practical Circuit and a Gateway to Most Concepts in EI) </p>
+<ol>
+  <li><a href="http://youtu.be/1LrwQOTPP20">Part 1</a>: What is a divider and how does it work if we build one?</li>
+  <li><a href="https://youtu.be/pzY2dj3gIgk">Part 1.1</a>: Measuring input and output voltages to fully characterize the operation of a circuit, with and without a load.</li>
+  <li><a href="http://youtu.be/OvB1V9_dFyQ">Part 2</a>: Deriving the formula for an unloaded and a loaded divider</li>
+  <li><a href="http://youtu.be/roZvWjmb5xo">Part 3</a>: Building and testing a loaded voltage divider. Both noise and loading of the divider by an oscilloscope become significant issues. </li>
+  <li><a href="http://youtu.be/mIJknFwBhQU">Part 4:</a> Studying voltage dividers constructed with combinations of resistors, inductors and capacitors that function as filters. Some additional general properties of dividers are also identified. </li>
+  <li><a href="http://youtu.be/7mv5qEalsmg">Part 5:</a> The use of voltage dividers for measuring internal resistances of sources and loads such as battery resistance and the input resistance of measurement devices like voltmeters and scopes. Also for determining the resistance of resistive sensors like photocells, strain gauges and force sensors. </li>
+  <li><a href="http://youtu.be/USjXFO6-pv0">Part 6:</a> The role of voltage dividers in the operation of transformers.</li>
+  <li><a href="https://youtu.be/iVh1rokrNgM">Part 6.1</a> Designing circuits by functional blocks.</li>
+  <li><a href="http://youtu.be/GGe2NEQu2L4">Part 7:</a> Deriving the transfer functions for inverting and non-inverting op-amp amplifiers using what we know about voltage dividers. Also, voltage dividers where neither end is at zero Volts -- a generalization useful for non-inverting op-amps and Schmitt Triggers.</li>
+  <li><a href="http://youtu.be/0i-p-YVXu3A">Part 8</a>: Configuring two voltage dividers into a Wheatstone Bridge circuit. Other uses of dividers as voltage references.</li>
+  <li><a href="http://youtu.be/6yUdkUNX85E">Part 9</a>: How does SPICE work? The material in this video is not required for EI but is useful for anyone who wishes to understand circuit analysis a little more deeply. </li>
+  <li><a href="http://youtu.be/eAw1MwjH5FE">Part 10</a>: Transistor and relay switches. The Schmitt Trigger.</li>
+  <li><a href="http://youtu.be/e1RYI3BDYYQ">Part 11</a>: Digital Logic Circuits &amp; the 555 Timer</li>
+  <li><a href="http://youtu.be/7HAKAJ8jTrs">Part 12</a>: Diode Rectifiers - Dividing voltage between diodes and resistors. </li>
+  <li><a href="http://youtu.be/MEyUXHHWPC8">Part 13</a>: Powering LEDs - Dividing  voltage between an LED and a current-limiting resistor. </li>
+  <li>Part ?: Making high voltage measurements. </li>
+  <li>Part ?: Oscilloscope Probes</li>
+  <li>Part ?: Other</li>
+</ol>
+<h2><a name="tools"></a>Calculators and Other Tools</h2>
+<p>There is an almost unlimited number of calculators and tools online to make our job easier. However, be sure that you always know how to do the calculations yourself because you will learn less if you rely on them too much. Treat them as great references and as a very easy way to check your results. You will not be able to use them on tests. </p>
+<ul>
+  <li><a href="http://electronic-toolbox.com/electronic-toolbox/">Electronic Toolbox</a> - An amazing tool with lots of calculators, component specification, etc. Available as an App for both IOS (iPhone, iPad, iTouch) or Windows (8 or 10) Cost is $7. </li>
+  <li><a href="http://www.daycounter.com/Calculators/Decibels-Calculator.phtml">Decibel Calculators</a> - One of many avaiable.</li>
+</ul>
+<h2><a name="amplitude" id="amplitude"></a>Amplitude Information</h2>
+<ul>
+  <li>Voltage Amplitudes
+    <ul>
+      <li>Amplitude - The maximum or peak value measured with respect to the average</li>
+      <li><a href="http://www.electronics-tutorials.ws/accircuits/rms-voltage.html">RMS</a> Amplitude (Electronics Tutorials)</li>
+      <li><a href="http://www.learningaboutelectronics.com/Articles/What-is-peak-to-peak-voltage.php">Peak-to-Peak</a> Amplitude (Learning About Electronics)</li>
+    </ul>
+  </li>
+  <li>Amplitude Based on Log or Ln
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Decibel">dB</a> Decibel (Wikipedia)</li>
+      <li><a href="https://en.wikipedia.org/wiki/DBm">dBm</a> (Wikipedia)</li>
+      <li>Other dB units - see the <a href="https://en.wikipedia.org/wiki/Decibel">Decibel</a> article (Wikipedia)</li>
+    </ul>
+  </li>
+</ul>
+<h2><a name="demos"></a>Demos</h2>
+<ul>
+  <li>Theremin
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Theremin">Theremin</a> (Wikipedia)</li>
+      <li><a href="http://www.dogstar.dantimax.dk/theremin/thersens.htm">On Theremin Sensitivity</a></li>
+      <li><a href="http://www.element14.com/community/docs/DOC-20512/l/understanding-and-calibrating-2010pdf">Understanding and Calibrating the Theremin</a> | <a href="http://www.element14.com/community/servlet/JiveServlet/previewBody/16832-102-1-52187/ThereminLCF2.xls">Theremin Calculations</a> (Element14) | <a href="https://www.element14.com/community/servlet/JiveServlet/previewBody/16794-102-1-52105/Theremin_Am_J_Phys_excellent.pdf">Physcis of the Theremin</a> (Element14)</li>
+    </ul>
+  </li>
+</ul>
+<h2><a name="misc"></a>Misc. Links Including Tutorials</h2>
+<ul>
+  <li><a href="http://www.allaboutcircuits.com/vol_1/index.html">All About Circuits</a></li>
+  <li>Instructables
+    <ul>
+      <li><a href="https://www.instructables.com/class/LEDs-and-Lighting-Class/">LEDs and Lighting Class</a></li>
+      <li><a href="https://www.instructables.com/class/Electronics-Class/">Electronics Class</a></li>
+      <li><a href="https://www.instructables.com/class/Arduino-Class/">Arduino Class</a></li>
+      <li><a href="https://www.instructables.com/class/Raspberry-Pi-Class/">Raspberry Pi Class</a></li>
+      <li><a href="https://www.instructables.com/class/Robots-Class/">Robots Class</a></li>
+      <li><a href="https://www.instructables.com/class/Wearable-Electronics-Class/">Wearable Electronics Class</a></li>
+    </ul>
+  </li>
+  <li><a href="https://learn.sparkfun.com/tutorials">Sparkfun
+    Tutorials
+    </a>
+    <ul>
+      <li><a href="https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard">How to Use a Breadboard</a></li>
+      <li><a href="https://learn.sparkfun.com/tutorials/what-is-a-battery">What is a Battery?</a></li>
+      <li><a href="https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter?">How to Use a Multimeter</a></li>
+      <li><a href="https://learn.sparkfun.com/tutorials/how-to-use-an-oscilloscope?">How to Use an Oscilloscope</a></li>
+    </ul>
+  </li>
+</ul>
+<h2><a name="quizzes"></a>Quizzes</h2>
+<ul>
+  <li>Past Quizzes
+    <ul>
+      <li>Quiz 1
+        <ul>
+          <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%201%20F15.pdf">Fall 2015 Quiz I</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%201%20F15%20Hand%20Solution.pdf">Fall 2015 Quiz I Solution</a> Video Solution: <a href="https://youtu.be/snn2riOvTEs">Part A</a> <a href="https://youtu.be/zhbJAwXmb_s">Part B-1</a> <a href="https://youtu.be/3OiZ2uqMRJo">Part B-2</a> <a href="https://youtu.be/Z-w3V0bfO80">Part B-3</a> <a href="https://youtu.be/TZbezxUhLhA">Part B-4&amp;5</a> <a href="https://youtu.be/hXIuuF2VF3s">Part B-6</a> <a href="https://youtu.be/iz9dWCC0V5U">Part B-7&amp;8</a></li>
+          <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%201%20S16.pdf">Spring 2016 Quiz I</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%201%20S16%20soln.pdf">Spring 2016 Quiz I Solution</a> Video Solution: <a href="https://youtu.be/2lhhhh1dnJs">Prob 1</a> <a href="https://youtu.be/S6UxpHHA0DM">Prob 2ab</a> <a href="https://youtu.be/0JepVmxsrPU">Prob 2c</a> <a href="https://youtu.be/BiBB98aF0wU">Prob 3</a> <a href="https://youtu.be/hLirUvfMMJU">Prob 4&amp;5</a> <a href="https://youtu.be/dm0YOUEuov4">Prob 6</a> <a href="https://youtu.be/oQMxqAMzU_A">Prob 7&amp;8</a></li>
+          <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%201%20F16.pdf">Fall 2016 Quiz I</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%201%20Solution%20Both%20Sections%20F16.pdf">Fall 2016 Quiz I Solution</a> Video Solution: <a href="https://youtu.be/WOLBm_1nYkg">Prob 1</a> <a href="https://youtu.be/BTv155WsGok">Prob 2</a> <a href="https://youtu.be/kTjZ3fTyFcQ">Prob 3</a> <a href="https://youtu.be/gzqoE2qHcXs">Prob 4</a> <a href="https://youtu.be/VzzAVQa12Hs">Prob 5</a> <a href="https://youtu.be/eouYiU_d5ZU">Prob 5 Extra</a> <a href="https://youtu.be/Ehw-f8fJN-g">Prob 6</a> <a href="https://youtu.be/mrZLMtbL6gA">Prob 7</a> <a href="https://youtu.be/zrejWPyiy6Y">Prob 8</a></li>
+          <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%201%20S17.pdf">Spring 2017 Quiz I</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%201%20S17%20soln.pdf">Spring 2017 Quiz I Solution</a> Video Solution: None yet</li>
+		  <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%201%20F17%20-%201.pdf">Fall 2017 Quiz I, Section 1</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%201%20F17%20soln%20-%201.pdf">Fall 2017 Quiz I Solution, Section 1</a><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%201%20F17%20-%202.pdf">Fall 2017 Quiz I, Section 2</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%201%20F17%20soln%20-%202.pdf">Fall 2017 Quiz I Solution, Section 2</a> Video Solution: None yet</li>
+		  <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%201%20F18%20-%201.pdf">Fall 2018 Quiz I, Section 1</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%201%20F18%20soln%20-%201.pdf">Fall 2018 Quiz I Solution, Section 1</a> Video Solution: None yet</li>
+        </ul>
+      </li>
+      <li>Quiz 2
+        <ul>
+          <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%202%20F15.pdf">Fall 2015 Quiz II</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%202%20F15%20soln.pdf">Fall 2015 Quiz II Solution</a> Video Solution: <a href="https://youtu.be/y3bR4zzrFPQ">Part A</a> Part B: <a href="https://youtu.be/7ryzicQIoC8">Probs 1&amp;2</a> <a href="https://youtu.be/Z74zK_u96f4">Prob 3</a> <a href="https://youtu.be/a_ONUIgh0PM">Prob 4</a>  (<a href="https://youtu.be/BVxHRmARtkk">More on Prob 4</a>) <a href="https://youtu.be/6jatMft2yDE">Prob 5</a> <a href="https://youtu.be/p8RJkLwJfog">Prob 6</a> <a href="https://youtu.be/o_TGG4oZYCI">Prob 7</a> <a href="https://youtu.be/P9GtAI25TaA">Prob 8</a> </li>
+          <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%202%20S16.pdf">Spring 2016 Quiz II</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%202%20S16%20soln.pdf">Spring 2016 Quiz II Solution</a> Video Solution: <a href="https://youtu.be/vAYGbM9AIxc">Overview</a> <a href="https://youtu.be/Ql0lC6A-pNg">Prob 1</a> <a href="https://youtu.be/iaHh4vGq8KI">Prob 2</a> <a href="https://youtu.be/4S0pBp9eDRI">Prob 3</a> <a href="https://youtu.be/jqwwKnE--jA">Prob 4</a> <a href="https://youtu.be/J7nJA_qWt9c">Prob 5</a> <a href="https://youtu.be/z3oEnbik3Bo">Prob 6</a></li>
+          <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%202%20F16-1.pdf">Fall 2016 Quiz II (Sec1)</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%202%20F16-2.pdf">Fall 2016 Quiz II (Sec2)</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/Q2-F16-Solution%20Info.pdf">Fall 2016 Quiz II Solution</a> Video Solution: <a href="https://youtu.be/EgHUpHrH_cA">Prob 1</a> <a href="https://youtu.be/P11u4pPa2to">Prob 2</a> <a href="https://youtu.be/npJ12hs0HHk">Prob 3</a> <a href="https://youtu.be/mYMvZI0JuwM">Prob 4</a> <a href="https://youtu.be/Omw0aREc78s">Prob 5</a> <a href="https://youtu.be/6Wut0YdDP2A">Prob 6</a></li>
+          <li>Spring 2017 Quiz II Spring 2017 Quiz II Solution Video Solution: None yet</li>
+         <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%202%20F17.pdf">Fall 2017 Quiz II</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%202%20F17%20soln.pdf">Fall 2017 Quiz II Solution</a> Video Solution: None yet</li>
+		   <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%202%20F18.pdf">Fall 2018 Quiz II</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%202%20F18%20Solution.pdf">Fall 2018 Quiz II Solution</a> Video Solution: None yet</li>
+		</ul>
+      </li>
+      <li>Quiz 3
+        <ul>
+          <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%203%20F15.pdf">Fall 2015 Quiz III</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%203%20F15%20soln.pdf">Fall 2015 Quiz III Solution</a> Video Solution for Part B: <a href="https://youtu.be/GoCMqv-lKRY">Overview</a> <a href="https://youtu.be/9eZ_d5O7Zl4">Probs 1&amp;2</a> <a href="https://youtu.be/5Fmm-2fr8ZE">Prob 3</a> <a href="https://youtu.be/EeeABIcfCPM">Prob 4</a> <a href="https://youtu.be/oNF1yHb3GSc">Prob 5</a> <a href="https://youtu.be/GnDanI0OxdQ">Prob 6</a> <a href="https://youtu.be/20ht1PsZRfk">Prob 7</a></li>
+          <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%203%20S16.pdf">Spring 2016 Quiz III</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%203%20S16%20soln.pdf">Spring 2016 Quiz III Solution</a> Video Solution: <a href="https://youtu.be/PH_uCupSCYo">Overview and Prob 1</a> <a href="https://youtu.be/3MY8YOYYMW8">Prob 2</a> <a href="https://youtu.be/flMJmwGCvV4">Prob 3</a> <a href="https://youtu.be/Nb21Lioutxg">Prob 4</a> <a href="https://youtu.be/R77kugCUEVo">Prob 5</a> <a href="https://youtu.be/ChuuTDb_FdI">Prob 6</a> <a href="https://youtu.be/23bSlaC08Pk">Prob 7</a> <a href="https://youtu.be/9rBB30jkes8">Prob 8</a></li>
+          <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%203%20F16%20-%201.pdf">Fall 2016 Quiz III (Sec 1)</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%203%20F16%20-%202.pdf">Fall 2016 Quiz III (Sec 2)</a> <a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/HandSolutionQuiz3F16.pdf">Fall 2016 Quiz III Solution</a> Video Solution: <a href="https://youtu.be/sbTh9SokzMU">Prob 1</a> <a href="https://youtu.be/NUEDpWgoTTU">Prob 2</a> <a href="https://youtu.be/WPszXYR79Ms">Prob 3</a> <a href="https://youtu.be/wFia4CpDESk">Prob 4</a> <a href="https://youtu.be/8pbxDOmEM8g">Prob 5</a> <a href="https://youtu.be/bFl2KZhH3Po">Prob 5 (2nd version)</a> <a href="https://youtu.be/mGNOYvDJggw">Prob 6</a> <a href="https://youtu.be/-SoQsyxJLMk">Prob 7</a></li>
+          <li>Spring 2017 Quiz III Spring 2017 Quiz III Solution Video Solution: None yet</li>
+		  <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%203%20F17%20soln.pdf">Fall 2017 Quiz III Solution</a> Video Solution: None yet</li>
+		  <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/quizzes/1010%20Quiz%203%20F18%20Solution.pdf">Fall 2018 Quiz III Solution</a> Video Solution: None yet</li>
+        </ul>
+      </li>
+    </ul>
+</li></ul>
+
+<h2><a name="grades" id="grades"></a>Grading</h2>
+<ul>
+  <li>Quizzes 50%</li>
+  <li>Experiments 30%</li>
+  <li>Problem Sets 10%</li>
+  <li>Attendance 5%</li>
+  <li>Participation 5%</li>
+</ul>
+<h2><a name="attendance" id="attendance"></a>Attendance</h2>
+<p>Because attendance counts for 5% of the course grade, there is a simple procedure for making up any missed classes during open shop times. Attend one of the TAs' open shop times or the instructors' office hours and complete the work missed during class. Some of the work can also be done at home, but you must attend at least an hour of open shop and obtain any required signatures from the TA or instructor <u>and</u> get the attendance Make-Up Form signed. Follow the instructions on the form below. Note that it requires all work be made up before the experiment or project due date. However, we will be a bit flexible on this requirement because this policy is new this semester. It is important to stay on schedule in this class. </p>
+<ul>
+  <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/docs/1010makeup.pdf">1010 Make-Up Form</a></li>
+</ul>
+<p>For Website, Contact: braunj4 at rpi dot edu </p>
+<p>&nbsp;</p>
+
+
+because this policy is new this semester. It is important to stay on schedule in this class. <p></p>
+<ul>
+  <li><a href="https://www.ecse.rpi.edu/courses/F19/ECSE-1010/docs/1010makeup.pdf">1010 Make-Up Form</a></li>
+</ul>
+<p>For Website, Contact: braunj4 at rpi dot edu </p>
+<p>&nbsp;</p>
+
+
+</body></html>"
+	"transformations":["stripped", "1-gram", "2-gram", "3-gram", "title"]
+}]
