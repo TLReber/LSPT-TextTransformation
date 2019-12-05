@@ -48,16 +48,27 @@ def stripped(stop_word_list=[], soup_instance=None):
         (string): A string that does not contain html tags or stop words
 
     """
-    text = soup_instance.text
+    #remove style and script tags
+    text = ""
+    if soup_instance.html != None:
+        for styletag in soup_instance.html.find_all("style"):
+            styletag.clear()
+        for scripttag in soup_instance.find_all("script"):
+            scripttag.clear()
+    
+        text = soup_instance.text
+    else:
+        text = soup_instance.__str__()
     text = text.lower()
+    #remove non alpha characters
     stripped_words = re.findall("[a-z]+(?:'[a-z]+)?", text)
+
     return_text = ""
     for word in stripped_words:
         if word not in stop_word_list:
             if return_text != "":
                 return_text += " "
             return_text += word
-            
     return return_text
 
 
@@ -78,12 +89,24 @@ def ngrams(stop_word_list=[], n=[], soup_instance=None):
             their own dictionary where the keys is each ngram while the values 
             are a list of their occurrences
     """
-    text = soup_instance.text
+    #remove style and script tags
+    text = ""
+    if soup_instance.html != None:
+        for styletag in soup_instance.html.find_all("style"):
+            styletag.clear()
+        for scripttag in soup_instance.find_all("script"):
+            scripttag.clear()
+    
+        text = soup_instance.text
+    else:
+        text = soup_instance.__str__()
     text = text.lower()
+    #remove non alpha characters
     stripped_words = re.findall("[a-z]+(?:'[a-z]+)?", text)
     return_dict = dict()
 
     for ngram_size in n:
+        #make a sub-dict for each size n
         return_dict[ngram_size] = dict()
         for index in range(len(stripped_words) - (ngram_size - 1)):
             accepted_ngram = True
@@ -101,5 +124,4 @@ def ngrams(stop_word_list=[], n=[], soup_instance=None):
                 if ngram_key not in return_dict[ngram_size].keys():
                     return_dict[ngram_size][ngram_key] = list()
                 return_dict[ngram_size][ngram_key].append(index)
-
     return return_dict
