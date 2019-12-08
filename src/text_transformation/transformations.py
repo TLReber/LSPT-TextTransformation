@@ -9,7 +9,7 @@ output. The Worker uses these tools to parse its transformations
 import re
 
 
-def title(executing: bool, soup_instance=None):
+def title(executing: bool, soup_instance=None, **kwargs):
     """
     Takes a soup instance a returns the title. If there is no title, it will then check h1, then
     h2, h3, h4, h5, h6, and the p tag in order. This function will only return a title of a constant
@@ -34,7 +34,7 @@ def title(executing: bool, soup_instance=None):
     return soup_instance.title.string;
 
 
-def stripped(stop_word_list=[], soup_instance=None):
+def stripped(executing:bool, stop_word_list=[], soup_instance=None, **kwargs):
     """
     Takes a soup instance and filters out html tags and stop words and returns 
     the resulting text in all lower case
@@ -72,7 +72,7 @@ def stripped(stop_word_list=[], soup_instance=None):
     return return_text
 
 
-def ngrams(stop_word_list=[], n=[], soup_instance=None):
+def ngrams(n:list, stop_word_list=[], soup_instance=None, **kwargs):
     """
     Takes a soup instance, a list of n, and a list of stop words and returns 
     all resulting ngrams without stop words
