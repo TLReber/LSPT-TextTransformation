@@ -2,14 +2,14 @@ import requests
 import json
 import time
 import threading
-
+import sys
 
 def test1():
 
     print("test 1 running, nothing should be printed from this test.\n")
     # the port number will be replaced with the actual port number that
     # the text transformation server is using
-    addr = "http://127.0.0.1:8000/transform"
+    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
     
     # the json that goes with the request
     data = {
@@ -71,8 +71,8 @@ def test2():
     )
     # the port number will be replaced with the actual port number that the 
     # text transformation server is using
-    addr = "http://127.0.0.1:8000/transform"
-    
+    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+
     # the json that goes with the request
     data = {
         "type": "html",
@@ -98,8 +98,8 @@ def test3():
 
     # the port number will be replaced with the actual port number that the 
     # text transformation server is using
-    addr = "http://127.0.0.1:8000/transform"
-    
+    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+
     # the json that goes with the request
     data = {
         "type": "html",
@@ -140,8 +140,8 @@ def test4():
 
     # the port number will be replaced with the actual port number that the 
     # text transformation server is using
-    addr = "http://127.0.0.1:8000/transform"
-    
+    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+
     # load the json we're using
     data = json.load(open("api_tests/lots_of_data.json"))
     
@@ -166,8 +166,8 @@ def test_submitty_html():
     
     # the port number will be replaced with the actual port number that the
     # text transformation server is using
-    addr = "http://127.0.0.1:8000/transform"
-    
+    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+
     # load the json we'll be using
     data = json.load(open("api_tests/submitty.json"))
     
@@ -191,8 +191,8 @@ def test_ecse_1010_html():
     
     # the port number will be replaced with the actual port number that the
     # text transformation server is using
-    addr = "http://127.0.0.1:8000/transform"
-    
+    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+
     # load the json we'll be using
     data = json.load(open("api_test/ECSE_1010.json"))
     
@@ -216,7 +216,7 @@ def test_wikipedia_html():
     
     # the port number will be replaced with the actual port number that the
     # text transformation server is using
-    addr = "http://127.0.0.1:8000/transform"
+    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
 
     # load the json we'll be using
     data = json.load(open("api_test/wikipedia.json"))
@@ -241,8 +241,8 @@ def test_grpc_html():
     
     # the port number will be replaced with the actual port number that the
     # text transformation server is using
-    addr = "http://127.0.0.1:8000/transform"
-    
+    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+
     # load the json we'll be using
     data = json.load(open("api_test/wikipedia.json"))
     
@@ -266,8 +266,8 @@ def test_diodes_html():
     
     # the port number will be replaced with the actual port number that the
     # text transformation server is using
-    addr = "http://127.0.0.1:8000/transform"
-    
+    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+
     # load the json we'll be using
     data = json.load(open("api_test/diodes.json"))
     
@@ -291,8 +291,8 @@ def test_non_json_put_request():
     
     # the port number will be replaced with the actual port number that the
     # text transformation server is using
-    addr = "http://127.0.0.1:8000/transform"
-    
+    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+
     # we should be sending json instead of this text in the request,
     # so we should be receiving some error code from the server since this
     # request doesn't make sense
