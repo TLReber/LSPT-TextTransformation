@@ -174,73 +174,88 @@ def test_transformer_title():
 def test_transformer_stripped():
     t = stripped
     soup = BeautifulSoup(text1, "html.parser")
-    assert t(stop_words_list, soup) == "hello hello world"
+    assert t(True, stop_words_list, soup) == "hello hello world"
+    assert t(False, stop_words_list, soup) == ""
     soup = BeautifulSoup(text2, "html.parser")
-    assert t(stop_words_list, soup) == "hello hello hello"
+    assert t(True, stop_words_list, soup) == "hello hello hello"
+    assert t(False, stop_words_list, soup) == ""
     soup = BeautifulSoup(text3, "html.parser")
-    assert t(stop_words_list, soup) == ""
+    assert t(True, stop_words_list, soup) == ""
+    assert t(False, stop_words_list, soup) == ""
     soup = BeautifulSoup(text4, "html.parser")
-    assert t(stop_words_list, soup) == ""
+    assert t(True, stop_words_list, soup) == ""
+    assert t(False, stop_words_list, soup) == ""
     soup = BeautifulSoup(text5, "html.parser")
-    assert t(stop_words_list, soup) == ""
+    assert t(True, stop_words_list, soup) == ""
+    assert t(False, stop_words_list, soup) == ""
     soup = BeautifulSoup(text6, "html.parser")
-    assert t(stop_words_list, soup) == "script console log hello script"
+    assert t(True, stop_words_list, soup) == "script console log hello script"
+    assert t(False, stop_words_list, soup) == ""
     soup = BeautifulSoup(html1, "html.parser")
     assert (
-        t(stop_words_list, soup)
+        t(True, stop_words_list, soup)
         == "dormouse's story dormouse's story once upon time"
     )
+    assert t(False, stop_words_list, soup) == ""
     soup = BeautifulSoup(html2, "html.parser")
-    assert t(stop_words_list, soup) == "words words words"
+    assert t(True, stop_words_list, soup) == "words words words"
+    assert t(False, stop_words_list, soup) == ""
     soup = BeautifulSoup(html3, "html.parser")
-    assert t(stop_words_list, soup) == ""
+    assert t(True, stop_words_list, soup) == ""
+    assert t(False, stop_words_list, soup) == ""
     soup = BeautifulSoup(html4, "html.parser")
-    assert t(stop_words_list, soup) == ""
+    assert t(True, stop_words_list, soup) == ""
+    assert t(False, stop_words_list, soup) == ""
     soup = BeautifulSoup(html5, "html.parser")
-    assert t(stop_words_list, soup) == ""
+    assert t(True, stop_words_list, soup) == ""
+    assert t(False, stop_words_list, soup) == ""
     #should remove contents of style or script tags
     soup = BeautifulSoup(html6, "html.parser")
-    assert t(stop_words_list, soup) == "hello world these paragraphs are styled with css"
+    assert t(True, stop_words_list, soup) == "hello world these paragraphs are styled with css"
+    assert t(False, stop_words_list, soup) == ""
     soup = BeautifulSoup(html7, "html.parser")
-    assert t(stop_words_list, soup) == "hello world these paragraphs are styled with css"
+    assert t(True, stop_words_list, soup) == "hello world these paragraphs are styled with css"
+    assert t(False, stop_words_list, soup) == ""
     soup = BeautifulSoup(html8, "html.parser")
-    assert t(stop_words_list, soup) == "hello world these paragraphs are styled with css"
+    assert t(True, stop_words_list, soup) == "hello world these paragraphs are styled with css"
+    assert t(False, stop_words_list, soup) == ""
     soup = BeautifulSoup(html9, "html.parser")
-    assert t(stop_words_list, soup) == "hello world these paragraphs are styled with css"
+    assert t(True, stop_words_list, soup) == "hello world these paragraphs are styled with css"
+    assert t(False, stop_words_list, soup) == ""
 
 
 
 def test_transformer_ngrams():
     t = ngrams
     soup = BeautifulSoup(text1, "html.parser")
-    assert t(stop_words_list, [1, 2, 3, 4], soup) == {
+    assert t([1, 2, 3, 4], stop_words_list, soup) == {
         1: {"hello": [0, 1], "world": [2]},
         2: {"hello hello": [0], "hello world": [1]},
         3: {"hello hello world": [0]},
         4: {}
     }
     soup = BeautifulSoup(text2, "html.parser")
-    assert t(stop_words_list, [1, 2, 3, 4], soup) == {
+    assert t([1, 2, 3, 4], stop_words_list, soup) == {
         1: {"hello": [0, 1, 2]},
         2: {"hello hello": [0, 1]},
         3: {"hello hello hello": [0]},
         4: {}
     }
     soup = BeautifulSoup(text3, "html.parser")
-    assert t(stop_words_list, [1, 2, 3], soup) == {1: {}, 2: {}, 3: {}}
+    assert t([1, 2, 3], stop_words_list, soup) == {1: {}, 2: {}, 3: {}}
     soup = BeautifulSoup(text4, "html.parser")
-    assert t(stop_words_list, [1, 2, 3], soup) == {1: {}, 2: {}, 3: {}}
+    assert t([1, 2, 3], stop_words_list, soup) == {1: {}, 2: {}, 3: {}}
     soup = BeautifulSoup(text5, "html.parser")
-    assert t(stop_words_list, [1, 2, 3], soup) == {1: {}, 2: {}, 3: {}}
+    assert t([1, 2, 3], stop_words_list, soup) == {1: {}, 2: {}, 3: {}}
     soup = BeautifulSoup(text6, "html.parser")
-    assert t(stop_words_list, [1, 2, 3], soup) == {
+    assert t([1, 2, 3], stop_words_list, soup) == {
     	1: {"script": [0, 4], "console": [1], "log": [2], "hello": [3]}, 
     	2: {"script console": [0], "console log": [1], "log hello": [2], "hello script": [3]}, 
     	3: {"script console log": [0], "console log hello": [1], "log hello script": [2]}
     }
     #script console log hello script
     soup = BeautifulSoup(html1, "html.parser")
-    assert t(stop_words_list, [1, 2, 3, 4], soup) == {
+    assert t([1, 2, 3, 4], stop_words_list, soup) == {
         1: {
             "dormouse's": [1, 4],
             "story": [2, 5],
@@ -253,20 +268,20 @@ def test_transformer_ngrams():
         4: {"dormouse's story once upon" : [4]}
     }
     soup = BeautifulSoup(html2, "html.parser")
-    assert t(stop_words_list, [1, 2, 3, 4], soup) == {
+    assert t([1, 2, 3, 4], stop_words_list, soup) == {
         1: {"words": [0, 1, 2]},
         2: {"words words": [0, 1]},
         3: {"words words words": [0]},
         4: {}
     }
     soup = BeautifulSoup(html3, "html.parser")
-    assert t(stop_words_list, [1, 2, 3], soup) == {1: {}, 2: {}, 3: {}}
+    assert t([1, 2, 3], stop_words_list, soup) == {1: {}, 2: {}, 3: {}}
     soup = BeautifulSoup(html4, "html.parser")
-    assert t(stop_words_list, [1, 2, 3], soup) == {1: {}, 2: {}, 3: {}}
+    assert t([1, 2, 3], stop_words_list, soup) == {1: {}, 2: {}, 3: {}}
     soup = BeautifulSoup(html5, "html.parser")
-    assert t(stop_words_list, [1, 2, 3], soup) == {1: {}, 2: {}, 3: {}}
+    assert t([1, 2, 3], stop_words_list, soup) == {1: {}, 2: {}, 3: {}}
     soup = BeautifulSoup(html6, "html.parser")
-    assert t(stop_words_list, [1, 2, 3], soup) == {
+    assert t([1, 2, 3], stop_words_list, soup) == {
     	1: {
     		"hello": [0], 
     		"world": [1], 
@@ -296,7 +311,7 @@ def test_transformer_ngrams():
     	}
     }
     soup = BeautifulSoup(html7, "html.parser")
-    assert t(stop_words_list, [1, 2, 3], soup) == {
+    assert t([1, 2, 3], stop_words_list, soup) == {
     	1: {
     		"hello": [0], 
     		"world": [1], 
@@ -326,7 +341,7 @@ def test_transformer_ngrams():
     	}
     }
     soup = BeautifulSoup(html8, "html.parser")
-    assert t(stop_words_list, [1, 2, 3], soup) == {
+    assert t([1, 2, 3], stop_words_list, soup) == {
     	1: {
     		"hello": [0], 
     		"world": [1], 
@@ -356,7 +371,7 @@ def test_transformer_ngrams():
     	}
     }
     soup = BeautifulSoup(html9, "html.parser")
-    assert t(stop_words_list, [1, 2, 3], soup) == {
+    assert t([1, 2, 3], stop_words_list, soup) == {
     	1: {
     		"hello": [0], 
     		"world": [1], 

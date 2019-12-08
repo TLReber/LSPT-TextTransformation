@@ -48,6 +48,8 @@ def stripped(executing:bool, stop_word_list=[], soup_instance=None, **kwargs):
         (string): A string that does not contain html tags or stop words
 
     """
+    if not executing:
+        return ""
     #remove style and script tags
     text = ""
     if soup_instance.html != None:
