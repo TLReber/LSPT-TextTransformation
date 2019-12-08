@@ -1,5 +1,4 @@
 [{
-	"id" : 1,
 	"type" : "html",
 	"data" : "<!DOCTYPE html>
 <!-- saved from url=(0108)https://www.electronics-notes.com/articles/electronic_components/diode/specifications-parameters-ratings.php -->
@@ -1381,5 +1380,9 @@ window.cookieconsent.initialise({
 
 					</ul>
 				</div></div><iframe id="google_osd_static_frame_6492826631978" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./diodes_files/saved_resource(2).html"></iframe><div id="fb-root" class=" fb_reset"><script src="./diodes_files/sdk(1).js" async=""></script><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./diodes_files/xd_arbiter.html" style="border: none;"></iframe></div><div></div></div></div><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./diodes_files/widget_iframe.6a44a9d26983bbb5b04ae399f9e496fe.html" title="Twitter settings iframe" style="display: none;"></iframe><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: STIXSizeOneSym, sans-serif;"></div></div></body><iframe id="google_esf" name="google_esf" src="./diodes_files/zrt_lookup.html" data-ad-client="ca-pub-2603569892487793" style="display: none;"></iframe></html>",
-	"transformations" : ["stripped", "1-gram", "2-gram", "3-gram"]
+			    "transformations": {
+			              "stripped": True,
+			              "grams": [1,2,3],
+			    			"Title": False
+			    }
 }]

@@ -1,5 +1,4 @@
 [{
-	"id" : 1,
 	"type" : "html",
 	"data" : "<!DOCTYPE html>
 <!-- saved from url=(0039)https://en.wikipedia.org/wiki/Wikipedia -->
@@ -6322,5 +6321,9 @@ additional terms may apply.  By using this site, you agree to the <a href="https
 
 
 <div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div><a accesskey="v" href="https://en.wikipedia.org/wiki/Wikipedia?action=edit" class="oo-ui-element-hidden"></a><div id="mwe-popups-svg"><svg xmlns="http://www.w3.org/2000/svg" width="0" height="0"><defs><clippath id="mwe-popups-mask"><path d="M0 8h10l8-8 8 8h974v992H0z"></path></clippath><clippath id="mwe-popups-mask-flip"><path d="M0 8h294l8-8 8 8h690v992H0z"></path></clippath><clippath id="mwe-popups-landscape-mask"><path d="M0 8h174l8-8 8 8h810v992H0z"></path></clippath><clippath id="mwe-popups-landscape-mask-flip"><path d="M0 0h1000v242H190l-8 8-8-8H0z"></path></clippath></defs></svg></div></body></html>",
-	"transformations" : ["stripped", "1-gram", "2-gram", "3-gram"]
+	"transformations": {
+              "stripped": True,
+              "grams": [1,2,3],
+              "Title": False
+    }
 }]
