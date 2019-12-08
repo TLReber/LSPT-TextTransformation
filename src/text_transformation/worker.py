@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from threading import Thread
+from bs4 import BeautifulSoup
+import zmq
 
 class Worker:
     """
@@ -16,18 +19,62 @@ class Worker:
     def __init__(
         self, scheduler_name: str, transformations: dict
     ):
-        pass
+        self.scheduler_name = scheduler_name
+        self.transformations = transformations
+        # create zmq requester object
+        self.context = zmq.Context()
+        # listening thread set-up
+        self.listen_thread = Thread(target=self.listen)
 
-    def start():
+    def start(self):
         """
         Blocking call that listens for requests from the scheduler and pushes
         results back to the scheduler
         """
-        pass
+        self.listen_thread.start()
+
+    def stop(self):
+        ender = self.context.socket(zmq.REQ)
+        ender.connect(f"inproc://{self.scheduler_name}")
+        ender.send_pyobj((None, None))
+        self.listen_thread.join()
+        self.context.destroy()
 
 
-    #                    Worker
-    #Scheduler --------> Worker ------------> Scheduler
-    #                    Worker
-    #These requests entail transforming data provided into more digestable
-    #information. The worker delegates this task to a transformer instance
+    def listen(self):
+        receiver = self.context.socket(zmq.PULL)
+        sender = self.context.socket(zmq.PUSH)
+        ender = self.context.socket(zmq.REP)
+
+        receiver.connect(f"ipc://./.{self.scheduler_name}push.ipc")
+        sender.connect(f"ipc://./.{self.scheduler_name}pull.ipc")
+        ender.bind(f"inproc://{self.scheduler_name}")
+
+        # makes a poller
+        poller = zmq.Poller()
+        poller.register(ender, zmq.POLLIN)
+        poller.register(receiver, zmq.POLLIN)
+        while True:
+            socks = dict(poller.poll())
+            if ender in socks:
+                msg = ender.recv_pyobj()
+                return
+            elif receiver in socks:
+                r_id, data = receiver.recv_pyobj()
+                data = self.on_recv(data)
+                sender.send_pyobj((r_id, data))
+
+    def on_recv(self, data):
+        stop_words = [] 
+        soup = BeautifulSoup(data["data"], "html.parser") 
+        tfs = {}
+        for name, arg in data["transformations"].items():
+            if name not in self.transformations:
+                continue
+            else:
+                tf = self.transformations[name]
+                tfs[name] = tf(
+                        arg, 
+                        soup_instance=soup, 
+                        stop_word_list=stop_words)
+        return tfs

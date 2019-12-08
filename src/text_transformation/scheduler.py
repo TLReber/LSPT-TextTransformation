@@ -7,6 +7,7 @@ This module houses the Scheduler component which is the front facing api server
 
 from aiohttp import web
 import asyncio
+import sys
 from threading import Thread
 import zmq
 
@@ -33,6 +34,9 @@ class Scheduler:
 
     def __init__(self, name: str):
         self.name = name
+        # create zmq requester object
+        self.context = zmq.Context()
+        self.requester = self.context.socket(zmq.PUSH) 
         # listening thread set-up
         self.request_id = 0
         self.results = {}
@@ -41,7 +45,7 @@ class Scheduler:
         self.app = web.Application()
         # adding current routes
         routes = [
-            web.post(f"/transform", self.transform)
+            web.post(f"/transform", self.transform_route)
         ]
         self.app.add_routes(routes)
 
@@ -55,32 +59,37 @@ class Scheduler:
         """
         Starts self.listen_thread and app
         """
+        self.requester.bind(f"ipc://./.{self.name}push.ipc")
         self.listen_thread.start()
 
     def stop(self):
         """
         Ends self.listen_thread
         """
-        context = zmq.Context()
-        ender = context.socket(zmq.PUSH)
-        ender.connect(f"ipc://./{self.name}-pull")
+        ender = self.context.socket(zmq.PUSH)
+        ender.connect(f"ipc://./.{self.name}pull.ipc")
         ender.send_pyobj((None, None))
         self.listen_thread.join()
+        self.context.destroy()
     
     def listen(self):
-        context = zmq.Context()
-        receiver = context.socket(zmq.PULL)
-        receiver.bind(f"ipc://./{self.name}-pull")
+        receiver = self.context.socket(zmq.PULL)
+        receiver.bind(f"ipc://./.{self.name}pull.ipc")
         while True:
             result_id, data = receiver.recv_pyobj()
-            #if result_id is None:
+            if result_id is None:
                 # signal that its time to stop
-            #    break
+                break
             # recover future id
             # need to lock?
-            self.results[result_id].set_result(data)
+            loop = self.results[result_id].get_loop()
+            loop.call_soon_threadsafe(
+                self.results[result_id].set_result(data))
 
-    async def transform(self, request):
+    async def transform_route(self, request):
+        pass
+
+    async def transform(self, json):
         """
         HTTP request is routed here, what is expected of request is are these 
         attributes. type: describes the type of data to be parsed (currently
@@ -91,5 +100,12 @@ class Scheduler:
             request(HTTPRequest): request of invoker of http-request
 
         """
-        pass
+        # send to work
+        r_id = self.request_id
+        self.results[r_id] = asyncio.Future()
+        self.request_id += 1
+        self.requester.send_pyobj((r_id, json))
+        result = await self.results[r_id]
+        del self.results[r_id]
+        return result
 

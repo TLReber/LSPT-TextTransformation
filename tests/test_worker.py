@@ -8,31 +8,62 @@ the response from a worker
 
 from multiprocessing import Process
 import pytest
+import sys
 import time
 import zmq
 
 from text_transformation.worker import Worker
 
-__author__ = "gregjhansell97"
-__copyright__ = "gregjhansell97"
-__license__ = "mit"
-
-
-def run_worker(name):
-    # run as separate process
-    w = Worker(name)
+def test_start_up():
+    w = Worker("worker", {})
     w.start()
+    w.stop()
 
+def test_no_transformations():
+    w = Worker("worker", {})
+    # create sender
+    sender = w.context.socket(zmq.PUSH)
+    sender.bind("ipc://./.workerpush.ipc")
+    # create receiver
+    receiver = w.context.socket(zmq.PULL)
+    receiver.bind("ipc://./.workerpull.ipc")
+    # send json data
+    w.start()
+    for i in range(20):
+        sender.send_pyobj(
+            (i, {"type": "text", "data": "", "transformations":{}})
+        )
+        assert receiver.recv_pyobj() == (i, {})
+    w.stop()
 
-def _test_start_up_worker():
-    # run worker as separate process, wait then end it
-    worker_p = Process(target=run_worker, args=("W"))
-    time.sleep(1)
-    # end processes
-    worker_p.terminate()
-    worker_p.join()
+def test_with_transformations():
+    def t1(*args, **kwargs):
+        return "cat"
+    def t2(*args, **kwargs):
+        return [1, 2, 3]
+    def t3(arg1, *args, **kwargs):
+        return arg1
+    tfs = {"t1": t1, "t2": t2, "t3": t3}
+    w = Worker("worker", tfs)
+    # create sender
+    sender = w.context.socket(zmq.PUSH)
+    sender.bind("ipc://./.workerpush.ipc")
+    # create receiver
+    receiver = w.context.socket(zmq.PULL)
+    receiver.bind("ipc://./.workerpull.ipc")
+    # send json data
+    w.start()
+    d = {"type": "text", "data": "", "transformations":{}}
 
+    d["transformations"] = {"t1": 1, "t3": "gerg"} 
+    sender.send_pyobj((1, d))
+    assert receiver.recv_pyobj() == (1, {"t1": "cat", "t3": "gerg"})
 
+    d["transformations"] = {"t2": True}
+    sender.send_pyobj((5, d))
+    assert receiver.recv_pyobj() == (5, {"t2": [1, 2, 3]})
+    w.stop()
+"""
 def _test_start_up_multiple_workers():
     workers = [Process(target=run_worker, args=("W")) for i in range(10)]
     time.sleep(1)
@@ -86,3 +117,4 @@ def _test_multiple_workers_transform_no_transformations():
     for w in workers:
         w.terminate()
         w.join()
+"""
