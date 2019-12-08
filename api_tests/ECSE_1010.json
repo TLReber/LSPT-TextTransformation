@@ -1,5 +1,4 @@
 [{
-	"id" : 1,
 	"type":"html",
 	"data":"<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- saved from url=(0047)https://www.ecse.rpi.edu/courses/F19/ECSE-1010/ -->
@@ -971,5 +970,9 @@ because this policy is new this semester. It is important to stay on schedule in
 
 
 </body></html>"
-	"transformations":["stripped", "1-gram", "2-gram", "3-gram", "title"]
+	"transformations": {
+            "stripped": True,
+            "grams": [1,2,3],
+			"Title": False
+		}
 }]

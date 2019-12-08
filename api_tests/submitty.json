@@ -1,5 +1,4 @@
 [{
-	"id": 1
 	"type":"html",
 	"data":"<!DOCTYPE html>
 <!-- saved from url=(0021)https://submitty.org/ -->
@@ -2827,5 +2826,9 @@ or contact the core Submitty development team:<br>
     
 
 </body></html>"
-	"transformations":["stripped", "1-gram", "2-gram", "3-gram", "title"]
+	"transformations": {
+         	"stripped": True,
+        	"grams": [1,2,3],
+			"Title": False
+		}
 }]
