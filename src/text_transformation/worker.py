@@ -65,7 +65,10 @@ class Worker:
                 sender.send_pyobj((r_id, data))
 
     def on_recv(self, data):
-        stop_words = [] 
+        stop_words = ["the", "of", "to", "a", "and", "in", "said", "for", "that", "was", "on", "he", "is", 
+        "with", "at", "by", "it", "from", "as", "be", "were", "an", "have", "his", "but", "has", "are", "not", 
+        "who", "they", "its", "had", "will", "would", "about", "i", "been", "this", "their", "new", "or", "which", 
+        "we", "more", "after", "us", "percent", "up", "one", "people"] 
         soup = BeautifulSoup(data["data"], "html.parser") 
         tfs = {}
         for name, arg in data["transformations"].items():
