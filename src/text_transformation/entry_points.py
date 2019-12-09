@@ -39,7 +39,7 @@ def run_server():
     for wp in worker_processes:
         wp.start()
     # listen for incomming messages
-    s.host("0.0.0.0", 8080)
+    s.host("0.0.0.0", port)
     s.stop()
     for wp in worker_processes:
         wp.terminate()
