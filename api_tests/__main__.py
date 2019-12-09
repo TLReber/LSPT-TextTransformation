@@ -22,12 +22,15 @@ def test1():
         }
     }
     
-    data = json.dumps(json)
+    data = json.dumps(data)
     
     # making the request
-    respond = requests.put(addr, json=data)
+    respond = requests.post(addr, data=data)
+    
+    print("HTTP response status code: " + str(respond.status_code))
     
     # converting the data we receive in response to json form
+    
     respond_json = respond.json()
     
     # making sure we have the correct results
@@ -84,9 +87,9 @@ def test2():
         }
     }
     
-    data = json.dumps(json)
+    data = json.dumps(data)
     
-    respond = requests.put(addr, json=data)
+    respond = requests.post(addr, data=data)
     
     # should print the error code we're getting from the server
     respond.raise_for_status()
@@ -114,7 +117,7 @@ def test3():
     data = json.dumps(data)
     
     # making the request
-    respond = requests.put(addr, json=data)
+    respond = requests.post(addr, data=data)
     
     # converting data we received in response to json
     respond_json = respond.json()
@@ -149,7 +152,7 @@ def test4():
     start = time.time()
     
     # make the request
-    respond = requests.put(addr, json=data)
+    respond = requests.post(addr, data=data)
     
     respond_json = respond.json()
     
@@ -172,7 +175,7 @@ def test_submitty_html():
     data = json.load(open("api_tests/submitty.json"))
     
     # make the request
-    respond = requests.put(addr, json=data)
+    respond = requests.post(addr, data=data)
     
     respond_json = respond.json()
     
@@ -197,7 +200,7 @@ def test_ecse_1010_html():
     data = json.load(open("api_test/ECSE_1010.json"))
     
     # make the request
-    respond = requests.put(addr, json=data)
+    respond = requests.post(addr, data=data)
     
     respond_json = respond.json()
     
@@ -222,7 +225,7 @@ def test_wikipedia_html():
     data = json.load(open("api_test/wikipedia.json"))
     
     # make the request
-    respond = requests.put(addr, json=data)
+    respond = requests.post(addr, data=data)
     
     respond_json = request.json()
     
@@ -247,7 +250,7 @@ def test_grpc_html():
     data = json.load(open("api_test/wikipedia.json"))
     
     # make the request
-    respond = requests.put(addr, json=data)
+    respond = requests.post(addr, data=data)
     
     respond_json = request.json()
     
@@ -272,7 +275,7 @@ def test_diodes_html():
     data = json.load(open("api_test/diodes.json"))
     
     # make the request
-    respond = requests.put(addr, json=data)
+    respond = requests.post(addr, data=data)
     
     respond_json = request.json()
     
@@ -299,27 +302,29 @@ def test_non_json_put_request():
     text = "this is some random text and this request doesn't make any sense"
 
     # make the request
-    respond = requests.put(addr, data = text)
+    respond = requests.post(addr, data = text)
     
     #see what error(s) we get from the server
-    respond.raise_for_status()
+   
+    
+    print("HTTP response status code: " + str(respond.status_code))
 
 if __name__ == "__main__":
-    test1()  # successful request
-    test2()  # invalid parameters
-    test3()  # no data
-    test4()  # lots of data (1.2MB)
+    #test1()  # successful request
+    #test2()  # invalid parameters
+    #test3()  # no data
+    #test4()  # lots of data (1.2MB)
     
     #testing with different (known) data
     
     # apparently the results are affected by the CSS styling code - HW2 couldn't
     # handle (ignore) text between CSS <style> tags
     # the impact of CSS on the results are unknown
-    test_submitty_html()
-    test_ecse_1010_html()
-    test_wikipedia_html()
-    test_grpc_html()
-    test_diodes_html()
+    #test_submitty_html()
+    #test_ecse_1010_html()
+    #test_wikipedia_html()
+    #test_grpc_html()
+    #test_diodes_html()
     
     test_non_json_put_request() # request that doesn't make sense
 
