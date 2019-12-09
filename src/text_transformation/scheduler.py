@@ -85,9 +85,11 @@ class Scheduler:
             loop = self.results[result_id].get_loop()
             loop.call_soon_threadsafe(
                 self.results[result_id].set_result(data))
+            
 
     async def transform_route(self, request):
-        pass
+        json = await self.transform(await request.json())
+        return web.json_response(json)
 
     async def transform(self, json):
         """

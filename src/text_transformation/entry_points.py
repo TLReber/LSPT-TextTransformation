@@ -31,33 +31,18 @@ def run_server():
     s = Scheduler(name)
     s.start()
     # start workers
-    workers = [
+    worker_processes = [
         Process(target=run_worker, args=((s.name,)))
         for _ in range(w_count)
     ]
     print(f"======== Running {w_count} Worker(s) =========")
-    for w in workers:
-        w.start()
+    for wp in worker_processes:
+        wp.start()
     # listen for incomming messages
     s.host("0.0.0.0", 8080)
     s.stop()
-    for w in workers:
-        w.terminate()
-
-def run_scheduler():
-    """
-    The entry point to start the scheduler from the terminal. Command line 
-    arguments are expected for run_scheduler to work. The first argument is
-    the ip address and port number (ex: 127.0.0.1:8080). The second argument
-    is the name of the scheduler which is used to workers can communicate with
-    the scheduler
-    """
-    print("======== Running Scheduler ===========")
-    s = Scheduler("text-transformer")
-    s.start()
-    s.host("0.0.0.0", 8080)
-    s.stop()
-
+    for wp in worker_processes:
+        wp.terminate()
 
 def run_worker(process_name):
     """
@@ -69,7 +54,7 @@ def run_worker(process_name):
     tf = {
         "title": title,
         "stripped": stripped,
-        "ngrams": ngrams
+        "grams": ngrams
     }
     try:
         w = Worker(process_name, tf)

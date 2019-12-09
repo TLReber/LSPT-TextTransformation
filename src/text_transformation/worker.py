@@ -56,10 +56,10 @@ class Worker:
         poller.register(receiver, zmq.POLLIN)
         while True:
             socks = dict(poller.poll())
-            if ender in socks:
+            if ender in socks and socks[ender] == zmq.POLLIN:
                 msg = ender.recv_pyobj()
                 return
-            elif receiver in socks:
+            elif receiver in socks and socks[receiver] == zmq.POLLIN:
                 r_id, data = receiver.recv_pyobj()
                 data = self.on_recv(data)
                 sender.send_pyobj((r_id, data))

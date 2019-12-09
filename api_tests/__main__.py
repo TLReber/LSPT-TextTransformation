@@ -4,6 +4,32 @@ import time
 import threading
 import sys
 
+
+def test_empty_json(address):
+    address = f"http://{address}/transform"
+    print(address)
+    data = {
+        "type": "hmtl",
+        "data": "",
+        "transformations": { }
+    }
+    print(requests.post(address, json=data).json())
+
+    
+def test_simple_json(address):
+    address = f"http://{address}/transform"
+    print(address)
+    data = {
+        "type": "hmtl",
+        "data": "<p>hello hello world this is some test, go and parse this!<\p>",
+        "transformations": { 
+            "stripped": True,
+            "grams": [1, 2, 3],
+            "title": True
+        }
+    }
+    print(requests.post(address, json=data).json())
+
 def test1():
 
     print("test 1 running, nothing should be printed from this test.\n")
@@ -325,8 +351,9 @@ if __name__ == "__main__":
     #test_wikipedia_html()
     #test_grpc_html()
     #test_diodes_html()
-    
-    test_non_json_put_request() # request that doesn't make sense
+    test_empty_json(sys.argv[1]) 
+    test_simple_json(sys.argv[1]) 
+    #test_non_json_put_request() # request that doesn't make sense
 
 
 # post and verify results, use assert statements
