@@ -59,6 +59,14 @@ After installing:
 
     text-trans-scheduler
 
+Connecting to the Server
+========================
+.. code-block:: bash
+    
+    ssh {RCS-ID}@lspt-text1.cs.rpi.edu
+    sudo bash
+    cd /LSPT-TextTransformation
+
 Note
 ====
 
