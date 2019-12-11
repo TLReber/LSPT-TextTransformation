@@ -24,19 +24,20 @@ class Scheduler:
     Attributes:
         address(tuple):(str, int), (ip, port)
         app(web.Application): helper tool to setup http request system
+        context(zmq.Context): context used by zmq to create the requester
+        listen_thread(Thread): runs self.listen in background to make 
+            self.results awaitable
         name(str): string identifier unique across processes
         results(dict): key of unique work request id, value of future
         request_id(int): used to assign unique ids for results
-        listen_thread(Thread): runs self.listen in background to make 
-            self.results awaitable
-        
+        requester(zmq.Socket): socket to push requests to workers
     """
 
     def __init__(self, name: str):
         self.name = name
         # create zmq requester object
         self.context = zmq.Context()
-        self.requester = self.context.socket(zmq.PUSH) 
+        self.requester = self.context.socket(zmq.PUSH)
         # listening thread set-up
         self.request_id = 0
         self.results = {}
@@ -44,14 +45,16 @@ class Scheduler:
 
         self.app = web.Application()
         # adding current routes
-        routes = [
-            web.post(f"/transform", self.transform_route)
-        ]
+        routes = [web.post(f"/transform", self.transform_route)]
         self.app.add_routes(routes)
 
-    def host(self, ip, port):
+    def host(self, ip: str, port: int):
         """
         Starts web app
+
+        Args:
+            ip: host address, do 0.0.0.0 to put across all possible
+            port: port number to access
         """
         web.run_app(self.app, host=ip, port=port)
 
@@ -71,8 +74,13 @@ class Scheduler:
         ender.send_pyobj((None, None))
         self.listen_thread.join()
         self.context.destroy()
-    
+
     def listen(self):
+        """
+        Method that gets spawned by listen_thread. It listens for responses from
+        workers and populates the results (currently awaited futures) with
+        the responses it recieves
+        """
         receiver = self.context.socket(zmq.PULL)
         receiver.bind(f"ipc://./.{self.name}pull.ipc")
         while True:
@@ -80,14 +88,20 @@ class Scheduler:
             if result_id is None:
                 # signal that its time to stop
                 break
-            # recover future id
-            # need to lock?
             loop = self.results[result_id].get_loop()
-            loop.call_soon_threadsafe(
-                self.results[result_id].set_result(data))
-            
+            loop.call_soon_threadsafe(self.results[result_id].set_result(data))
 
     async def transform_route(self, request):
+        """
+        Entry point for incoming post request for the route /transform
+
+        Args:
+            request(web.Request): post request with json data that has keys 
+                for: type, data and transformations as specified in the API
+
+        Returns:
+            (web.Response): json repsonse with the dictionary of transformations
+        """
         json = await self.transform(await request.json())
         return web.json_response(json)
 
@@ -99,8 +113,11 @@ class Scheduler:
         transformed: list of transformations to alter the data
 
         Args:
-            request(HTTPRequest): request of invoker of http-request
+            json(dict): dictionary representation of the json required to be
+                transformed
 
+        Returns:
+            (dict): response to the transformation
         """
         # send to work
         r_id = self.request_id
@@ -110,4 +127,3 @@ class Scheduler:
         result = await self.results[r_id]
         del self.results[r_id]
         return result
-

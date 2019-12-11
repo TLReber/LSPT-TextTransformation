@@ -11,9 +11,9 @@ import re
 
 def title(executing: bool, soup_instance=None, **kwargs):
     """
-    Takes a soup instance a returns the title. If there is no title, it will then check h1, then
-    h2, h3, h4, h5, h6, and the p tag in order. This function will only return a title of a constant
-    size
+    Takes a soup instance a returns the title. If there is no title, it will 
+    then check h1, then h2, h3, h4, h5, h6, and the p tag in order. This 
+    function will only return a title of a constant size
 
     Args:
         executing(bool): If true, this function returns the title, otherwise 
@@ -22,19 +22,19 @@ def title(executing: bool, soup_instance=None, **kwargs):
             transform
 
     Returns:
-        (string): A string that contains the title or ""
+        (str): A string that contains the title or ""
 
     """
-    if(executing == False):
+    if executing == False:
         return ""
-    if(soup_instance.title == None):
+    if soup_instance.title == None:
         return ""
-    if(soup_instance.title.string == None):
+    if soup_instance.title.string == None:
         return ""
-    return soup_instance.title.string;
+    return soup_instance.title.string
 
 
-def stripped(executing:bool, stop_word_list=[], soup_instance=None, **kwargs):
+def stripped(executing: bool, stop_word_list=[], soup_instance=None, **kwargs):
     """
     Takes a soup instance and filters out html tags and stop words and returns 
     the resulting text in all lower case
@@ -45,24 +45,24 @@ def stripped(executing:bool, stop_word_list=[], soup_instance=None, **kwargs):
             transform
 
     Returns:
-        (string): A string that does not contain html tags or stop words
+        (str): A string that does not contain html tags or stop words
 
     """
     if not executing:
         return ""
-    #remove style and script tags
+    # remove style and script tags
     text = ""
     if soup_instance.html != None:
         for styletag in soup_instance.html.find_all("style"):
             styletag.clear()
         for scripttag in soup_instance.find_all("script"):
             scripttag.clear()
-    
+
         text = soup_instance.text
     else:
         text = soup_instance.__str__()
     text = text.lower()
-    #remove non alpha characters
+    # remove non alpha characters
     stripped_words = re.findall("[a-z]+(?:'[a-z]+)?", text)
 
     return_text = ""
@@ -74,7 +74,7 @@ def stripped(executing:bool, stop_word_list=[], soup_instance=None, **kwargs):
     return return_text
 
 
-def ngrams(n:list, stop_word_list=[], soup_instance=None, **kwargs):
+def ngrams(n: list, stop_word_list=[], soup_instance=None, **kwargs):
     """
     Takes a soup instance, a list of n, and a list of stop words and returns 
     all resulting ngrams without stop words
@@ -91,24 +91,24 @@ def ngrams(n:list, stop_word_list=[], soup_instance=None, **kwargs):
             their own dictionary where the keys is each ngram while the values 
             are a list of their occurrences
     """
-    #remove style and script tags
+    # remove style and script tags
     text = ""
     if soup_instance.html != None:
         for styletag in soup_instance.html.find_all("style"):
             styletag.clear()
         for scripttag in soup_instance.find_all("script"):
             scripttag.clear()
-    
+
         text = soup_instance.text
     else:
         text = soup_instance.__str__()
     text = text.lower()
-    #remove non alpha characters
+    # remove non alpha characters
     stripped_words = re.findall("[a-z]+(?:'[a-z]+)?", text)
     return_dict = dict()
 
     for ngram_size in n:
-        #make a sub-dict for each size n
+        # make a sub-dict for each size n
         return_dict[ngram_size] = dict()
         for index in range(len(stripped_words) - (ngram_size - 1)):
             accepted_ngram = True
@@ -118,10 +118,10 @@ def ngrams(n:list, stop_word_list=[], soup_instance=None, **kwargs):
                     accepted_ngram = False
                     break
                 else:
-                    if(ngram_index != 0):
+                    if ngram_index != 0:
                         ngram_key += " "
                     ngram_key += stripped_words[index + ngram_index]
-                    
+
             if accepted_ngram:
                 if ngram_key not in return_dict[ngram_size].keys():
                     return_dict[ngram_size][ngram_key] = list()
