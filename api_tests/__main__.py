@@ -93,8 +93,7 @@ def test1(addr):
     grams = json.dumps(grams)
     grams = json.loads(grams)
     
-    print(respond_json["stripped"])
-    print(respond_json["grams"]["1"])
+    print(respond_json)
     #why the fuck is grams a string???
     
     assert respond_json["grams"]['1'] == grams['1'], "words do not match (test 1)"
@@ -201,36 +200,35 @@ def test4(addr):
 
     # don't care about the actual response
 
-def test_submitty_html():
+def test_submitty_html(addr):
     print("testing with submitty.json")
     
     # the port number will be replaced with the actual port number that the
     # text transformation server is using
-    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+    addr = f"http://{addr}/transform"
 
     # load the json we'll be using
     data = json.load(open("api_tests/submitty.json"), strict = False)
     # make the request
     
-    print(data)
+    #print(data)
     
-    respond = requests.post(addr, data=data)
+    respond = requests.post(addr, json=data)
     
     print("HTTP response status code: " + str(respond.status_code) + "\n")
     
     respond_json = respond.json()
     
-    print(respond_json)
-    
     # check that the statistics are correct
-    # we've ran the data through hw2 so the statistics should be correct
-    assert len(respond_json["stripped"]) == 539, "total word count incorrect"
+    # we've ran the data through the php from hw2 so the statistics should be correct
     
-    assert len(respond_json["grams"]["1"]) == 309, "unique word count incorrect"
+    assert len(respond_json["stripped"].split()) == 469, "total word count incorrect"
+    
+    assert len(respond_json["grams"]["1"]) == 289, "unique word count incorrect"
     
     assert len(respond_json["grams"]["2"]) == 369, "unique bigram count incorrect"
     
-    assert len(respond_json["grams"]["3"]) == 341, "unique trigram count incorrect"
+    assert len(respond_json["grams"]["3"]) == 340, "unique trigram count incorrect"
     
 def test_ecse_1010_html(addr):
     print("testing with ECSE_1010.json")
@@ -240,97 +238,78 @@ def test_ecse_1010_html(addr):
     addr = f"http://{addr}/transform"
 
     # load the json we'll be using
-    data = json.load(open("api_test/ECSE_1010.json"))
+    data = json.load(open("api_tests/ECSE_1010.json"), strict = False)
     
     # make the request
-    respond = requests.post(addr, data=data)
+    respond = requests.post(addr, json=data)
     
     respond_json = respond.json()
     
     # check that the statistics are correct
     # we've ran the data through hw2 so the statistics should be correct
-    assert len(respond_json["stripped"]) == 3603, "total word count incorrect"
     
-    assert len(respond_json["grams"]["1"]) == 908, "unique word count incorrect"
+    assert len(respond_json["stripped"].split()) == 2803, "total word count incorrect"
     
-    assert len(respond_json["grams"]["2"]) == 1487, "unique bigram count incorrect"
+    assert len(respond_json["grams"]["1"]) == 842, "unique word count incorrect"
     
-    assert len(respond_json["grams"]["3"]) == 1373, "unique trigram count incorrect"
+    assert len(respond_json["grams"]["2"]) == 1423, "unique bigram count incorrect"
     
-def test_wikipedia_html():
-    print("testing with wikipedia.json")
+    assert len(respond_json["grams"]["3"]) == 1306, "unique trigram count incorrect"
     
-    # the port number will be replaced with the actual port number that the
-    # text transformation server is using
-    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
-
-    # load the json we'll be using
-    data = json.load(open("api_test/wikipedia.json"))
-    
-    # make the request
-    respond = requests.post(addr, data=data)
-    
-    respond_json = request.json()
-    
-    # check that the statistics are correct
-    # we've ran the data through hw2 so the statistics should be correct
-    assert len(respond_json["stripped"]) == 34070, "total word count incorrect"
-    
-    assert len(respond_json["grams"]["1"]) == 5695, "unique word count incorrect"
-    
-    assert len(respond_json["grams"]["2"]) == 12118, "unique bigram count incorrect"
-    
-    assert len(respond_json["grams"]["3"]) == 12617, "unique trigram count incorrect"
-    
-def test_grpc_html():
+def test_grpc_html(addr):
     print("testing with grpc.json")
     
     # the port number will be replaced with the actual port number that the
     # text transformation server is using
-    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+    addr = f"http://{addr}/transform"
 
     # load the json we'll be using
-    data = json.load(open("api_test/wikipedia.json"))
+    data = json.load(open("api_tests/grpc.json"), strict = False)
     
     # make the request
-    respond = requests.post(addr, data=data)
+    respond = requests.post(addr, json=data)
     
-    respond_json = request.json()
+    respond_json = respond.json()
     
     # check that the statistics are correct
     # we've ran the data through hw2 so the statistics should be correct
-    assert len(respond_json["stripped"]) == 7091, "total word count incorrect"
+    4989
+    684
+    1470
+    1362
+    assert len(respond_json["stripped"].split()) == 4989, "total word count incorrect"
     
-    assert len(respond_json["grams"]["1"]) == 715, "unique word count incorrect"
+    assert len(respond_json["grams"]["1"]) == 684, "unique word count incorrect"
     
-    assert len(respond_json["grams"]["2"]) == 1543, "unique bigram count incorrect"
+    assert len(respond_json["grams"]["2"]) == 1470, "unique bigram count incorrect"
     
-    assert len(respond_json["grams"]["3"]) == 1497, "unique trigram count incorrect"
+    assert len(respond_json["grams"]["3"]) == 1362, "unique trigram count incorrect"
 
-def test_diodes_html():
+def test_diodes_html(addr):
     print("testing with diodes.json")
     
     # the port number will be replaced with the actual port number that the
     # text transformation server is using
-    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+    addr = f"http://{addr}/transform"
 
     # load the json we'll be using
-    data = json.load(open("api_test/diodes.json"))
+    data = json.load(open("api_tests/diodes.json"), strict = False)
     
     # make the request
-    respond = requests.post(addr, data=data)
+    respond = requests.post(addr, json=data)
     
-    respond_json = request.json()
+    respond_json = respond.json()
     
     # check that the statistics are correct
     # we've ran the data through hw2 so the statistics should be correct
-    assert len(respond_json["stripped"]) == 21740, "total word count incorrect"
+
+    assert len(respond_json["stripped"].split()) == 1916, "total word count incorrect"
     
-    assert len(respond_json["grams"]["1"]) == 2099, "unique word count incorrect"
+    assert len(respond_json["grams"]["1"]) == 746, "unique word count incorrect"
     
-    assert len(respond_json["grams"]["2"]) == 4778, "unique bigram count incorrect"
+    assert len(respond_json["grams"]["2"]) == 976, "unique bigram count incorrect"
     
-    assert len(respond_json["grams"]["3"]) == 6945, "unique trigram count incorrect"
+    assert len(respond_json["grams"]["3"]) == 708, "unique trigram count incorrect"
 
 def test_non_json_put_request(addr):
     print("testing with non-json data")
@@ -364,10 +343,9 @@ if __name__ == "__main__":
     # handle (ignore) text between CSS <style> tags
     # the impact of CSS on the results are unknown
     test_submitty_html(sys.argv[1])
-    #test_ecse_1010_html()
-    #test_wikipedia_html()
-    #test_grpc_html()
-    #test_diodes_html()
+    test_ecse_1010_html(sys.argv[1])
+    test_grpc_html(sys.argv[1])
+    test_diodes_html(sys.argv[1])
     
     
     #test_empty_json(sys.argv[1])
