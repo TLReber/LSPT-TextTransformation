@@ -40,7 +40,7 @@ def test1():
     # the json that goes with the request
     data = {
         "type": "html",
-        "data": "<p>hello hello world this is some test, go and parse this!<\p>",
+        "data": "<html><p> hello hello world this is some test, go and parse this! </p></html>",
         "transformations": {
             "stripped": True,
             "grams": [1,2,3],
@@ -64,7 +64,7 @@ def test1():
     
         assert (
             respond_json["stripped"]
-            == "hello hello world this is some test go and parse this"
+            == "hello hello world some test go parse"
         )
     
     except:
@@ -93,12 +93,15 @@ def test1():
     grams = json.dumps(grams)
     grams = json.loads(grams)
     
+    print(respond_json["stripped"])
     print(respond_json["grams"]["1"])
     #why the fuck is grams a string???
     
     assert respond_json["grams"]['1'] == grams['1'], "words do not match (test 1)"
     assert respond_json["grams"]['1'] == grams['1'], "bigrams do not match (test 1)"
     assert respond_json["grams"]['1'] == grams['1'], "trigrams go not match (test 1)"
+    
+    print("\n")
 
 
 def test2():
@@ -117,7 +120,8 @@ def test2():
         "transformations": {
             "stripped": True,
             "grams": [1,2,3],
-            "Title": False
+            "Title": False,
+            "some random parameter": False
         }
     }
     
@@ -126,12 +130,12 @@ def test2():
     respond = requests.post(addr, data=data)
     
     # should print the error code we're getting from the server
-    respond.raise_for_status()
+    print("HTTP response status code: " + str(respond.status_code) + "\n")
 
 
 def test3():
 
-    print("test3 running, nothing should be printed from this test.\n")
+    print("test 3 running, nothing should be printed from this test.\n")
 
     # the port number will be replaced with the actual port number that the 
     # text transformation server is using
@@ -170,7 +174,7 @@ def test3():
 def test4():
 
     print(
-        "test4 running, the time used to process this request will be printed.\n"
+        "test 4 running, the time used to process this request will be printed.\n"
     )
     
     
@@ -180,21 +184,20 @@ def test4():
     addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
 
     # load the json we're using
-    data = json.load(open("api_tests/lots_of_data.json"))
+    data = json.load(open("api_tests/lots_of_data.json"), strict = False)
     
     # the time the request is made
     start = time.time()
     
     # make the request
     respond = requests.post(addr, data=data)
-    
-    respond_json = respond.json()
-    
+        
     # the time we receive response and convert the response to json
     end = time.time()
     
     # print the time used for the server to handle the request
     print(end - start)
+    print("\n")
 
     # don't care about the actual response
 
@@ -206,12 +209,13 @@ def test_submitty_html():
     addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
 
     # load the json we'll be using
-    data = json.load(open("api_tests/submitty.json"))
-    
+    data = json.load(open("api_tests/submitty.json"), strict = False)
     # make the request
     respond = requests.post(addr, data=data)
     
     respond_json = respond.json()
+    
+    print(respond_json)
     
     # check that the statistics are correct
     # we've ran the data through hw2 so the statistics should be correct
@@ -345,16 +349,16 @@ def test_non_json_put_request():
 
 if __name__ == "__main__":
     test1()  # successful request
-    #test2()  # invalid parameters
-    #test3()  # no data
-    #test4()  # lots of data (1.2MB)
+    test2()  # invalid parameters
+    test3()  # no data
+    test4()  # lots of data (1.2MB)
     
     #testing with different (known) data
     
     # apparently the results are affected by the CSS styling code - HW2 couldn't
     # handle (ignore) text between CSS <style> tags
     # the impact of CSS on the results are unknown
-    #test_submitty_html()
+    test_submitty_html()
     #test_ecse_1010_html()
     #test_wikipedia_html()
     #test_grpc_html()

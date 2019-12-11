@@ -1,32 +1,32 @@
-[{
+{
 	"type":"html",
 	"data":"<!DOCTYPE html>
 <!-- saved from url=(0021)https://submitty.org/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">
         
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="generator" content="Jekyll v3.8.5">
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+        <meta name=\"generator\" content=\"Jekyll v3.8.5\">
 
-        <link rel="stylesheet" href="./submitty_files/css">
-        <link rel="stylesheet" href="./submitty_files/main.css">
-        <link rel="apple-touch-icon" href="https://submitty.org/apple-touch-icon.png">
-        <link rel="shortcut icon" href="https://submitty.cs.rpi.edu/img/favicon.ico" type="image/x-icon">
-        <link rel="icon" type="image/png" href="https://submitty.org/touch-icon.png" sizes="192x192">
-        <!--<link rel="icon" type="image/png" href="/img/favicon.png">-->
+        <link rel=\"stylesheet\" href=\"./submitty_files/css\">
+        <link rel=\"stylesheet\" href=\"./submitty_files/main.css\">
+        <link rel=\"apple-touch-icon\" href=\"https://submitty.org/apple-touch-icon.png\">
+        <link rel=\"shortcut icon\" href=\"https://submitty.cs.rpi.edu/img/favicon.ico\" type=\"image/x-icon\">
+        <link rel=\"icon\" type=\"image/png\" href=\"https://submitty.org/touch-icon.png\" sizes=\"192x192\">
+        <!--<link rel=\"icon\" type=\"image/png\" href=\"/img/favicon.png\">-->
 
-        <link type="application/atom+xml" rel="alternate" href="https://submitty.org/feed.xml" title="Submitty">
+        <link type=\"application/atom+xml\" rel=\"alternate\" href=\"https://submitty.org/feed.xml\" title=\"Submitty\">
         <!-- Begin Jekyll SEO tag v2.5.0 -->
 <title>Welcome | Submitty</title>
-<meta name="generator" content="Jekyll v3.8.5">
-<meta property="og:title" content="Welcome">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="Submitty is an open source programming assignment submission system from the Rensselaer Center for Open Source Software (RCOS), launched by the Department of Computer Science at Rensselaer Polytechnic Institute.">
-<meta property="og:description" content="Submitty is an open source programming assignment submission system from the Rensselaer Center for Open Source Software (RCOS), launched by the Department of Computer Science at Rensselaer Polytechnic Institute.">
-<link rel="canonical" href="https://submitty.org/index">
-<meta property="og:url" content="https://submitty.org/index">
-<meta property="og:site_name" content="Submitty">
-<script async="" src="./submitty_files/analytics.js"></script><script type="application/ld+json">
-{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://submitty.org/siteicon.png"}},"@type":"Article","url":"https://submitty.org/index","headline":"Welcome","description":"Submitty is an open source programming assignment submission system from the Rensselaer Center for Open Source Software (RCOS), launched by the Department of Computer Science at Rensselaer Polytechnic Institute.","@context":"http://schema.org"}</script>
+<meta name=\"generator\" content=\"Jekyll v3.8.5\">
+<meta property=\"og:title\" content=\"Welcome\">
+<meta property=\"og:locale\" content=\"en_US\">
+<meta name=\"description\" content=\"Submitty is an open source programming assignment submission system from the Rensselaer Center for Open Source Software (RCOS), launched by the Department of Computer Science at Rensselaer Polytechnic Institute.\">
+<meta property=\"og:description\" content=\"Submitty is an open source programming assignment submission system from the Rensselaer Center for Open Source Software (RCOS), launched by the Department of Computer Science at Rensselaer Polytechnic Institute.\">
+<link rel=\"canonical\" href=\"https://submitty.org/index\">
+<meta property=\"og:url\" content=\"https://submitty.org/index\">
+<meta property=\"og:site_name\" content=\"Submitty\">
+<script async=\"\" src=\"./submitty_files/analytics.js\"></script><script type=\"application/ld+json\">
+{\"publisher\":{\"@type\":\"Organization\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://submitty.org/siteicon.png\"}},\"@type\":\"Article\",\"url\":\"https://submitty.org/index\",\"headline\":\"Welcome\",\"description\":\"Submitty is an open source programming assignment submission system from the Rensselaer Center for Open Source Software (RCOS), launched by the Department of Computer Science at Rensselaer Polytechnic Institute.\",\"@context\":\"http://schema.org\"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -41,20 +41,20 @@
                 ga('send', 'pageview');
             </script>
         
-        <script type="text/javascript" src="./submitty_files/main.js" defer=""></script>
+        <script type=\"text/javascript\" src=\"./submitty_files/main.js\" defer=\"\"></script>
     </head>
 
     <body>
-        <a href="https://github.com/Submitty" class="github-corner" aria-label="View Submitty on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#0a6496; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" class="octo-background"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-        <header class="main-nav">
+        <a href=\"https://github.com/Submitty\" class=\"github-corner\" aria-label=\"View Submitty on Github\"><svg width=\"80\" height=\"80\" viewBox=\"0 0 250 250\" style=\"fill:#0a6496; color:#fff; position: absolute; top: 0; border: 0; right: 0;\" aria-hidden=\"true\"><path d=\"M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z\" class=\"octo-background\"></path><path d=\"M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2\" fill=\"currentColor\" style=\"transform-origin: 130px 106px;\" class=\"octo-arm\"></path><path d=\"M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z\" fill=\"currentColor\" class=\"octo-body\"></path></svg></a>
+        <header class=\"main-nav\">
             <h1>
-                <a href="https://submitty.org/"><img src="./submitty_files/submitty_logo.png" alt="Submitty logo"></a>
+                <a href=\"https://submitty.org/\"><img src=\"./submitty_files/submitty_logo.png\" alt=\"Submitty logo\"></a>
                 <!--Submitty-->
-                <button type="button" class="open-nav" id="open-nav"></button>
+                <button type=\"button\" class=\"open-nav\" id=\"open-nav\"></button>
             </h1>
-            <form action="https://submitty.org/search/" method="get">
-                <input type="text" name="q" id="search-input" placeholder="Search">
-                <input type="submit" value="Search" style="display: none;">
+            <form action=\"https://submitty.org/search/\" method=\"get\">
+                <input type=\"text\" name=\"q\" id=\"search-input\" placeholder=\"Search\">
+                <input type=\"submit\" value=\"Search\" style=\"display: none;\">
             </form>
             <ul>
                 
@@ -67,17 +67,17 @@
                 
                 
                 
-                <li class="nav-item top-level  open has-children">
-                    <i class="nav-arrow nav-click"></i>
+                <li class=\"nav-item top-level  open has-children\">
+                    <i class=\"nav-arrow nav-click\"></i>
                     
-                    <a href="https://submitty.org/index">
+                    <a href=\"https://submitty.org/index\">
                     
                     Welcome
                     
                     </a>
                     
                     
-                    <ul class="inner-nav">
+                    <ul class=\"inner-nav\">
                         
                             
                             
@@ -92,10 +92,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/index">
+                            <a href=\"https://submitty.org/index\">
                             
                             Overview
                             
@@ -117,10 +117,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/index/tutorial">
+                            <a href=\"https://submitty.org/index/tutorial\">
                             
                             Tutorial
                             
@@ -142,10 +142,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/index/publications">
+                            <a href=\"https://submitty.org/index/publications\">
                             
                             Publications
                             
@@ -167,17 +167,17 @@
                 
                 
                 
-                <li class="nav-item top-level  has-children">
-                    <i class="nav-arrow nav-click"></i>
+                <li class=\"nav-item top-level  has-children\">
+                    <i class=\"nav-arrow nav-click\"></i>
                     
-                    <a href="https://submitty.org/student">
+                    <a href=\"https://submitty.org/student\">
                     
                     Student
                     
                     </a>
                     
                     
-                    <ul class="inner-nav">
+                    <ul class=\"inner-nav\">
                         
                             
                             
@@ -192,10 +192,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/student">
+                            <a href=\"https://submitty.org/student\">
                             
                             Login to Submitty
                             
@@ -217,10 +217,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/student/navigation">
+                            <a href=\"https://submitty.org/student/navigation\">
                             
                             Course Navigation
                             
@@ -242,10 +242,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/student/submission">
+                            <a href=\"https://submitty.org/student/submission\">
                             
                             Submission
                             
@@ -267,10 +267,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/student/git_submission">
+                            <a href=\"https://submitty.org/student/git_submission\">
                             
                             Submission via GIT
                             
@@ -292,10 +292,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/student/automated_testing">
+                            <a href=\"https://submitty.org/student/automated_testing\">
                             
                             Automated Testing
                             
@@ -317,10 +317,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/student/late_days">
+                            <a href=\"https://submitty.org/student/late_days\">
                             
                             Late Days &amp; Extensions
                             
@@ -342,10 +342,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/student/managing_versions">
+                            <a href=\"https://submitty.org/student/managing_versions\">
                             
                             Managing Versions
                             
@@ -367,10 +367,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/student/reviewing_ta_grades">
+                            <a href=\"https://submitty.org/student/reviewing_ta_grades\">
                             
                             Reviewing TA Grades
                             
@@ -392,10 +392,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/student/grade_inquiry_student">
+                            <a href=\"https://submitty.org/student/grade_inquiry_student\">
                             
                             Opening a Grade Inquiry
                             
@@ -417,10 +417,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/student/team_assignments">
+                            <a href=\"https://submitty.org/student/team_assignments\">
                             
                             Team Assignments
                             
@@ -442,10 +442,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/student/discussion_forum">
+                            <a href=\"https://submitty.org/student/discussion_forum\">
                             
                             Discussion Forum
                             
@@ -467,10 +467,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/student/notifications">
+                            <a href=\"https://submitty.org/student/notifications\">
                             
                             Notifications &amp; Email
                             
@@ -492,17 +492,17 @@
                 
                 
                 
-                <li class="nav-item top-level  has-children">
-                    <i class="nav-arrow nav-click"></i>
+                <li class=\"nav-item top-level  has-children\">
+                    <i class=\"nav-arrow nav-click\"></i>
                     
-                    <a href="https://submitty.org/grader">
+                    <a href=\"https://submitty.org/grader\">
                     
                     TA or Grader
                     
                     </a>
                     
                     
-                    <ul class="inner-nav">
+                    <ul class=\"inner-nav\">
                         
                             
                             
@@ -517,10 +517,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/grader">
+                            <a href=\"https://submitty.org/grader\">
                             
                             Overview
                             
@@ -542,10 +542,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/grader/sorting_and_navigation">
+                            <a href=\"https://submitty.org/grader/sorting_and_navigation\">
                             
                             Sorting and Navigation
                             
@@ -567,10 +567,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/grader/grade_inquiry_grader">
+                            <a href=\"https://submitty.org/grader/grade_inquiry_grader\">
                             
                             Resolving a Grade Inquiry
                             
@@ -592,17 +592,17 @@
                 
                 
                 
-                <li class="nav-item top-level  has-children">
-                    <i class="nav-arrow nav-click"></i>
+                <li class=\"nav-item top-level  has-children\">
+                    <i class=\"nav-arrow nav-click\"></i>
                     
-                    <a href="https://submitty.org/instructor">
+                    <a href=\"https://submitty.org/instructor\">
                     
                     Instructor
                     
                     </a>
                     
                     
-                    <ul class="inner-nav">
+                    <ul class=\"inner-nav\">
                         
                             
                             
@@ -617,10 +617,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor">
+                            <a href=\"https://submitty.org/instructor\">
                             
                             Overview
                             
@@ -642,10 +642,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/course_settings">
+                            <a href=\"https://submitty.org/instructor/course_settings\">
                             
                             Course Settings
                             
@@ -667,10 +667,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/managing_enrollment">
+                            <a href=\"https://submitty.org/instructor/managing_enrollment\">
                             
                             Managing Enrollment
                             
@@ -692,10 +692,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/create_edit_gradeable">
+                            <a href=\"https://submitty.org/instructor/create_edit_gradeable\">
                             
                             Create or Edit a Gradeable
                             
@@ -717,10 +717,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/directory_structure">
+                            <a href=\"https://submitty.org/instructor/directory_structure\">
                             
                             Directory Structure
                             
@@ -742,10 +742,10 @@
                             
                             
                             
-                        <li class="nav-item  has-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  has-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/assignment_configuration">
+                            <a href=\"https://submitty.org/instructor/assignment_configuration\">
                             
                             Assignment Configuration
                             
@@ -759,10 +759,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/instructor/assignment_configuration/configuration_path">
+                                    <a href=\"https://submitty.org/instructor/assignment_configuration/configuration_path\">
                                     
                                     Configuration Path
                                     
@@ -775,10 +775,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/instructor/assignment_configuration/structure">
+                                    <a href=\"https://submitty.org/instructor/assignment_configuration/structure\">
                                     
                                     Autograding Configuration Structure
                                     
@@ -791,10 +791,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/instructor/assignment_configuration/phases">
+                                    <a href=\"https://submitty.org/instructor/assignment_configuration/phases\">
                                     
                                     Phases of Autograding
                                     
@@ -807,10 +807,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/instructor/assignment_configuration/specification">
+                                    <a href=\"https://submitty.org/instructor/assignment_configuration/specification\">
                                     
                                     Autograding Specification
                                     
@@ -823,10 +823,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/instructor/assignment_configuration/networking">
+                                    <a href=\"https://submitty.org/instructor/assignment_configuration/networking\">
                                     
                                     Distributed / Networked Applications
                                     
@@ -839,10 +839,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/instructor/assignment_configuration/graphics">
+                                    <a href=\"https://submitty.org/instructor/assignment_configuration/graphics\">
                                     
                                     Graphics Applications
                                     
@@ -855,10 +855,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/instructor/assignment_configuration/validation">
+                                    <a href=\"https://submitty.org/instructor/assignment_configuration/validation\">
                                     
                                     Validation
                                     
@@ -871,10 +871,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/instructor/assignment_configuration/notebook">
+                                    <a href=\"https://submitty.org/instructor/assignment_configuration/notebook\">
                                     
                                     Notebook
                                     
@@ -899,10 +899,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/course_materials">
+                            <a href=\"https://submitty.org/instructor/course_materials\">
                             
                             Course Materials
                             
@@ -924,10 +924,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/managing_git">
+                            <a href=\"https://submitty.org/instructor/managing_git\">
                             
                             Facilitating Submission via GIT
                             
@@ -949,10 +949,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/static_analysis">
+                            <a href=\"https://submitty.org/instructor/static_analysis\">
                             
                             Static Analysis
                             
@@ -974,10 +974,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/tree_tool">
+                            <a href=\"https://submitty.org/instructor/tree_tool\">
                             
                             Tree Tool
                             
@@ -999,10 +999,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/log_files">
+                            <a href=\"https://submitty.org/instructor/log_files\">
                             
                             Log Files
                             
@@ -1024,10 +1024,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/batch_regrade_submissions">
+                            <a href=\"https://submitty.org/instructor/batch_regrade_submissions\">
                             
                             Batch Regrade Submissions
                             
@@ -1049,10 +1049,10 @@
                             
                             
                             
-                        <li class="nav-item  has-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  has-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/rainbow_grades">
+                            <a href=\"https://submitty.org/instructor/rainbow_grades\">
                             
                             Rainbow Grades
                             
@@ -1066,10 +1066,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/instructor/rainbow_grades/automatic_setup">
+                                    <a href=\"https://submitty.org/instructor/rainbow_grades/automatic_setup\">
                                     
                                     Automatic Setup
                                     
@@ -1082,10 +1082,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/instructor/rainbow_grades/manual_setup">
+                                    <a href=\"https://submitty.org/instructor/rainbow_grades/manual_setup\">
                                     
                                     Manual Setup
                                     
@@ -1098,10 +1098,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/instructor/rainbow_grades/customization_basics">
+                                    <a href=\"https://submitty.org/instructor/rainbow_grades/customization_basics\">
                                     
                                     Customization Basics
                                     
@@ -1114,10 +1114,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/instructor/rainbow_grades/gradeables">
+                                    <a href=\"https://submitty.org/instructor/rainbow_grades/gradeables\">
                                     
                                     Gradeables Customization
                                     
@@ -1130,10 +1130,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/instructor/rainbow_grades/exam_customization">
+                                    <a href=\"https://submitty.org/instructor/rainbow_grades/exam_customization\">
                                     
                                     Exam Seating
                                     
@@ -1146,10 +1146,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/instructor/rainbow_grades/iclicker_instructions">
+                                    <a href=\"https://submitty.org/instructor/rainbow_grades/iclicker_instructions\">
                                     
                                     iClicker Instructions
                                     
@@ -1162,10 +1162,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/instructor/rainbow_grades/wsl_vpn">
+                                    <a href=\"https://submitty.org/instructor/rainbow_grades/wsl_vpn\">
                                     
                                     RPI VPN on WSL Instructions
                                     
@@ -1190,10 +1190,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/late_days">
+                            <a href=\"https://submitty.org/instructor/late_days\">
                             
                             Late Days
                             
@@ -1215,10 +1215,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/team_assignments">
+                            <a href=\"https://submitty.org/instructor/team_assignments\">
                             
                             Team Assignments
                             
@@ -1240,10 +1240,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/website_customization">
+                            <a href=\"https://submitty.org/instructor/website_customization\">
                             
                             Website Customization
                             
@@ -1265,10 +1265,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/plagiarism">
+                            <a href=\"https://submitty.org/instructor/plagiarism\">
                             
                             Plagiarism Detection
                             
@@ -1290,10 +1290,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/bulk_pdf_upload">
+                            <a href=\"https://submitty.org/instructor/bulk_pdf_upload\">
                             
                             Bulk PDF Upload
                             
@@ -1315,10 +1315,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/student_photos">
+                            <a href=\"https://submitty.org/instructor/student_photos\">
                             
                             Photo Scraper
                             
@@ -1340,10 +1340,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/silent_editing">
+                            <a href=\"https://submitty.org/instructor/silent_editing\">
                             
                             Silent Grade Editing
                             
@@ -1365,10 +1365,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/grade_inquiry_instructor">
+                            <a href=\"https://submitty.org/instructor/grade_inquiry_instructor\">
                             
                             Enabling Grade Inquiries
                             
@@ -1390,10 +1390,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/forum">
+                            <a href=\"https://submitty.org/instructor/forum\">
                             
                             Discussion Forum
                             
@@ -1415,10 +1415,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/grade_override">
+                            <a href=\"https://submitty.org/instructor/grade_override\">
                             
                             Grade Override
                             
@@ -1440,10 +1440,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/instructor/premade_assignments">
+                            <a href=\"https://submitty.org/instructor/premade_assignments\">
                             
                             Premade Assignments
                             
@@ -1465,17 +1465,17 @@
                 
                 
                 
-                <li class="nav-item top-level  has-children">
-                    <i class="nav-arrow nav-click"></i>
+                <li class=\"nav-item top-level  has-children\">
+                    <i class=\"nav-arrow nav-click\"></i>
                     
-                    <a href="https://submitty.org/sysadmin">
+                    <a href=\"https://submitty.org/sysadmin\">
                     
                     System Administrator
                     
                     </a>
                     
                     
-                    <ul class="inner-nav">
+                    <ul class=\"inner-nav\">
                         
                             
                             
@@ -1490,10 +1490,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/sysadmin">
+                            <a href=\"https://submitty.org/sysadmin\">
                             
                             Server OS
                             
@@ -1515,10 +1515,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/sysadmin/installation">
+                            <a href=\"https://submitty.org/sysadmin/installation\">
                             
                             Installation
                             
@@ -1540,10 +1540,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/sysadmin/update">
+                            <a href=\"https://submitty.org/sysadmin/update\">
                             
                             Update Submitty
                             
@@ -1565,10 +1565,10 @@
                             
                             
                             
-                        <li class="nav-item  has-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  has-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/sysadmin/version_notes">
+                            <a href=\"https://submitty.org/sysadmin/version_notes\">
                             
                             Installation Version Notes
                             
@@ -1582,10 +1582,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/sysadmin/version_notes/v19.08.03">
+                                    <a href=\"https://submitty.org/sysadmin/version_notes/v19.08.03\">
                                     
                                     v19.08.03
                                     
@@ -1598,10 +1598,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/sysadmin/version_notes/v19.06.02">
+                                    <a href=\"https://submitty.org/sysadmin/version_notes/v19.06.02\">
                                     
                                     v19.06.02
                                     
@@ -1614,10 +1614,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/sysadmin/version_notes/v.19.06.01">
+                                    <a href=\"https://submitty.org/sysadmin/version_notes/v.19.06.01\">
                                     
                                     v.19.06.01
                                     
@@ -1642,10 +1642,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/sysadmin/database_overview">
+                            <a href=\"https://submitty.org/sysadmin/database_overview\">
                             
                             Database Overview
                             
@@ -1667,10 +1667,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/sysadmin/user_access_level">
+                            <a href=\"https://submitty.org/sysadmin/user_access_level\">
                             
                             User Access Level
                             
@@ -1692,10 +1692,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/sysadmin/course_creation">
+                            <a href=\"https://submitty.org/sysadmin/course_creation\">
                             
                             Course Creation
                             
@@ -1717,10 +1717,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/sysadmin/git">
+                            <a href=\"https://submitty.org/sysadmin/git\">
                             
                             Setting up Internal Git
                             
@@ -1742,10 +1742,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/sysadmin/worker_installation">
+                            <a href=\"https://submitty.org/sysadmin/worker_installation\">
                             
                             Worker Installation
                             
@@ -1767,10 +1767,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/sysadmin/system_customization">
+                            <a href=\"https://submitty.org/sysadmin/system_customization\">
                             
                             System Customization Checklist
                             
@@ -1792,10 +1792,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/sysadmin/email_configuration">
+                            <a href=\"https://submitty.org/sysadmin/email_configuration\">
                             
                             Email Configuration
                             
@@ -1817,10 +1817,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/sysadmin/student_auto_feed">
+                            <a href=\"https://submitty.org/sysadmin/student_auto_feed\">
                             
                             Student Auto Feed
                             
@@ -1842,10 +1842,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/sysadmin/course_archiving">
+                            <a href=\"https://submitty.org/sysadmin/course_archiving\">
                             
                             Course Archiving
                             
@@ -1867,10 +1867,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/sysadmin/rainbow_grades">
+                            <a href=\"https://submitty.org/sysadmin/rainbow_grades\">
                             
                             Rainbow Grades
                             
@@ -1892,17 +1892,17 @@
                 
                 
                 
-                <li class="nav-item top-level  has-children">
-                    <i class="nav-arrow nav-click"></i>
+                <li class=\"nav-item top-level  has-children\">
+                    <i class=\"nav-arrow nav-click\"></i>
                     
-                    <a href="https://submitty.org/developer">
+                    <a href=\"https://submitty.org/developer\">
                     
                     Developer
                     
                     </a>
                     
                     
-                    <ul class="inner-nav">
+                    <ul class=\"inner-nav\">
                         
                             
                             
@@ -1917,10 +1917,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer">
+                            <a href=\"https://submitty.org/developer\">
                             
                             Overview
                             
@@ -1942,10 +1942,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/vm_install_using_vagrant">
+                            <a href=\"https://submitty.org/developer/vm_install_using_vagrant\">
                             
                             VM Install using Vagrant
                             
@@ -1967,10 +1967,10 @@
                             
                             
                             
-                        <li class="nav-item  has-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  has-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/development_instructions">
+                            <a href=\"https://submitty.org/developer/development_instructions\">
                             
                             Development Instructions
                             
@@ -1984,10 +1984,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/development_instructions/troubleshooting">
+                                    <a href=\"https://submitty.org/developer/development_instructions/troubleshooting\">
                                     
                                     Troubleshooting
                                     
@@ -2000,10 +2000,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/development_instructions/vagrant_email_configuration">
+                                    <a href=\"https://submitty.org/developer/development_instructions/vagrant_email_configuration\">
                                     
                                     Email Configuration
                                     
@@ -2016,10 +2016,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/development_instructions/miscellaneous">
+                                    <a href=\"https://submitty.org/developer/development_instructions/miscellaneous\">
                                     
                                     Miscellaneous
                                     
@@ -2044,10 +2044,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/phpstorm">
+                            <a href=\"https://submitty.org/developer/phpstorm\">
                             
                             PhpStorm Setup Instructions
                             
@@ -2069,10 +2069,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/database_design">
+                            <a href=\"https://submitty.org/developer/database_design\">
                             
                             Database Design
                             
@@ -2094,10 +2094,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/migrations">
+                            <a href=\"https://submitty.org/developer/migrations\">
                             
                             Migrations
                             
@@ -2119,10 +2119,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/automated_grading">
+                            <a href=\"https://submitty.org/developer/automated_grading\">
                             
                             Automated Grading
                             
@@ -2144,10 +2144,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/json_configuration_files">
+                            <a href=\"https://submitty.org/developer/json_configuration_files\">
                             
                             JSON Configuration Files
                             
@@ -2169,10 +2169,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/json_responses">
+                            <a href=\"https://submitty.org/developer/json_responses\">
                             
                             JSON Responses
                             
@@ -2194,10 +2194,10 @@
                             
                             
                             
-                        <li class="nav-item  has-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  has-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/coding_style_guide">
+                            <a href=\"https://submitty.org/developer/coding_style_guide\">
                             
                             Coding Style Guide
                             
@@ -2211,10 +2211,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/coding_style_guide/python">
+                                    <a href=\"https://submitty.org/developer/coding_style_guide/python\">
                                     
                                     Python
                                     
@@ -2227,10 +2227,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/coding_style_guide/c++">
+                                    <a href=\"https://submitty.org/developer/coding_style_guide/c++\">
                                     
                                     C++
                                     
@@ -2243,10 +2243,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/coding_style_guide/php">
+                                    <a href=\"https://submitty.org/developer/coding_style_guide/php\">
                                     
                                     PHP
                                     
@@ -2259,10 +2259,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/coding_style_guide/javascript">
+                                    <a href=\"https://submitty.org/developer/coding_style_guide/javascript\">
                                     
                                     JavaScript
                                     
@@ -2275,10 +2275,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/coding_style_guide/css">
+                                    <a href=\"https://submitty.org/developer/coding_style_guide/css\">
                                     
                                     CSS
                                     
@@ -2303,10 +2303,10 @@
                             
                             
                             
-                        <li class="nav-item  has-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  has-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/interface_design_style_guide">
+                            <a href=\"https://submitty.org/developer/interface_design_style_guide\">
                             
                             Interface Design
                             
@@ -2320,10 +2320,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/interface_design_style_guide/web_accessibility">
+                                    <a href=\"https://submitty.org/developer/interface_design_style_guide/web_accessibility\">
                                     
                                     Web Accessibility
                                     
@@ -2348,10 +2348,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/project_ideas">
+                            <a href=\"https://submitty.org/developer/project_ideas\">
                             
                             Project Ideas
                             
@@ -2373,10 +2373,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/how_to_contribute">
+                            <a href=\"https://submitty.org/developer/how_to_contribute\">
                             
                             How to Contribute
                             
@@ -2398,10 +2398,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/autograding_tests">
+                            <a href=\"https://submitty.org/developer/autograding_tests\">
                             
                             Autograding Tests
                             
@@ -2423,10 +2423,10 @@
                             
                             
                             
-                        <li class="nav-item  has-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  has-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/php_unit_tests">
+                            <a href=\"https://submitty.org/developer/php_unit_tests\">
                             
                             PHP Unit Tests
                             
@@ -2440,10 +2440,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/php_unit_tests/writing_unit_tests">
+                                    <a href=\"https://submitty.org/developer/php_unit_tests/writing_unit_tests\">
                                     
                                     Writing Unit Tests
                                     
@@ -2468,10 +2468,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/end_to_end_tests">
+                            <a href=\"https://submitty.org/developer/end_to_end_tests\">
                             
                             End to End Tests
                             
@@ -2493,10 +2493,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/updating_dependencies">
+                            <a href=\"https://submitty.org/developer/updating_dependencies\">
                             
                             Updating Dependencies
                             
@@ -2518,10 +2518,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/travis_ci">
+                            <a href=\"https://submitty.org/developer/travis_ci\">
                             
                             Travis CI
                             
@@ -2543,10 +2543,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/rainbow_grades_tests">
+                            <a href=\"https://submitty.org/developer/rainbow_grades_tests\">
                             
                             Rainbow Grades Tests
                             
@@ -2568,10 +2568,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/configuring_tie_in_programs">
+                            <a href=\"https://submitty.org/developer/configuring_tie_in_programs\">
                             
                             Configuring Tie In Programs
                             
@@ -2593,10 +2593,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/router">
+                            <a href=\"https://submitty.org/developer/router\">
                             
                             Router
                             
@@ -2618,10 +2618,10 @@
                             
                             
                             
-                        <li class="nav-item  no-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  no-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://api.submitty.org/">
+                            <a href=\"https://api.submitty.org/\">
                             
                             API
                             
@@ -2643,10 +2643,10 @@
                             
                             
                             
-                        <li class="nav-item  has-children">
-                            <i class="inner-nav-arrow nav-click"></i>
+                        <li class=\"nav-item  has-children\">
+                            <i class=\"inner-nav-arrow nav-click\"></i>
                             
-                            <a href="https://submitty.org/developer/google_summer_of_code">
+                            <a href=\"https://submitty.org/developer/google_summer_of_code\">
                             
                             Google Summer of Code
                             
@@ -2660,10 +2660,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/google_summer_of_code/2019_FonNoel">
+                                    <a href=\"https://submitty.org/developer/google_summer_of_code/2019_FonNoel\">
                                     
                                     2019 Fon Noel
                                     
@@ -2676,10 +2676,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/google_summer_of_code/2019_DrumilPatel">
+                                    <a href=\"https://submitty.org/developer/google_summer_of_code/2019_DrumilPatel\">
                                     
                                     2019 Drumil Patel
                                     
@@ -2692,10 +2692,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/google_summer_of_code/2019_AnubhavSingh">
+                                    <a href=\"https://submitty.org/developer/google_summer_of_code/2019_AnubhavSingh\">
                                     
                                     2019 Anubhav Singh
                                     
@@ -2708,10 +2708,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/google_summer_of_code/2019_XiaoHan">
+                                    <a href=\"https://submitty.org/developer/google_summer_of_code/2019_XiaoHan\">
                                     
                                     2019 Xiao Han
                                     
@@ -2724,10 +2724,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/google_summer_of_code/2018_TusharGurjar">
+                                    <a href=\"https://submitty.org/developer/google_summer_of_code/2018_TusharGurjar\">
                                     
                                     2018 Tushar Gurjar
                                     
@@ -2740,10 +2740,10 @@
                                 
                                 
                                 
-                                <li class="nav-item inner ">
+                                <li class=\"nav-item inner \">
                                     
                                     
-                                    <a href="https://submitty.org/developer/google_summer_of_code/2018_GaganKumar">
+                                    <a href=\"https://submitty.org/developer/google_summer_of_code/2018_GaganKumar\">
                                     
                                     2018 Gagan Kumar
                                     
@@ -2764,22 +2764,22 @@
 
 
 
-        <section class="main">
-            <div class="page-header">
+        <section class=\"main\">
+            <div class=\"page-header\">
                 <h2>Submitty</h2>
                 <h3>Welcome</h3>
             </div>
-            <article class="content">
-                <p><a href="http://submitty.org/">Submitty</a> is an open source programming
+            <article class=\"content\">
+                <p><a href=\"http://submitty.org/\">Submitty</a> is an open source programming
 assignment submission system from the 
-<a href="https://rcos.io/">Rensselaer Center for Open Source Software (RCOS)</a>, 
+<a href=\"https://rcos.io/\">Rensselaer Center for Open Source Software (RCOS)</a>,
 launched by the
-<a href="http://www.cs.rpi.edu/">Department of Computer Science</a> at
-<a href="http://www.rpi.edu/">Rensselaer Polytechnic Institute</a>.</p>
+<a href=\"http://www.cs.rpi.edu/\">Department of Computer Science</a> at
+<a href=\"http://www.rpi.edu/\">Rensselaer Polytechnic Institute</a>.</p>
 
-<p><a href="https://github.com/Submitty/">The Submitty project is hosted on GitHub</a>.</p>
+<p><a href=\"https://github.com/Submitty/\">The Submitty project is hosted on GitHub</a>.</p>
 
-<h4 id="key-features">Key Features<a href="https://submitty.org/#key-features"><svg class="anchor" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<h4 id=\"key-features\">Key Features<a href=\"https://submitty.org/#key-features\"><svg class=\"anchor\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a></h4>
 
 <ul>
   <li>Secure testing of many languages: Python, C/C++, Java, Scheme, Prolog, SQL, SPIM, and anything available on GNU / Linux!</li>
@@ -2796,39 +2796,39 @@ launched by the
   <li>Open-source, free to use, install on your own hardware, or VPS</li>
 </ul>
 
-<h4 id="contact-us">Contact Us<a href="https://submitty.org/#contact-us"><svg class="anchor" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a></h4>
+<h4 id=\"contact-us\">Contact Us<a href=\"https://submitty.org/#contact-us\"><svg class=\"anchor\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path fill-rule=\"evenodd\" d=\"M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z\"></path></svg></a></h4>
 
 <p>Are you interested in joining the Submitty Development Team?  Please read:<br>
-<a href="https://submitty.org/developer">Suggestions for New Developers</a>  and  <a href="https://submitty.org/developer/how_to_contribute">How to Contribute</a>.</p>
+<a href=\"https://submitty.org/developer\">Suggestions for New Developers</a>  and  <a href=\"https://submitty.org/developer/how_to_contribute\">How to Contribute</a>.</p>
 
-<p>We also have a public <a href="https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWZhOGM4NWU4M2U3ZmM2ZmM5NTYwNjk3NTc5Yjg1ZGRlYzU1MjcwYWNkNGYxZjk2YTk3ZmEyODY3MjEyOTc0M2E">Slack server for Submitty Developers</a></p>
+<p>We also have a public <a href=\"https://join.slack.com/t/submitty/shared_invite/enQtMzE1NzgyMzUzNzI5LWZhOGM4NWU4M2U3ZmM2ZmM5NTYwNjk3NTc5Yjg1ZGRlYzU1MjcwYWNkNGYxZjk2YTk3ZmEyODY3MjEyOTc0M2E\">Slack server for Submitty Developers</a></p>
 
 <p>Instructors and system administrators who are interested in setting up a
 production Submitty installations at their school are welcome and encouraged to
 use the Submitty Google Groups mailing list:<br>
-<a href="mailto:submitty@googlegroups.com">submitty@googlegroups.com</a><br>
-<a href="https://groups.google.com/forum/#!forum/submitty">https://groups.google.com/forum/#!forum/submitty</a><br>
+<a href=\"mailto:submitty@googlegroups.com\">submitty@googlegroups.com</a><br>
+<a href=\"https://groups.google.com/forum/#!forum/submitty\">https://groups.google.com/forum/#!forum/submitty</a><br>
 or contact the core Submitty development team:<br>
-<a href="mailto:submitty-admin@googlegroups.com">submitty-admin@googlegroups.com</a></p>
+<a href=\"mailto:submitty-admin@googlegroups.com\">submitty-admin@googlegroups.com</a></p>
 
 <p>Please use the links on the sidebar to further explore Submitty.</p>
 
             </article>
 
             <footer>
-                <div class="container">
-                    <p style="text-align: center;font-size:smaller;">
-                        <a href="https://rcos.io/">A Rensselaer Center for Open-Source Project, 2014-2019.</a>
+                <div class=\"container\">
+                    <p style=\"text-align: center;font-size:smaller;\">
+                        <a href=\"https://rcos.io/\">A Rensselaer Center for Open-Source Project, 2014-2019.</a>
                     </p>
                 </div>
             </footer>
         </section>
     
 
-</body></html>"
+</body></html>",
 	"transformations": {
-         	"stripped": True,
+         	"stripped": true,
         	"grams": [1,2,3],
-			"Title": False
+			"Title": false
 		}
-}]
+}
