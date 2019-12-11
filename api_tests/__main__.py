@@ -30,13 +30,13 @@ def test_simple_json(address):
     }
     print(requests.post(address, json=data).json())
 
-def test1():
+def test1(addr):
 
     print("test 1 running, nothing should be printed from this test.\n")
     # the port number will be replaced with the actual port number that
     # the text transformation server is using
-    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
-    
+    addr = f"http://{addr}/transform"
+
     # the json that goes with the request
     data = {
         "type": "html",
@@ -104,14 +104,14 @@ def test1():
     print("\n")
 
 
-def test2():
+def test2(addr):
 
     print(
         "test 2 running, this should print a 400 error, indicating that the parameters are invalid\n"
     )
     # the port number will be replaced with the actual port number that the 
     # text transformation server is using
-    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+    addr = f"http://{addr}/transform"
 
     # the json that goes with the request
     data = {
@@ -133,13 +133,13 @@ def test2():
     print("HTTP response status code: " + str(respond.status_code) + "\n")
 
 
-def test3():
+def test3(addr):
 
     print("test 3 running, nothing should be printed from this test.\n")
 
     # the port number will be replaced with the actual port number that the 
     # text transformation server is using
-    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+    addr = f"http://{addr}/transform"
 
     # the json that goes with the request
     data = {
@@ -171,7 +171,7 @@ def test3():
     assert respond_json["grams"]["3"] == {}, "trigrams go not match (test 1)"
 
 
-def test4():
+def test4(addr):
 
     print(
         "test 4 running, the time used to process this request will be printed.\n"
@@ -181,7 +181,7 @@ def test4():
 
     # the port number will be replaced with the actual port number that the 
     # text transformation server is using
-    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+    addr = f"http://{addr}/transform"
 
     # load the json we're using
     data = json.load(open("api_tests/lots_of_data.json"), strict = False)
@@ -211,7 +211,12 @@ def test_submitty_html():
     # load the json we'll be using
     data = json.load(open("api_tests/submitty.json"), strict = False)
     # make the request
+    
+    print(data)
+    
     respond = requests.post(addr, data=data)
+    
+    print("HTTP response status code: " + str(respond.status_code) + "\n")
     
     respond_json = respond.json()
     
@@ -227,12 +232,12 @@ def test_submitty_html():
     
     assert len(respond_json["grams"]["3"]) == 341, "unique trigram count incorrect"
     
-def test_ecse_1010_html():
+def test_ecse_1010_html(addr):
     print("testing with ECSE_1010.json")
     
     # the port number will be replaced with the actual port number that the
     # text transformation server is using
-    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+    addr = f"http://{addr}/transform"
 
     # load the json we'll be using
     data = json.load(open("api_test/ECSE_1010.json"))
@@ -327,12 +332,12 @@ def test_diodes_html():
     
     assert len(respond_json["grams"]["3"]) == 6945, "unique trigram count incorrect"
 
-def test_non_json_put_request():
+def test_non_json_put_request(addr):
     print("testing with non-json data")
     
     # the port number will be replaced with the actual port number that the
     # text transformation server is using
-    addr = "http://127.0.0.1:" + str(sys.argv[1]) + "/transform"
+    addr = f"http://{addr}/transform"
 
     # we should be sending json instead of this text in the request,
     # so we should be receiving some error code from the server since this
@@ -348,24 +353,26 @@ def test_non_json_put_request():
     print("HTTP response status code: " + str(respond.status_code))
 
 if __name__ == "__main__":
-    test1()  # successful request
-    test2()  # invalid parameters
-    test3()  # no data
-    test4()  # lots of data (1.2MB)
+    test1(sys.argv[1])  # successful request
+    test2(sys.argv[1])  # invalid parameters
+    test3(sys.argv[1])  # no data
+    test4(sys.argv[1])  # lots of data (1.2MB)
     
     #testing with different (known) data
     
     # apparently the results are affected by the CSS styling code - HW2 couldn't
     # handle (ignore) text between CSS <style> tags
     # the impact of CSS on the results are unknown
-    test_submitty_html()
+    test_submitty_html(sys.argv[1])
     #test_ecse_1010_html()
     #test_wikipedia_html()
     #test_grpc_html()
     #test_diodes_html()
+    
+    
     #test_empty_json(sys.argv[1])
     #test_simple_json(sys.argv[1])
-    #test_non_json_put_request() # request that doesn't make sense
+    test_non_json_put_request(sys.argv[1]) # request that doesn't make sense
 
 
 # post and verify results, use assert statements
