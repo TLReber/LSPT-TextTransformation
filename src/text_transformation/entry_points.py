@@ -2,10 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-file that houses all the entry points. The default scheduler script is 
-run_scheduler which spins up a scheduler to take in api requests. The default
-worker script is run_worker which spins up a worker to help the scheduler
-processes incoming requests
+File that houses all the entry points.There is currently only one entry point.
+That entry point is run_server which starts up a scheduler and a variable
+number of workers
 """
 from multiprocessing import Process
 import sys
@@ -16,6 +15,10 @@ from text_transformation.transformations import title, stripped, ngrams
 
 
 def run_server():
+    """
+    Entry point that starts up several workers and a scheduler. The Scheduler
+    listends for http requests and delegates the requests off to workers
+    """
     name = None
     port = None
     w_count = None
@@ -32,8 +35,7 @@ def run_server():
     s.start()
     # start workers
     worker_processes = [
-        Process(target=run_worker, args=((s.name,)))
-        for _ in range(w_count)
+        Process(target=run_worker, args=((s.name,))) for _ in range(w_count)
     ]
     print(f"======== Running {w_count} Worker(s) =========")
     for wp in worker_processes:
@@ -44,20 +46,18 @@ def run_server():
     for wp in worker_processes:
         wp.terminate()
 
-def run_worker(process_name):
+
+def run_worker(scheduler_name: str):
     """
-    The entry point to start the worker from the terminal. Command line
-    arguments are expected for run_worker to work. The only argument is the name
-    of the scheduler. The name of the scheduler facilitates communication
-    between the scheduler and the worker
+    This is a helper function that runs on a separate process. It spins up a
+    worker that communicates with a scheduler specified scheduler name 
+
+    Args: 
+        scheduler_name: name of scheduler the worker is communicating with
     """
-    tf = {
-        "title": title,
-        "stripped": stripped,
-        "grams": ngrams
-    }
+    tf = {"title": title, "stripped": stripped, "grams": ngrams}
     try:
-        w = Worker(process_name, tf)
+        w = Worker(scheduler_name, tf)
         w.listen()
     except KeyboardInterrupt:
         pass

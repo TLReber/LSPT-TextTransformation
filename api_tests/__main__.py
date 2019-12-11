@@ -21,7 +21,7 @@ def test_simple_json(address):
     print(address)
     data = {
         "type": "hmtl",
-        "data": "<p>hello hello world this is some test, go and parse this!<\p>",
+        "data": "<html><p>hello hello world this is some test, go and parse this!</p></hmtl>",
         "transformations": { 
             "stripped": True,
             "grams": [1, 2, 3],
