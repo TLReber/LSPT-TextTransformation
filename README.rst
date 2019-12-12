@@ -26,16 +26,26 @@ After installing:
 
     python setup.py test
 
-Running API Testing
+Running Server
 ====================
 
 After installing:
 
 .. code-block:: bash
 
-    python api_test
+    text-trans-server <name> <port> <num_workers>
 
-SSH To Server
+
+Running API Testing
+====================
+
+After installing and running the server:
+
+.. code-block:: bash
+
+    python api_test <addr>:<port>
+
+How to SSH
 ========================
 .. code-block:: bash
     
