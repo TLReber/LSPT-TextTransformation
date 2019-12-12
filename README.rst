@@ -6,11 +6,6 @@ Text Transformation
 Server that parses through raw document data to determine meaningful statistics 
 to be used in ranking and querying.
 
-Description
-===========
-
-A longer description of your project goes here...
-
 Installation
 ============
 - Using python 3.7 though 3.6 should work
@@ -40,24 +35,6 @@ After installing:
 .. code-block:: bash
 
     python api_test
-
-Running A Worker
-=================
-
-After installing:
-
-.. code-block:: bash
-
-    text-trans-worker
-
-Running A Scheduler
-===================
-
-After installing:
-
-.. code-block:: bash
-
-    text-trans-scheduler
 
 Connecting to the Server
 ========================
