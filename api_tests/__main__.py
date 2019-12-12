@@ -212,11 +212,13 @@ def test_submitty_html(addr):
     # make the request
     
     #print(data)
-    
+    start = time.time()
     respond = requests.post(addr, json=data)
-    
+    end = time.time()
+    print(end - start)
+    print("\n")
+
     print("HTTP response status code: " + str(respond.status_code) + "\n")
-    
     respond_json = respond.json()
     
     # check that the statistics are correct
@@ -241,7 +243,11 @@ def test_ecse_1010_html(addr):
     data = json.load(open("api_tests/ECSE_1010.json"), strict = False)
     
     # make the request
+    start = time.time()
     respond = requests.post(addr, json=data)
+    end = time.time()
+    print(end - start)
+    print("\n")
     
     respond_json = respond.json()
     
@@ -267,16 +273,17 @@ def test_grpc_html(addr):
     data = json.load(open("api_tests/grpc.json"), strict = False)
     
     # make the request
+    start = time.time()
     respond = requests.post(addr, json=data)
+    end = time.time()
+    print(end - start)
+    print("\n")
     
     respond_json = respond.json()
     
     # check that the statistics are correct
     # we've ran the data through hw2 so the statistics should be correct
-    4989
-    684
-    1470
-    1362
+
     assert len(respond_json["stripped"].split()) == 4989, "total word count incorrect"
     
     assert len(respond_json["grams"]["1"]) == 684, "unique word count incorrect"
@@ -296,7 +303,11 @@ def test_diodes_html(addr):
     data = json.load(open("api_tests/diodes.json"), strict = False)
     
     # make the request
+    start = time.time()
     respond = requests.post(addr, json=data)
+    end = time.time()
+    print(end - start)
+    print("\n")
     
     respond_json = respond.json()
     

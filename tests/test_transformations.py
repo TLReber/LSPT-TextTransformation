@@ -168,12 +168,16 @@ def test_transformer_title():
 
 def test_transformer_stripped():
     t = stripped
+
+    # basic strings to strip
     soup = BeautifulSoup(text1, "html.parser")
     assert t(True, stop_words_list, soup) == "hello hello world"
     assert t(False, stop_words_list, soup) == ""
     soup = BeautifulSoup(text2, "html.parser")
     assert t(True, stop_words_list, soup) == "hello hello hello"
     assert t(False, stop_words_list, soup) == ""
+
+    # strings only contain stop words
     soup = BeautifulSoup(text3, "html.parser")
     assert t(True, stop_words_list, soup) == ""
     assert t(False, stop_words_list, soup) == ""
@@ -183,9 +187,13 @@ def test_transformer_stripped():
     soup = BeautifulSoup(text5, "html.parser")
     assert t(True, stop_words_list, soup) == ""
     assert t(False, stop_words_list, soup) == ""
+
+    # string contains html tags when not an html document
     soup = BeautifulSoup(text6, "html.parser")
     assert t(True, stop_words_list, soup) == "script console log hello script"
     assert t(False, stop_words_list, soup) == ""
+
+    # basic html docs to strip
     soup = BeautifulSoup(html1, "html.parser")
     assert (
         t(True, stop_words_list, soup)
@@ -195,9 +203,13 @@ def test_transformer_stripped():
     soup = BeautifulSoup(html2, "html.parser")
     assert t(True, stop_words_list, soup) == "words words words"
     assert t(False, stop_words_list, soup) == ""
+
+    # no content to strip
     soup = BeautifulSoup(html3, "html.parser")
     assert t(True, stop_words_list, soup) == ""
     assert t(False, stop_words_list, soup) == ""
+
+    # html docs only contain stop words
     soup = BeautifulSoup(html4, "html.parser")
     assert t(True, stop_words_list, soup) == ""
     assert t(False, stop_words_list, soup) == ""
@@ -233,6 +245,8 @@ def test_transformer_stripped():
 
 def test_transformer_ngrams():
     t = ngrams
+
+    # basic string to parse
     soup = BeautifulSoup(text1, "html.parser")
     assert t([1, 2, 3, 4], stop_words_list, soup) == {
         1: {"hello": [0, 1], "world": [2]},
@@ -240,6 +254,8 @@ def test_transformer_ngrams():
         3: {"hello hello world": [0]},
         4: {},
     }
+
+    # one repeated word in string
     soup = BeautifulSoup(text2, "html.parser")
     assert t([1, 2, 3, 4], stop_words_list, soup) == {
         1: {"hello": [0, 1, 2]},
@@ -247,12 +263,16 @@ def test_transformer_ngrams():
         3: {"hello hello hello": [0]},
         4: {},
     }
+
+    # strings only contain stop words
     soup = BeautifulSoup(text3, "html.parser")
     assert t([1, 2, 3], stop_words_list, soup) == {1: {}, 2: {}, 3: {}}
     soup = BeautifulSoup(text4, "html.parser")
     assert t([1, 2, 3], stop_words_list, soup) == {1: {}, 2: {}, 3: {}}
     soup = BeautifulSoup(text5, "html.parser")
     assert t([1, 2, 3], stop_words_list, soup) == {1: {}, 2: {}, 3: {}}
+
+    # strings should not have html tags stripped when they are not an html doc
     soup = BeautifulSoup(text6, "html.parser")
     assert t([1, 2, 3], stop_words_list, soup) == {
         1: {"script": [0, 4], "console": [1], "log": [2], "hello": [3]},
@@ -268,7 +288,7 @@ def test_transformer_ngrams():
             "log hello script": [2],
         },
     }
-    # script console log hello script
+    # basic html document to parse
     soup = BeautifulSoup(html1, "html.parser")
     assert t([1, 2, 3, 4], stop_words_list, soup) == {
         1: {
@@ -282,6 +302,8 @@ def test_transformer_ngrams():
         3: {"dormouse's story once": [4], "story once upon": [5]},
         4: {"dormouse's story once upon": [4]},
     }
+
+    # html doc with repeated word
     soup = BeautifulSoup(html2, "html.parser")
     assert t([1, 2, 3, 4], stop_words_list, soup) == {
         1: {"words": [0, 1, 2]},
@@ -289,12 +311,18 @@ def test_transformer_ngrams():
         3: {"words words words": [0]},
         4: {},
     }
+
+    # html doc with no content
     soup = BeautifulSoup(html3, "html.parser")
     assert t([1, 2, 3], stop_words_list, soup) == {1: {}, 2: {}, 3: {}}
+
+    # html doc contains only stop words
     soup = BeautifulSoup(html4, "html.parser")
     assert t([1, 2, 3], stop_words_list, soup) == {1: {}, 2: {}, 3: {}}
     soup = BeautifulSoup(html5, "html.parser")
     assert t([1, 2, 3], stop_words_list, soup) == {1: {}, 2: {}, 3: {}}
+
+    # html doc should not include contents of style and script tags in ngrams
     soup = BeautifulSoup(html6, "html.parser")
     assert t([1, 2, 3], stop_words_list, soup) == {
         1: {
