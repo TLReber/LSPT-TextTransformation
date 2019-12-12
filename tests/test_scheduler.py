@@ -36,17 +36,22 @@ def run_echo_worker(name, error_q):
 
 
 async def run_requester(scheduler, num_requests):
-    replies, _ = await asyncio.wait([ 
-        scheduler.transform({"echo": [1, 2, 3], "index": i})
-        for i in range(num_requests)])
+    replies, _ = await asyncio.wait(
+        [
+            scheduler.transform({"echo": [1, 2, 3], "index": i})
+            for i in range(num_requests)
+        ]
+    )
     assert len(replies) == num_requests
     for r in replies:
         assert r.result()["echo"] == [1, 2, 3]
+
 
 def test_start_up():
     s = Scheduler("scheduler")
     s.start()
     s.stop()
+
 
 def test_echo_one_worker():
     error_q = Queue()
@@ -73,7 +78,7 @@ def test_multiple_workers():
     ]
     for w in workers:
         w.start()
-    time.sleep(0.5) # make sure that all sockets connected first
+    time.sleep(0.5)  # make sure that all sockets connected first
 
     asyncio.run(run_requester(s, 100))
 
@@ -82,4 +87,3 @@ def test_multiple_workers():
     for w in workers:
         w.terminate()
     s.stop()
-
