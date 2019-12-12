@@ -2,7 +2,6 @@
 Text Transformation
 ===================
 
-
 Server that parses through raw document data to determine meaningful statistics 
 to be used in ranking and querying.
 
@@ -36,13 +35,19 @@ After installing:
 
     python api_test
 
-Connecting to the Server
+SSH To Server
 ========================
 .. code-block:: bash
     
     ssh {RCS-ID}@lspt-text1.cs.rpi.edu
     sudo bash
     cd /LSPT-TextTransformation
+
+Auto-Document Code
+========================
+.. code-block:: bash
+
+    python setup.py docs
 
 Note
 ====

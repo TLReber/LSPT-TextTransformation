@@ -2,7 +2,8 @@
 text-transformation
 ===================
 
-This is the documentation of **text-transformation**.
+Text Transformation takes in raw data and transforms it into more digestible
+formats by running a server that takes in http-post requests.
 
 .. note::
 
@@ -31,7 +32,6 @@ Contents
 
    License <license>
    Authors <authors>
-   Changelog <changelog>
    Module Reference <api/modules>
 
 
